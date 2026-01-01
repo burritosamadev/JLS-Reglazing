@@ -1,0 +1,22 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy circle background -->
+  <circle cx="30" cy="30" r="28" fill="#0d0f61"/>
+
+  <!-- Bathtub Icon (centered, smaller) -->
+  <g transform="translate(15, 18)">
+    <!-- Bathtub body -->
+    <path d="M2 8 Q2 4, 5 4 L25 4 Q28 4, 28 8 L29 12 L1 12 L2 8Z" fill="#ffffff"/>
+    <!-- Bathtub legs -->
+    <rect x="3" y="12" width="2" height="4" rx="1" fill="#ffffff"/>
+    <rect x="25" y="12" width="2" height="4" rx="1" fill="#ffffff"/>
+    <!-- Water/spray effect -->
+    <circle cx="15" cy="7" r="1" fill="#3b82f6"/>
+    <circle cx="12" cy="6" r="0.7" fill="#60a5fa" opacity="0.8"/>
+    <circle cx="18" cy="6" r="0.7" fill="#60a5fa" opacity="0.8"/>
+  </g>
+
+  <!-- Small sparkle accent -->
+  <g transform="translate(40, 15)">
+    <path d="M5 0L6 3L9 4L6 5L5 8L4 5L1 4L4 3L5 0Z" fill="#3b82f6"/>
+  </g>
+</svg>

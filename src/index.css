@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Jost:wght@300;400;500;600;700&family=Marcellus&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Jost', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #222226;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Ensure zero CLS by reserving space for dynamic content */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Utility for hero text */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.secondary-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
+}
+
+/* Hide scrollbar while maintaining functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Fix form input text visibility */
+input, textarea, select {
+  color: #222226;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+/* Ensure autofill text is visible */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #222226;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}

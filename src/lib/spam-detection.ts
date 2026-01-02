@@ -1,9 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
-
-const supabase = createClient(
-  process.env.SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-)
+import { getBlocklistEntry } from './google-sheets.js'
+import { rateLimiter } from './rate-limiter.js'
 
 const disposableDomains = [
   'tempmail.com',
@@ -77,13 +73,8 @@ export async function calculateSpamScore(input: SpamCheckInput): Promise<SpamChe
     reasons.push('Disposable email domain')
   }
 
-  // Check blocklist
-  const { data: blockedIP } = await supabase
-    .from('blocklist')
-    .select('*')
-    .eq('value', input.ipAddress)
-    .eq('type', 'ip')
-    .single()
+  // Check blocklist (Google Sheets)
+  const blockedIP = await getBlocklistEntry('ip', input.ipAddress)
 
   if (blockedIP) {
     spamScore += 100
@@ -91,12 +82,7 @@ export async function calculateSpamScore(input: SpamCheckInput): Promise<SpamChe
     return { isSpam: true, spamScore, reasons }
   }
 
-  const { data: blockedEmail } = await supabase
-    .from('blocklist')
-    .select('*')
-    .eq('value', input.email.toLowerCase())
-    .eq('type', 'email')
-    .single()
+  const blockedEmail = await getBlocklistEntry('email', input.email.toLowerCase())
 
   if (blockedEmail) {
     spamScore += 100
@@ -105,12 +91,7 @@ export async function calculateSpamScore(input: SpamCheckInput): Promise<SpamChe
   }
 
   if (emailDomain) {
-    const { data: blockedDomain } = await supabase
-      .from('blocklist')
-      .select('*')
-      .eq('value', emailDomain)
-      .eq('type', 'domain')
-      .single()
+    const blockedDomain = await getBlocklistEntry('domain', emailDomain)
 
     if (blockedDomain) {
       spamScore += 100
@@ -119,17 +100,12 @@ export async function calculateSpamScore(input: SpamCheckInput): Promise<SpamChe
     }
   }
 
-  // Check rate limiting
-  const oneHourAgo = new Date(Date.now() - 3600000).toISOString()
-  const { data: recentSubmissions, error: rateError } = await supabase
-    .from('form_submissions')
-    .select('id')
-    .eq('ip_address', input.ipAddress)
-    .gte('created_at', oneHourAgo)
+  // Check rate limiting (in-memory)
+  const rateLimit = rateLimiter.checkRateLimit(input.ipAddress)
 
-  if (!rateError && recentSubmissions && recentSubmissions.length >= 3) {
+  if (rateLimit.exceeded) {
     spamScore += 60
-    reasons.push('Rate limit exceeded')
+    reasons.push(`Rate limit exceeded (${rateLimit.count} submissions in 1 hour)`)
   }
 
   // Content spam detection

@@ -27,3 +27,14 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+#secrets folder
+secrets/
+.vercel
+.env.vercel
+secrets
+/secrets/
+/secrets
+
+
+

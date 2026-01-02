@@ -51,6 +51,17 @@ export const formSubmissionSchema = z.object({
     .number()
     .min(3, 'Submission too fast')
     .max(600, 'Submission timeout'),
+
+  // File attachments (optional)
+  attachments: z
+    .array(
+      z.object({
+        name: z.string(),
+        type: z.string(),
+        data: z.string(), // Base64
+      })
+    )
+    .optional(),
 })
 
 export type FormSubmissionInput = z.infer<typeof formSubmissionSchema>

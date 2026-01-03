@@ -1,4 +1,4 @@
-# JLS Reglazing Website
+# JLS Reglazing Website (to edit)
 
 Professional bathtub and kitchen reglazing services website for JL Bath Renovation Services.
 

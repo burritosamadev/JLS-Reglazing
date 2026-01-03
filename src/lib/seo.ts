@@ -19,6 +19,11 @@ interface LocalBusinessSchema {
     longitude: number
   }
   areaServed: Array<{ '@type': string; name: string }>
+  aggregateRating?: {
+    '@type': string
+    ratingValue: string
+    reviewCount: string
+  }
   openingHoursSpecification?: {
     '@type': string
     dayOfWeek: string[]

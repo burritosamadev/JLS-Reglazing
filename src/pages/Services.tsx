@@ -184,15 +184,6 @@ export default function Services() {
                 Most projects completed in 1-2 days. Minimal disruption to your routine.
               </p>
             </div>
-            <div className="p-8">
-              <ArrowPathIcon className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-3">
-                Eco-Friendly
-              </h3>
-              <p className="text-gray-700 font-jost">
-                Refinishing reduces waste. No demolition or landfill disposal required.
-              </p>
-            </div>
           </div>
         </div>
       </section>

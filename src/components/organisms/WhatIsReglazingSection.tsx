@@ -6,7 +6,6 @@ export default function WhatIsReglazingSection() {
   const benefits = [
     'Save up to 90% vs replacement',
     'Completed in 1-2 days',
-    'Eco-friendly alternative',
     'Durable, long-lasting finish',
     '2-year warranty included',
   ]
@@ -57,7 +56,7 @@ export default function WhatIsReglazingSection() {
               </p>
               <p className="text-lg text-gray-700 font-jost leading-relaxed">
                 We apply a durable, high-quality coating that transforms old, damaged surfaces into
-                beautiful fixtures. The process is fast, cost-effective, and environmentally friendly.
+                beautiful fixtures. The process is fast and cost-effective.
               </p>
 
               {/* Benefits List */}

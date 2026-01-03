@@ -30,7 +30,7 @@ export default function TopBar() {
           {/* Social Media Icons */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="https://facebook.com/jlsreglazing"
+              href="https://www.facebook.com/profile.php?id=61586186871010"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-100 hover:text-[#FB8040] transition-colors transform hover:scale-110 duration-200"

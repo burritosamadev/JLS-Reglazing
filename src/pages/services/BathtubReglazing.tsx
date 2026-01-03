@@ -11,7 +11,6 @@ export default function BathtubReglazing() {
         'Complete in just 3-5 hours',
         'Available in custom colors and finishes',
         '2-year warranty on all work',
-        'Eco-friendly process with no demolition',
         'Lasts 10-15 years with proper care',
       ]}
       processSteps={[

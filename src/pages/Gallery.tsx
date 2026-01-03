@@ -59,20 +59,16 @@ export default function Gallery() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-neutral-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="hero-title mb-6">Before & After Gallery</h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto font-jost">
-              See the transformation. Over 4,000 units serviced with exceptional results.
-              Drag the slider to compare before and after.
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6">
+              Before & After Gallery
+            </h1>
+            <p className="text-xl text-neutral-100 max-w-3xl mx-auto">
+              See the amazing transformations we've achieved for over 4,000 satisfied customers
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -94,7 +90,7 @@ export default function Gallery() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="mt-4 text-center"
                 >
-                  <h3 className="text-xl font-orbitron font-bold text-navy-900 mb-2">
+                  <h3 className="text-xl font-orbitron font-bold text-[#232423] mb-2">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 font-jost">{project.description}</p>
@@ -106,23 +102,23 @@ export default function Gallery() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-navy-900 text-white">
+      <section className="py-20 bg-[#232423] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-orbitron font-bold text-blue-400 mb-2">20+</div>
+              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">20+</div>
               <p className="text-xl font-jost">Years Experience</p>
             </div>
             <div>
-              <div className="text-5xl font-orbitron font-bold text-blue-400 mb-2">4,000+</div>
+              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">4,000+</div>
               <p className="text-xl font-jost">Units Serviced</p>
             </div>
             <div>
-              <div className="text-5xl font-orbitron font-bold text-blue-400 mb-2">100%</div>
+              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">100%</div>
               <p className="text-xl font-jost">Satisfaction Rate</p>
             </div>
             <div>
-              <div className="text-5xl font-orbitron font-bold text-blue-400 mb-2">2-Year</div>
+              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">2-Year</div>
               <p className="text-xl font-jost">Warranty</p>
             </div>
           </div>
@@ -133,7 +129,7 @@ export default function Gallery() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title text-navy-900 mb-4">What Our Customers Say</h2>
+            <h2 className="section-title text-[#232423] mb-4">What Our Customers Say</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -153,7 +149,7 @@ export default function Gallery() {
                 "Outstanding work! Our bathtub looks brand new. Jorge and his team were
                 professional, punctual, and the quality exceeded our expectations."
               </p>
-              <p className="font-orbitron font-semibold text-navy-900">
+              <p className="font-orbitron font-semibold text-[#232423]">
                 - San Bernardino Homeowner
               </p>
             </motion.div>
@@ -174,7 +170,7 @@ export default function Gallery() {
                 "Saved thousands compared to replacement. The kitchen countertops look amazing and
                 the 2-year warranty gives us peace of mind."
               </p>
-              <p className="font-orbitron font-semibold text-navy-900">
+              <p className="font-orbitron font-semibold text-[#232423]">
                 - Riverside Property Manager
               </p>
             </motion.div>
@@ -195,7 +191,7 @@ export default function Gallery() {
                 "Highly recommend! Jorge's expertise and attention to detail transformed our
                 apartment complex bathrooms. Excellent value for money."
               </p>
-              <p className="font-orbitron font-semibold text-navy-900">
+              <p className="font-orbitron font-semibold text-[#232423]">
                 - Los Angeles Property Owner
               </p>
             </motion.div>
@@ -204,7 +200,7 @@ export default function Gallery() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Ready for Your Own Transformation?</h2>
           <p className="text-xl mb-8 font-jost">
@@ -212,7 +208,7 @@ export default function Gallery() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Get Your Free Quote
           </Link>

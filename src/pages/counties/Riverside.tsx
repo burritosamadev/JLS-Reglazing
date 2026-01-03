@@ -6,7 +6,7 @@ export default function Riverside() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ export default function Riverside() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="section-title text-navy-900 mb-6">
+              <h2 className="section-title text-[#232423] mb-6">
                 Serving Riverside County Communities
               </h2>
               <p className="text-lg text-gray-700 font-jost mb-6 leading-relaxed">
@@ -42,7 +42,7 @@ export default function Riverside() {
               </p>
 
               <div className="bg-white rounded-xl p-6 shadow-lg mb-6">
-                <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-4">
+                <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-4">
                   Riverside County Services
                 </h3>
                 <ul className="space-y-2">
@@ -64,7 +64,7 @@ export default function Riverside() {
             </div>
 
             <div>
-              <div className="bg-blue-600 text-white rounded-xl p-8 mb-6">
+              <div className="bg-[#FB8040] text-white rounded-xl p-8 mb-6">
                 <h3 className="text-2xl font-orbitron font-bold mb-4">
                   Riverside County Homeowners Save Big
                 </h3>
@@ -73,14 +73,14 @@ export default function Riverside() {
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg font-jost font-bold transition-all duration-200 transform hover:scale-105"
+                  className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-8 py-3 rounded-lg font-jost font-bold transition-all duration-200 transform hover:scale-105"
                 >
                   Get Free Quote
                 </Link>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-4">
+                <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-4">
                   Trusted by Riverside County
                 </h3>
                 <ul className="space-y-3">
@@ -93,7 +93,7 @@ export default function Riverside() {
                     '4,000+ units serviced',
                   ].map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <StarIcon className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" />
+                      <StarIcon className="w-6 h-6 text-[#FB8040] mr-3 flex-shrink-0" />
                       <span className="text-gray-700 font-jost">{feature}</span>
                     </li>
                   ))}
@@ -108,7 +108,7 @@ export default function Riverside() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-title text-navy-900 mb-4">
+            <h2 className="section-title text-[#232423] mb-4">
               Serving Riverside County Cities
             </h2>
           </div>
@@ -136,7 +136,7 @@ export default function Riverside() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-900 text-white">
+      <section className="py-20 bg-[#232423] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Riverside County's Reglazing Experts</h2>
           <p className="text-xl mb-8 font-jost">
@@ -144,7 +144,7 @@ export default function Riverside() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="inline-block bg-[#FB8040] hover:bg-[#E5722A] text-white px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Get Your Free Quote
           </Link>

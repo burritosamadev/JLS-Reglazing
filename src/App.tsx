@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Layout from './components/templates/Layout'
 import Home from './pages/Home'
 import Services from './pages/Services'
@@ -12,6 +13,17 @@ import Riverside from './pages/counties/Riverside'
 import Hemet from './pages/counties/Hemet'
 import LosAngeles from './pages/counties/LosAngeles'
 import Victorville from './pages/counties/Victorville'
+
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 // Individual Service Pages - Disabled for now, re-enable later
 // import BathtubReglazing from './pages/services/BathtubReglazing'
 // import KitchenCountertop from './pages/services/KitchenCountertop'
@@ -21,9 +33,10 @@ import Victorville from './pages/counties/Victorville'
 // import EnclosureRefinishing from './pages/services/EnclosureRefinishing'
 // import CutOutRepairs from './pages/services/CutOutRepairs'
 
-function App() {
+function AppContent() {
   return (
-    <Router>
+    <>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -48,6 +61,14 @@ function App() {
           {/* <Route path="/services/cut-out-repairs" element={<CutOutRepairs />} /> */}
         </Routes>
       </Layout>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   )
 }

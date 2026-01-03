@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
+import { analytics } from '../../lib/analytics'
 
 export default function QuickQuoteForm() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,7 @@ export default function QuickQuoteForm() {
     if (!hasInteracted.current) {
       hasInteracted.current = true
       setStartTime(Date.now())
+      analytics.formStart('QuickQuote')
     }
   }
 
@@ -63,6 +65,9 @@ export default function QuickQuoteForm() {
         throw new Error(data.message || 'Failed to submit form')
       }
 
+      // Track successful form submission
+      analytics.formSubmit('QuickQuote')
+
       setIsSuccess(true)
       setFormData({
         name: '',
@@ -83,7 +88,10 @@ export default function QuickQuoteForm() {
         setIsSuccess(false)
       }, 5000)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong')
+      const errorMessage = err instanceof Error ? err.message : 'Something went wrong'
+      setError(errorMessage)
+      // Track form error
+      analytics.formError('QuickQuote', errorMessage)
     } finally {
       setIsSubmitting(false)
     }

@@ -22,7 +22,7 @@ export default function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -61,7 +61,7 @@ export default function About() {
                   alt="Jorge Saldana - Founder of JLS Reglazing"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900 to-transparent p-8 rounded-b-2xl">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#232423] to-transparent p-8 rounded-b-2xl">
                   <h2 className="text-3xl font-orbitron font-bold text-white mb-2">Jorge Saldana</h2>
                   <p className="text-xl text-gray-100 font-jost">
                     Founder & Master Craftsman
@@ -83,7 +83,7 @@ export default function About() {
                 },
               }}
             >
-              <h2 className="text-3xl font-orbitron font-semibold text-navy-900 mb-6">
+              <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6">
                 Our Story
               </h2>
               <div className="space-y-4 text-gray-700 font-jost text-lg leading-relaxed">
@@ -113,7 +113,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title text-navy-900 mb-4">Our Credentials</h2>
+            <h2 className="section-title text-[#232423] mb-4">Our Credentials</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
               Certified, insured, and committed to excellence
             </p>
@@ -136,8 +136,8 @@ export default function About() {
                 }}
                 className="bg-gray-100 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300"
               >
-                <credential.Icon className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-orbitron font-semibold text-navy-900">
+                <credential.Icon className="w-16 h-16 text-[#FB8040] mx-auto mb-4" />
+                <h3 className="text-xl font-orbitron font-semibold text-[#232423]">
                   {credential.label}
                 </h3>
               </motion.div>
@@ -150,12 +150,12 @@ export default function About() {
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title text-navy-900 mb-4">Why Choose JLS Reglazing?</h2>
+            <h2 className="section-title text-[#232423] mb-4">Why Choose JLS Reglazing?</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-4">
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-4">
                 Experience You Can Trust
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
@@ -166,7 +166,7 @@ export default function About() {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-4">
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-4">
                 Quality Guaranteed
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
@@ -177,18 +177,18 @@ export default function About() {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-4">
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-4">
                 Cost-Effective Solutions
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Save up to <span className="font-bold text-blue-600">90%</span> compared to replacement costs. Our reglazing services deliver
+                Save up to <span className="font-bold text-[#FB8040]">90%</span> compared to replacement costs. Our reglazing services deliver
                 like-new results at a fraction of the price, making quality bathroom and kitchen
                 updates accessible to everyone.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-4">
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-4">
                 Customer-Focused Service
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
@@ -205,7 +205,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-title text-navy-900 mb-4">Proudly Serving Southern California</h2>
+            <h2 className="section-title text-[#232423] mb-4">Proudly Serving Southern California</h2>
             <p className="text-xl text-gray-700 font-jost">
               San Bernardino County • Riverside County • Hemet • Los Angeles County • Victorville
             </p>
@@ -214,7 +214,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Ready to Work with Us?</h2>
           <p className="text-xl mb-8 font-jost">
@@ -222,7 +222,7 @@ export default function About() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Contact Us Today
           </Link>

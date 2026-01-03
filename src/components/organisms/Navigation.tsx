@@ -1,9 +1,19 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import Button from '../atoms/Button'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
+  // Helper function to check if link is active
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/'
+    }
+    return location.pathname.startsWith(path)
+  }
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -15,7 +25,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-navy-900 text-white sticky top-0 z-50 shadow-lg">
+    <nav className="bg-[#232423] text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -29,7 +39,11 @@ export default function Navigation() {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-gray-100 hover:text-blue-600 transition-colors duration-200 font-jost font-medium"
+                className={`font-jost font-medium transition-all duration-200 ${
+                  isActive(link.path)
+                    ? 'text-white border-b-2 border-[#FB8040]'
+                    : 'text-gray-100 hover:text-[#FB8040] border-b-2 border-transparent'
+                }`}
               >
                 {link.name}
               </Link>
@@ -38,12 +52,9 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link
-              to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-jost font-semibold transition-all duration-200 transform hover:scale-105"
-            >
+            <Button href="/contact" variant="primary" size="md">
               Get Free Quote
-            </Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -76,26 +87,28 @@ export default function Navigation() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-navy-800"
+          className="md:hidden bg-[#221F1C]"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-navy-700 hover:text-white transition-colors"
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  isActive(link.path)
+                    ? 'bg-[#FB8040] text-white font-semibold'
+                    : 'text-gray-100 hover:bg-[#FB8040]/20 hover:text-white'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md font-semibold mt-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Get Free Quote
-            </Link>
+            <div className="mt-4" onClick={() => setIsOpen(false)}>
+              <Button href="/contact" variant="primary" size="md" fullWidth>
+                Get Free Quote
+              </Button>
+            </div>
           </div>
         </motion.div>
       )}

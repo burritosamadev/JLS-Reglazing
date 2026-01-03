@@ -65,7 +65,7 @@ export default function Process() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -109,7 +109,7 @@ export default function Process() {
                   <div
                     className={`relative ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
                   >
-                    <div className="relative aspect-[4/3] bg-gradient-to-br from-navy-900 to-blue-900 rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="relative aspect-[4/3] bg-gradient-to-br from-[#232423] to-[#221F1C] rounded-2xl overflow-hidden shadow-2xl">
                       {/* Step Number Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-[12rem] font-orbitron font-bold text-white/10 leading-none">
@@ -132,12 +132,12 @@ export default function Process() {
                   {/* Content Side */}
                   <div className={index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}>
                     <div className="inline-block mb-4">
-                      <span className="text-blue-600 font-orbitron font-bold text-sm tracking-widest uppercase">
+                      <span className="text-[#FB8040] font-orbitron font-bold text-sm tracking-widest uppercase">
                         Step {step.number}
                       </span>
                     </div>
 
-                    <h3 className="text-4xl md:text-5xl font-orbitron font-bold text-navy-900 mb-6 leading-tight">
+                    <h3 className="text-4xl md:text-5xl font-orbitron font-bold text-[#232423] mb-6 leading-tight">
                       {step.title}
                     </h3>
 
@@ -180,7 +180,7 @@ export default function Process() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title text-navy-900 mb-4">Why Our Process Works</h2>
+            <h2 className="section-title text-[#232423] mb-4">Why Our Process Works</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
               20 years of experience perfecting our reglazing technique
             </p>
@@ -188,8 +188,8 @@ export default function Process() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <ViewfinderCircleIcon className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-3">
+              <ViewfinderCircleIcon className="w-16 h-16 text-[#FB8040] mx-auto mb-4" />
+              <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-3">
                 Precision Work
               </h3>
               <p className="text-gray-700 font-jost">
@@ -198,8 +198,8 @@ export default function Process() {
             </div>
 
             <div className="text-center p-6">
-              <ShieldCheckIcon className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-3">
+              <ShieldCheckIcon className="w-16 h-16 text-[#FB8040] mx-auto mb-4" />
+              <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-3">
                 2-Year Warranty
               </h3>
               <p className="text-gray-700 font-jost">
@@ -208,8 +208,8 @@ export default function Process() {
             </div>
 
             <div className="text-center p-6">
-              <ClockIcon className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-3">
+              <ClockIcon className="w-16 h-16 text-[#FB8040] mx-auto mb-4" />
+              <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-3">
                 Quick Turnaround
               </h3>
               <p className="text-gray-700 font-jost">
@@ -218,8 +218,8 @@ export default function Process() {
             </div>
 
             <div className="text-center p-6">
-              <SparklesIcon className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-3">
+              <SparklesIcon className="w-16 h-16 text-[#FB8040] mx-auto mb-4" />
+              <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-3">
                 Like-New Results
               </h3>
               <p className="text-gray-700 font-jost">
@@ -231,7 +231,7 @@ export default function Process() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Experience Professional Reglazing</h2>
           <p className="text-xl mb-8 font-jost">
@@ -239,7 +239,7 @@ export default function Process() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Request Free Quote
           </Link>

@@ -98,7 +98,7 @@ export default function Services() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -135,7 +135,7 @@ export default function Services() {
                 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-4">
+                <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-4">
                   {service.title}
                 </h3>
                 <p className="text-gray-700 font-jost mb-6 leading-relaxed">
@@ -168,8 +168,8 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-8">
               <CurrencyDollarIcon className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-3">
-                Save Up to <span className="text-blue-600 font-bold">90%</span>
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-3">
+                Save Up to <span className="text-[#FB8040] font-bold">90%</span>
               </h3>
               <p className="text-gray-700 font-jost">
                 Reglazing costs a fraction of replacement. Keep more money in your pocket.
@@ -177,7 +177,7 @@ export default function Services() {
             </div>
             <div className="p-8">
               <BoltIcon className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-3">
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-3">
                 Quick Turnaround
               </h3>
               <p className="text-gray-700 font-jost">
@@ -186,7 +186,7 @@ export default function Services() {
             </div>
             <div className="p-8">
               <ArrowPathIcon className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-orbitron font-semibold text-navy-900 mb-3">
+              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-3">
                 Eco-Friendly
               </h3>
               <p className="text-gray-700 font-jost">
@@ -198,7 +198,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-8 font-jost">
@@ -206,7 +206,7 @@ export default function Services() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Get Your Free Quote
           </Link>

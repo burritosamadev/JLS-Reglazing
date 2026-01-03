@@ -1,3 +1,4 @@
+import 'dotenv/config' // Load environment variables for local development
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { v4 as uuidv4 } from 'uuid'
 import { formSubmissionSchema } from '../src/lib/validation.js'
@@ -5,7 +6,6 @@ import { calculateSpamScore } from '../src/lib/spam-detection.js'
 import { sendFormNotification } from '../src/lib/email.js'
 import { sendSubmissionNotification, sendSpamAlert } from '../src/lib/slack.js'
 import { addFormSubmission, updateSubmission } from '../src/lib/google-sheets.js'
-import { uploadFileToDrive } from '../src/lib/google-drive.js'
 import { rateLimiter } from '../src/lib/rate-limiter.js'
 
 export default async function handler(
@@ -51,25 +51,17 @@ export default async function handler(
       status = 'spam'
     }
 
-    // Handle file attachments - upload to Google Drive
-    const attachments = (req.body as any).attachments || []
+    // File attachments feature removed
     const attachmentLinks: string[] = []
-
-    if (attachments.length > 0) {
-      for (const att of attachments) {
-        try {
-          const link = await uploadFileToDrive(att)
-          attachmentLinks.push(link)
-        } catch (error) {
-          console.error('File upload error:', error)
-          // Continue submission even if file upload fails
-        }
-      }
-    }
 
     // Generate unique submission ID
     const submissionId = uuidv4()
     const createdAt = new Date().toISOString()
+
+    // Extract new form fields
+    const serviceAddress = (req.body as any).serviceAddress || ''
+    const occupied = (req.body as any).occupied || false
+    const smsConsent = (req.body as any).smsConsent || false
 
     // Prepare submission data for Google Sheets
     const submissionData = {
@@ -80,6 +72,9 @@ export default async function handler(
       phone: validatedData.phone || '',
       company: validatedData.company || '',
       subject: validatedData.subject || '',
+      service_address: serviceAddress,
+      occupied: occupied,
+      sms_consent: smsConsent,
       message: validatedData.message,
       attachment_links: JSON.stringify(attachmentLinks),
       status,

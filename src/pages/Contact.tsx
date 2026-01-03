@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
-import ContactForm from '../components/organisms/ContactForm'
+import QuickQuoteForm from '../components/organisms/QuickQuoteForm'
 import ServiceAreaMap from '../components/organisms/ServiceAreaMap'
+import Card from '../components/atoms/Card'
+import Heading from '../components/atoms/Heading'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
 export default function Contact() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -30,44 +32,52 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h2 className="text-2xl font-orbitron font-semibold text-navy-900 mb-6">
+              <div className="bg-[#FAF8F3] rounded-xl p-8 shadow-lg">
+                <h2 className="text-2xl font-orbitron font-semibold text-[#232423] mb-6">
                   Request a Quote
                 </h2>
-                <p className="text-gray-700 font-jost mb-8">
+                <p className="text-[#7A7269] font-jost mb-8">
                   Give us a call or submit the quote form below to get your bathtub, tub, bath
                   vanity, kitchen countertop, and kitchen sink professionally reglazed this week!
                 </p>
 
-                <ContactForm />
+                <QuickQuoteForm />
               </div>
             </div>
 
             {/* Info Sidebar */}
             <div className="space-y-6">
               {/* Contact Info */}
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-4">
+              <Card variant="default">
+                <Heading as="h3" styleAs="card" className="mb-4">
                   Contact Information
-                </h3>
+                </Heading>
                 <div className="space-y-4">
                   <div>
                     <p className="text-sm text-gray-600 font-jost mb-1">Email</p>
                     <a
                       href="mailto:jorge@jlsreglazing.com"
-                      className="text-blue-600 hover:text-blue-700 font-jost"
+                      className="text-[#FB8040] hover:text-[#E5722A] font-jost"
                     >
                       jorge@jlsreglazing.com
                     </a>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 font-jost mb-1">Phone</p>
-                    <a
-                      href="tel:+1XXXXXXXXXX"
-                      className="text-blue-600 hover:text-blue-700 font-jost"
-                    >
-                      (XXX) XXX-XXXX
-                    </a>
+                    <p className="text-sm text-neutral-400 font-medium mb-2">Phone</p>
+                    <div className="space-y-2">
+                      <a
+                        href="tel:+13107420057"
+                        className="block text-[#FB8040] hover:text-[#E5722A] font-medium"
+                      >
+                        <span className="text-neutral-400 text-sm">English:</span> +1 (310) 742-0057
+                      </a>
+                      <a
+                        href="tel:+14243815170"
+                        className="block text-[#FB8040] hover:text-[#E5722A] font-medium"
+                      >
+                        <span className="text-neutral-400 text-sm">Spanish:</span> +1 (424) 381-5170
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 font-jost mb-1">Service Areas</p>
@@ -76,7 +86,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Card>
 
               {/* How It Works */}
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
@@ -155,7 +165,7 @@ export default function Contact() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="section-title text-navy-900 mb-4">Our Service Coverage Area</h2>
+            <h2 className="section-title text-[#232423] mb-4">Our Service Coverage Area</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
               Proudly serving Southern California with professional reglazing services
             </p>
@@ -173,7 +183,7 @@ export default function Contact() {
             ].map((area) => (
               <div
                 key={area}
-                className="bg-navy-900 text-white rounded-lg p-6 text-center font-jost font-semibold text-lg"
+                className="bg-[#232423] text-white rounded-lg p-6 text-center font-jost font-semibold text-lg"
               >
                 {area}
               </div>

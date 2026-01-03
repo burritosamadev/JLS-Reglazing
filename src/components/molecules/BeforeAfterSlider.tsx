@@ -53,7 +53,7 @@ export default function BeforeAfterSlider({
       <div className="absolute inset-0">
         <img
           src={afterImage}
-          alt={`${alt} - After`}
+          alt=""
           className="w-full h-full object-cover"
           draggable={false}
         />
@@ -71,7 +71,7 @@ export default function BeforeAfterSlider({
       >
         <img
           src={beforeImage}
-          alt={`${alt} - Before`}
+          alt=""
           className="w-full h-full object-cover"
           draggable={false}
         />

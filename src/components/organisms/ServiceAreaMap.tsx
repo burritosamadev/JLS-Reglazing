@@ -22,31 +22,31 @@ export default function ServiceAreaMap() {
       name: 'San Bernardino County',
       center: [34.1083, -117.2898] as [number, number],
       radius: 40000, // 40km radius
-      color: '#3b82f6',
+      color: '#FBB040',
     },
     {
       name: 'Riverside County',
       center: [33.7537, -116.2059] as [number, number],
       radius: 45000,
-      color: '#10b981',
+      color: '#ca8c2a',
     },
     {
       name: 'Hemet',
       center: [33.7475, -116.9719] as [number, number],
       radius: 20000,
-      color: '#f59e0b',
+      color: '#9b6a1e',
     },
     {
       name: 'Los Angeles County',
       center: [34.0522, -118.2437] as [number, number],
       radius: 50000,
-      color: '#8b5cf6',
+      color: '#6d4a12',
     },
     {
       name: 'Victorville',
       center: [34.5362, -117.2912] as [number, number],
       radius: 25000,
-      color: '#ef4444',
+      color: '#432c07',
     },
   ]
 
@@ -54,12 +54,13 @@ export default function ServiceAreaMap() {
   const mapCenter: [number, number] = [33.9, -117.5]
 
   return (
-    <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-2xl">
+    <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl z-0">
       <MapContainer
         center={mapCenter}
         zoom={8}
         scrollWheelZoom={false}
-        className="w-full h-full"
+        className="h-full w-full"
+        style={{ zIndex: 0 }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

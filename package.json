@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:api": "vercel dev --listen 3001",
+    "dev:all": "npm run dev & npm run dev:api",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:drive": "tsx scripts/verify-google-drive.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -23,6 +26,7 @@
     "node-fetch": "^3.3.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.11.0",
     "uuid": "^13.0.0",
@@ -47,5 +51,10 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
+  },
+  "overrides": {
+    "path-to-regexp": "^6.3.0",
+    "esbuild": "^0.24.0",
+    "undici": "^5.29.0"
   }
 }

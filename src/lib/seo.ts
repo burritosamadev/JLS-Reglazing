@@ -59,7 +59,7 @@ export const generateLocalBusinessSchema = (): LocalBusinessSchema => {
     description: 'Professional bathtub and kitchen reglazing services in Southern California. 20+ years experience, 4,000+ units serviced.',
     '@id': 'https://jlsreglazing.com',
     url: 'https://jlsreglazing.com',
-    telephone: '+1-XXX-XXX-XXXX',
+    telephone: '+1-310-742-0057',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -71,7 +71,13 @@ export const generateLocalBusinessSchema = (): LocalBusinessSchema => {
       { '@type': 'City', name: 'Riverside' },
       { '@type': 'City', name: 'Hemet' },
       { '@type': 'City', name: 'Los Angeles' },
+      { '@type': 'City', name: 'Victorville' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '150',
+    },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

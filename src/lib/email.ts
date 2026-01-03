@@ -15,23 +15,17 @@ interface FormNotificationData {
 
 export async function sendFormNotification(data: FormNotificationData): Promise<void> {
   // In production, this would use nodemailer or a service like SendGrid
-  // For now, we'll just log it
-  console.log('Email notification would be sent:', {
+  // For now, we'll just log it (without PII for security)
+  console.log('Email notification prepared:', {
     to: process.env.NOTIFICATION_EMAIL || 'notifications@jlsreglazing.com',
-    subject: `New Quote Request from ${data.name}`,
-    body: `
-      New form submission received:
-
-      Name: ${data.name}
-      Email: ${data.email}
-      Phone: ${data.phone || 'Not provided'}
-      Company: ${data.company || 'Not provided'}
-      Subject: ${data.subject || 'Not provided'}
-      Message: ${data.message}
-
-      IP Address: ${data.ipAddress}
-      Submitted at: ${data.submittedAt}
-    `,
+    subject: 'New Quote Request',
+    hasName: !!data.name,
+    hasEmail: !!data.email,
+    hasPhone: !!data.phone,
+    hasCompany: !!data.company,
+    hasSubject: !!data.subject,
+    hasMessage: !!data.message,
+    timestamp: data.submittedAt,
   })
 
   // Simulate async operation

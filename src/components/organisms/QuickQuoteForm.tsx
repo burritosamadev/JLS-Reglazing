@@ -1,56 +1,28 @@
 import { useState, useRef } from 'react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
-interface QuickQuoteFormProps {
-  compact?: boolean
-}
-
-export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps) {
+export default function QuickQuoteForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    serviceType: '',
-    description: '',
+    service: '',
+    serviceAddress: '',
+    projectDetails: '',
+    occupied: false,
+    smsConsent: false,
     website: '', // Honeypot
   })
-  const [files, setFiles] = useState<FileList | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [startTime, setStartTime] = useState<number | null>(null)
   const hasInteracted = useRef(false)
-  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleFirstInteraction = () => {
     if (!hasInteracted.current) {
       hasInteracted.current = true
       setStartTime(Date.now())
-    }
-  }
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFiles = e.target.files
-    if (selectedFiles) {
-      // Validate file size (max 10MB total)
-      const totalSize = Array.from(selectedFiles).reduce((acc, file) => acc + file.size, 0)
-      if (totalSize > 10 * 1024 * 1024) {
-        setError('Total file size must be less than 10MB')
-        e.target.value = ''
-        return
-      }
-      // Validate file types (images only)
-      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/heic']
-      const invalidFiles = Array.from(selectedFiles).filter(
-        (file) => !allowedTypes.includes(file.type.toLowerCase())
-      )
-      if (invalidFiles.length > 0) {
-        setError('Only image files (JPG, PNG, WebP, HEIC) are allowed')
-        e.target.value = ''
-        return
-      }
-      setFiles(selectedFiles)
-      setError(null)
     }
   }
 
@@ -63,37 +35,18 @@ export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps)
     const submissionTime = startTime ? Math.floor((Date.now() - startTime) / 1000) : 0
 
     try {
-      // Convert files to base64 if any
-      const fileData: Array<{ name: string; type: string; data: string }> = []
-      if (files) {
-        for (const file of Array.from(files)) {
-          const base64 = await new Promise<string>((resolve, reject) => {
-            const reader = new FileReader()
-            reader.onload = () => {
-              const result = reader.result as string
-              resolve(result.split(',')[1]) // Remove data:image/xxx;base64, prefix
-            }
-            reader.onerror = reject
-            reader.readAsDataURL(file)
-          })
-          fileData.push({
-            name: file.name,
-            type: file.type,
-            data: base64,
-          })
-        }
-      }
-
       // Prepare JSON payload
       const payload = {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
-        subject: formData.serviceType,
-        message: `${formData.description}\n\n[Submitted via Quick Quote Form]${fileData.length > 0 ? `\n${fileData.length} photo(s) attached` : ''}`,
+        subject: formData.service,
+        serviceAddress: formData.serviceAddress,
+        occupied: formData.occupied,
+        smsConsent: formData.smsConsent,
+        message: formData.projectDetails || '',
         website: formData.website,
         submissionTime,
-        attachments: fileData,
       }
 
       const response = await fetch('/api/submit-form', {
@@ -115,14 +68,13 @@ export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps)
         name: '',
         email: '',
         phone: '',
-        serviceType: '',
-        description: '',
+        service: '',
+        serviceAddress: '',
+        projectDetails: '',
+        occupied: false,
+        smsConsent: false,
         website: '',
       })
-      setFiles(null)
-      if (fileInputRef.current) {
-        fileInputRef.current.value = ''
-      }
       hasInteracted.current = false
       setStartTime(null)
 
@@ -140,18 +92,23 @@ export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps)
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    const { name, value, type } = e.target
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked
+      setFormData((prev) => ({ ...prev, [name]: checked }))
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }))
+    }
   }
 
   if (isSuccess) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
         <CheckCircleIcon className="w-16 h-16 text-green-600 mx-auto mb-3" />
-        <h3 className="text-xl font-orbitron font-bold text-green-900 mb-2">
+        <h3 className="text-xl font-bold text-green-900 mb-2">
           Quote Request Received!
         </h3>
-        <p className="text-sm text-green-700 font-jost">
+        <p className="text-sm text-green-700">
           We'll contact you within 24 hours with your personalized quote.
         </p>
       </div>
@@ -159,7 +116,7 @@ export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps)
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-3">
       {/* Honeypot field */}
       <input
         type="text"
@@ -173,12 +130,13 @@ export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps)
       />
 
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-red-700 text-sm">
+        <div className="bg-red-50 border border-red-200 rounded-md p-3 text-red-700 text-sm">
           {error}
         </div>
       )}
 
-      <div>
+      {/* Row 1: Name + Email */}
+      <div className="grid grid-cols-2 gap-2">
         <input
           type="text"
           name="name"
@@ -186,106 +144,128 @@ export default function QuickQuoteForm({ compact = false }: QuickQuoteFormProps)
           value={formData.name}
           onChange={handleChange}
           onFocus={handleFirstInteraction}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent font-jost bg-white text-gray-900 placeholder:text-gray-400"
-          placeholder="Your Name *"
+          className="h-9 px-3 border border-[#E5E0D6] rounded-md text-sm placeholder:text-[#7A7269] text-[#221F1C] bg-white focus:ring-2 focus:ring-[#FB8040] focus:border-transparent"
+          placeholder="Full Name *"
+        />
+        <input
+          type="email"
+          name="email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+          onFocus={handleFirstInteraction}
+          className="h-9 px-3 border border-[#E5E0D6] rounded-md text-sm placeholder:text-[#7A7269] text-[#221F1C] bg-white focus:ring-2 focus:ring-[#FB8040] focus:border-transparent"
+          placeholder="Email *"
         />
       </div>
 
-      <div className={compact ? 'grid grid-cols-1 md:grid-cols-2 gap-4' : 'space-y-4'}>
-        <div>
-          <input
-            type="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            onFocus={handleFirstInteraction}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent font-jost bg-white text-gray-900 placeholder:text-gray-400"
-            placeholder="Email Address *"
-          />
-        </div>
-
-        <div>
-          <input
-            type="tel"
-            name="phone"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-            onFocus={handleFirstInteraction}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent font-jost bg-white text-gray-900 placeholder:text-gray-400"
-            placeholder="Phone Number *"
-          />
-        </div>
-      </div>
-
-      <div>
-        <select
-          name="serviceType"
+      {/* Row 2: Phone + Service */}
+      <div className="grid grid-cols-2 gap-2">
+        <input
+          type="tel"
+          name="phone"
           required
-          value={formData.serviceType}
+          value={formData.phone}
           onChange={handleChange}
           onFocus={handleFirstInteraction}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent font-jost bg-white text-gray-900"
+          className="h-9 px-3 border border-[#E5E0D6] rounded-md text-sm placeholder:text-[#7A7269] text-[#221F1C] bg-white focus:ring-2 focus:ring-[#FB8040] focus:border-transparent"
+          placeholder="Phone *"
+        />
+        <select
+          name="service"
+          required
+          value={formData.service}
+          onChange={handleChange}
+          onFocus={handleFirstInteraction}
+          className="h-9 px-3 pr-8 border border-[#E5E0D6] rounded-md text-sm text-[#221F1C] bg-white focus:ring-2 focus:ring-[#FB8040] focus:border-transparent appearance-none"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%237A7269' stroke-width='2'/%3E%3C/svg%3E")`,
+            backgroundPosition: 'right 0.75rem center',
+            backgroundRepeat: 'no-repeat',
+          }}
         >
-          <option value="">Select Service Type *</option>
+          <option value="">Select Service *</option>
           <option value="Bathtub Reglazing">Bathtub Reglazing</option>
-          <option value="Kitchen Countertop">Kitchen Countertop</option>
-          <option value="Sink Refinishing">Sink Refinishing</option>
+          <option value="Bathroom Foundation Repair (cut-outs)">Bathroom Foundation Repair (cut-outs)</option>
+          <option value="Kitchen Reglazing">Kitchen Reglazing</option>
+          <option value="Sink/Vanity Reglazing">Sink/Vanity Reglazing</option>
           <option value="Tile Reglazing">Tile Reglazing</option>
-          <option value="Vanity Restoration">Vanity Restoration</option>
-          <option value="Crack Repair">Crack Repair</option>
-          <option value="Multiple Services">Multiple Services</option>
+          <option value="Porcelain Reglazing">Porcelain Reglazing</option>
+          <option value="Repair Cracks or Peeling">Repair Cracks or Peeling</option>
           <option value="Other">Other</option>
         </select>
       </div>
 
-      <div>
-        <textarea
-          name="description"
-          required
-          rows={compact ? 3 : 4}
-          value={formData.description}
+      {/* Row 3: Service Address */}
+      <input
+        type="text"
+        name="serviceAddress"
+        required
+        value={formData.serviceAddress}
+        onChange={handleChange}
+        onFocus={handleFirstInteraction}
+        className="h-9 px-3 border border-[#E5E0D6] rounded-md text-sm placeholder:text-[#7A7269] text-[#221F1C] bg-white focus:ring-2 focus:ring-[#FB8040] focus:border-transparent w-full"
+        placeholder="Service Address *"
+      />
+
+      {/* Row 4: Project Details */}
+      <textarea
+        name="projectDetails"
+        rows={2}
+        value={formData.projectDetails}
+        onChange={handleChange}
+        onFocus={handleFirstInteraction}
+        className="px-3 py-2 border border-[#E5E0D6] rounded-md text-sm placeholder:text-[#7A7269] text-[#221F1C] bg-white focus:ring-2 focus:ring-[#FB8040] focus:border-transparent resize-none w-full"
+        placeholder="Project details (optional)"
+      />
+
+      {/* Row 5: Occupied Checkbox */}
+      <div className="flex items-start gap-2">
+        <input
+          type="checkbox"
+          id="occupied"
+          name="occupied"
+          checked={formData.occupied}
           onChange={handleChange}
           onFocus={handleFirstInteraction}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent font-jost bg-white resize-none text-gray-900 placeholder:text-gray-400"
-          placeholder="Describe your project (size, location, timeline, etc.) *"
+          className="mt-0.5 w-4 h-4 border border-[#E5E0D6] rounded bg-white checked:bg-[#FB8040] checked:border-[#FB8040] focus:ring-2 focus:ring-[#FB8040] focus:ring-offset-0"
         />
-      </div>
-
-      <div>
-        <label className="block text-sm font-jost text-gray-700 mb-2">
-          Attach Photos (Optional - helps us provide accurate quote)
+        <label htmlFor="occupied" className="text-xs text-[#7A7269] leading-tight cursor-pointer">
+          Occupied
         </label>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="image/*"
-          multiple
-          onChange={handleFileChange}
-          onFocus={handleFirstInteraction}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent font-jost bg-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-        />
-        <p className="text-xs text-gray-500 mt-1 font-jost">
-          Max 10MB total. Supported: JPG, PNG, WebP, HEIC
-        </p>
-        {files && (
-          <p className="text-sm text-green-600 mt-2 font-jost">
-            {files.length} file{files.length > 1 ? 's' : ''} selected
-          </p>
-        )}
       </div>
 
+      {/* Row 6: SMS Consent Checkbox */}
+      <div className="flex items-start gap-2">
+        <input
+          type="checkbox"
+          id="smsConsent"
+          name="smsConsent"
+          checked={formData.smsConsent}
+          onChange={handleChange}
+          onFocus={handleFirstInteraction}
+          className="mt-0.5 w-4 h-4 border border-[#E5E0D6] rounded bg-white checked:bg-[#FB8040] checked:border-[#FB8040] focus:ring-2 focus:ring-[#FB8040] focus:ring-offset-0"
+        />
+        <label htmlFor="smsConsent" className="text-xs text-[#7A7269] leading-tight cursor-pointer">
+          I agree to receive SMS from JLS Reglazing. Msg & data rates may apply. Reply STOP to opt out.
+        </label>
+      </div>
+
+      {/* Row 7: Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-orbitron font-bold text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 shadow-lg"
+        className="w-full h-10 bg-[#FB8040] hover:bg-[#E5722A] text-white text-sm font-bold rounded-md flex items-center justify-center gap-2 disabled:opacity-50 transition-colors"
       >
-        {isSubmitting ? 'Sending...' : 'Get Free Quote'}
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+        <span>{isSubmitting ? 'Sending...' : 'Get Free Quote'}</span>
       </button>
 
-      <p className="text-xs text-center text-gray-600 font-jost">
-        By submitting, you agree to be contacted about your quote request.
+      {/* Row 8: Footer Privacy Note */}
+      <p className="text-[10px] text-[#7A7269] text-center leading-tight">
+        We respond within 24 hours. Your info is kept private.
       </p>
     </form>
   )

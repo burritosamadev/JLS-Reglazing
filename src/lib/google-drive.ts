@@ -80,7 +80,13 @@ export async function uploadFileToDrive(file: {
     console.log(`✓ File uploaded to Google Drive: ${uniqueFileName}`)
     return link
   } catch (error) {
-    console.error('Error uploading file to Google Drive:', error)
+    console.error('❌ Google Drive upload failed:', {
+      filename: file.name,
+      error: error instanceof Error ? error.message : String(error),
+      hasServiceAccount: !!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      hasFolderId: !!process.env.GOOGLE_DRIVE_FOLDER_ID,
+      hasPrivateKey: !!process.env.GOOGLE_PRIVATE_KEY,
+    })
     throw error
   }
 }

@@ -30,9 +30,9 @@ dist-ssr
 
 #secrets folder
 secrets/
+public/secrets/
 .vercel
 .env.vercel
-secrets
 /secrets/
 /secrets
 

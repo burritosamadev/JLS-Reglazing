@@ -56,6 +56,7 @@ export default function BeforeAfterSlider({
           alt={`${alt} - After`}
           className="w-full h-full object-cover"
           draggable={false}
+          loading="lazy"
         />
         <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-orbitron font-bold text-sm shadow-lg">
           AFTER
@@ -74,6 +75,7 @@ export default function BeforeAfterSlider({
           alt={`${alt} - Before`}
           className="w-full h-full object-cover"
           draggable={false}
+          loading="lazy"
         />
         <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-orbitron font-bold text-sm shadow-lg">
           BEFORE

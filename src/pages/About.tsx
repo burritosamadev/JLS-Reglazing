@@ -60,6 +60,7 @@ export default function About() {
                   src="/images/painter_1.jpg"
                   alt="Jorge Saldana - Founder of JLS Reglazing"
                   className="w-full h-auto rounded-2xl shadow-2xl"
+                  loading="lazy"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#232423] to-transparent p-8 rounded-b-2xl">
                   <h2 className="text-3xl font-orbitron font-bold text-white mb-2">Jorge Saldana</h2>

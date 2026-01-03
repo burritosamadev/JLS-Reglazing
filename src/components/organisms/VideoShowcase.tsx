@@ -10,6 +10,7 @@ export default function VideoShowcase() {
         <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black">
           <video
             controls
+            preload="none"
             className="w-full aspect-video object-contain"
           >
             <source src="/videos/video6.mp4" type="video/mp4" />

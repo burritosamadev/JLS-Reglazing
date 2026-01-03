@@ -76,6 +76,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            preload="none"
             className="w-full h-full object-cover opacity-60"
           >
             <source src="/videos/video1.mp4" type="video/mp4" />

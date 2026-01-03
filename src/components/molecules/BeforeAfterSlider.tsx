@@ -51,13 +51,20 @@ export default function BeforeAfterSlider({
     >
       {/* After Image (Background) */}
       <div className="absolute inset-0">
-        <img
-          src={afterImage}
-          alt={`${alt} - After`}
-          className="w-full h-full object-cover"
-          draggable={false}
-          loading="lazy"
-        />
+        <picture>
+          <source
+            srcSet={`${afterImage.replace('.jpg', '-800w.webp')} 800w, ${afterImage.replace('.jpg', '.webp')} 1536w`}
+            sizes="(max-width: 768px) 100vw, 800px"
+            type="image/webp"
+          />
+          <img
+            src={afterImage}
+            alt={`${alt} - After`}
+            className="w-full h-full object-cover"
+            draggable={false}
+            loading="lazy"
+          />
+        </picture>
         <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-orbitron font-bold text-sm shadow-lg">
           AFTER
         </div>
@@ -70,13 +77,20 @@ export default function BeforeAfterSlider({
           clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
         }}
       >
-        <img
-          src={beforeImage}
-          alt={`${alt} - Before`}
-          className="w-full h-full object-cover"
-          draggable={false}
-          loading="lazy"
-        />
+        <picture>
+          <source
+            srcSet={`${beforeImage.replace('.jpg', '-800w.webp')} 800w, ${beforeImage.replace('.jpg', '.webp')} 1536w`}
+            sizes="(max-width: 768px) 100vw, 800px"
+            type="image/webp"
+          />
+          <img
+            src={beforeImage}
+            alt={`${alt} - Before`}
+            className="w-full h-full object-cover"
+            draggable={false}
+            loading="lazy"
+          />
+        </picture>
         <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-orbitron font-bold text-sm shadow-lg">
           BEFORE
         </div>

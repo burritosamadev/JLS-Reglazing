@@ -59,6 +59,10 @@ export default function ServiceAreaMap() {
         center={mapCenter}
         zoom={8}
         scrollWheelZoom={false}
+        dragging={false}
+        touchZoom={false}
+        doubleClickZoom={false}
+        zoomControl={false}
         className="h-full w-full"
         style={{ zIndex: 0 }}
       >

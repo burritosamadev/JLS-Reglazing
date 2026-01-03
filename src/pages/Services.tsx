@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import {
   CurrencyDollarIcon,
   BoltIcon,
-  ArrowPathIcon,
   CheckCircleIcon,
 } from '@heroicons/react/24/outline'
 

@@ -22,7 +22,16 @@ export default function MobileCtaBar() {
             e.preventDefault()
             analytics.ctaClick('Get Quote', 'Mobile CTA Bar')
             const quoteSection = document.querySelector('#quote-form')
-            quoteSection?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            if (quoteSection) {
+              // Get the element's position
+              const elementPosition = quoteSection.getBoundingClientRect().top
+              const offsetPosition = elementPosition + window.pageYOffset - 80 // Account for fixed header
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              })
+            }
           }}
           className="flex-1 flex items-center justify-center gap-2 bg-[#221F1C] hover:bg-[#1a1816] text-white font-bold border-l border-[#FB8040]/30 transition-colors active:scale-95"
         >

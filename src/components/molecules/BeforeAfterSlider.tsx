@@ -5,12 +5,14 @@ interface BeforeAfterSliderProps {
   beforeImage: string
   afterImage: string
   alt: string
+  priority?: boolean // Set true for above-the-fold sliders to eager load and prevent layout shift
 }
 
 export default function BeforeAfterSlider({
   beforeImage,
   afterImage,
   alt,
+  priority = false,
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50)
   const [isDragging, setIsDragging] = useState(false)
@@ -40,8 +42,13 @@ export default function BeforeAfterSlider({
   }
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    e.preventDefault() // Prevent page scrolling while dragging
     const rect = e.currentTarget.getBoundingClientRect()
     handleMove(e.touches[0].clientX, rect)
+  }
+
+  const handleTouchStart = () => {
+    setIsDragging(true)
   }
 
   return (
@@ -50,12 +57,13 @@ export default function BeforeAfterSlider({
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-2xl cursor-col-resize select-none"
+      className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-2xl cursor-col-resize select-none touch-none"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
+      onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseUp}
     >
@@ -72,7 +80,8 @@ export default function BeforeAfterSlider({
             alt={`${alt} - After`}
             className="w-full h-full object-cover"
             draggable={false}
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'auto'}
           />
         </picture>
         <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-orbitron font-bold text-sm shadow-lg">
@@ -98,7 +107,8 @@ export default function BeforeAfterSlider({
             alt={`${alt} - Before`}
             className="w-full h-full object-cover"
             draggable={false}
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'auto'}
           />
         </picture>
         <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-orbitron font-bold text-sm shadow-lg">

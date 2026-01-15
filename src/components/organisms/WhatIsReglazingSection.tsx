@@ -40,6 +40,7 @@ export default function WhatIsReglazingSection() {
               beforeImage="/images/1_before.webp"
               afterImage="/images/1_after.webp"
               alt="Bathtub Transformation"
+              priority={true}
             />
           </motion.div>
 

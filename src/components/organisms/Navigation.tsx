@@ -45,7 +45,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
             {navLinks.map((link) => (
               link.hasDropdown ? (
                 <div
@@ -102,7 +102,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button href="/contact" variant="primary" size="md">
               Get Free Quote
             </Button>
@@ -111,7 +111,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-navy-800 transition-colors"
+            className="lg:hidden p-2 rounded-md hover:bg-navy-800 transition-colors"
           >
             <svg
               className="h-6 w-6"

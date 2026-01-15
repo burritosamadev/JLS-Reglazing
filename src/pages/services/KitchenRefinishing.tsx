@@ -4,47 +4,47 @@ import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
 import SEO from '../../components/molecules/SEO'
 import BeforeAfterSlider from '../../components/molecules/BeforeAfterSlider'
 
-export default function BathtubEnclosureRefinishing() {
+export default function KitchenRefinishing() {
   const features = [
-    'Ceramic tile wall refinishing',
-    'Fiberglass surround reglazing',
-    'Grout restoration and sealing',
-    'Water damage repair',
-    'Mold and mildew resistant finish',
+    'Tile and laminate countertop refinishing',
+    'Bar top reglazing services',
+    'Heat and stain resistant finish',
+    'White and multi-spec color options',
+    'Crack and damage repair',
     '2-year warranty included',
   ]
 
   const faqs = [
     {
-      question: 'How much does bathtub enclosure refinishing cost?',
+      question: 'How much does kitchen countertop refinishing cost?',
       answer:
-        'Bathtub enclosure refinishing costs up to 90% less than tile replacement. The exact cost depends on size and tile condition. Contact us at (310) 742-0057 for a free quote. Ideal for rental property bathroom updates.',
+        'Kitchen countertop refinishing costs up to 90% less than full replacement. The exact cost depends on the size, condition, and materials. Contact us at (310) 742-0057 for a free quote. This makes it ideal for rental property updates.',
     },
     {
-      question: 'Can you refinish ceramic tile walls?',
+      question: 'What types of countertops can be refinished?',
       answer:
-        'Yes! We refinish ceramic tile bathtub surrounds, restoring grout lines and creating a seamless, waterproof finish. Our tile reglazing process eliminates mold, mildew, and staining.',
+        'We refinish tile countertops, laminate countertops, and bar tops. Our professional kitchen reglazing process restores worn surfaces with a durable, heat-resistant finish.',
     },
     {
-      question: 'How long do refinished enclosures last?',
+      question: 'How long do refinished kitchen countertops last?',
       answer:
-        'With proper care, refinished bathtub enclosures last 10+ years. All our enclosure refinishing projects include a 2-year warranty and mold-resistant, waterproof coatings.',
+        'With proper care, refinished kitchen countertops last 10+ years. All our kitchen refinishing projects include a 2-year warranty and professional-grade materials.',
     },
   ]
 
   const relatedServices = [
     { name: 'Bathtub Refinishing', url: '/services/bathtub-refinishing' },
-    { name: 'Kitchen Countertop Refinishing', url: '/services/kitchen-refinishing' },
+    { name: 'Sink Refinishing', url: '/services/sink-refinishing' },
     { name: 'Crack & Chip Repair', url: '/services/crack-repair' },
   ]
 
   return (
     <div>
       <SEO
-        title="Bathtub Enclosure Refinishing - Professional Tile Surround Reglazing"
-        description="Expert bathtub enclosure refinishing for ceramic tile and fiberglass surrounds. Save up to 90% vs replacement. Restore tub walls beautifully. Free quotes."
-        keywords="bathtub enclosure refinishing, tile surround reglazing, ceramic tile refinishing, bathtub wall refinishing, tile reglazing"
-        canonical="https://jlsreglazing.com/services/bathtub-enclosure"
+        title="Kitchen Countertop Refinishing - Professional Reglazing Services"
+        description="Expert kitchen countertop refinishing for tile and laminate surfaces. Save up to 90% vs replacement. Perfect for rental properties. 24-hour service. Free quotes."
+        keywords="kitchen countertop refinishing, kitchen refinishing, refinish kitchen countertops, tile countertop reglazing, laminate countertop refinishing"
+        canonical="https://jlsreglazing.com/services/kitchen-refinishing"
       />
 
       {/* Hero Section */}
@@ -62,10 +62,10 @@ export default function BathtubEnclosureRefinishing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="hero-title mb-6">Bathtub Enclosure Refinishing & Tile Reglazing</h1>
+            <h1 className="hero-title mb-6">Kitchen Countertop Refinishing & Reglazing</h1>
             <p className="text-xl text-gray-100 max-w-3xl font-jost">
-              Professional bathtub enclosure refinishing for ceramic tile walls and fiberglass
-              surrounds. Restore grout, eliminate mold, create waterproof finish.
+              Professional kitchen countertop refinishing that transforms tile and laminate
+              surfaces. Durable, heat-resistant finishes for homes and rental properties.
             </p>
           </motion.div>
         </div>
@@ -83,9 +83,9 @@ export default function BathtubEnclosureRefinishing() {
               transition={{ duration: 0.6 }}
             >
               <BeforeAfterSlider
-                beforeImage="/images/2_before.jpg"
-                afterImage="/images/2_after.jpg"
-                alt="Bathtub enclosure refinishing transformation"
+                beforeImage="/images/solo_4.jpg"
+                afterImage="/images/solo_4.jpg"
+                alt="Kitchen countertop refinishing transformation"
               />
             </motion.div>
 
@@ -110,11 +110,8 @@ export default function BathtubEnclosureRefinishing() {
 
               <div className="mt-8 p-6 bg-[#FB8040] text-white rounded-xl">
                 <p className="text-2xl font-orbitron font-bold mb-2">90% Savings</p>
-                <p className="font-jost mt-2 text-sm opacity-90">
-                  Call (310) 742-0057 for your free quote
-                </p>
                 <p className="font-jost">
-                  Professional enclosure refinishing - eliminate mold and restore tile
+                  Kitchen countertop refinishing costs up to 90% less than replacement
                 </p>
                 <p className="font-jost mt-2 text-sm opacity-90">
                   Call (310) 742-0057 for your free quote
@@ -125,32 +122,30 @@ export default function BathtubEnclosureRefinishing() {
         </div>
       </section>
 
-      {/* History of Enclosure Refinishing */}
+      {/* History of Kitchen Reglazing */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
-            The History of Bathtub Enclosure Refinishing in Southern California
+            The History of Kitchen Refinishing in Southern California
           </h2>
           <div className="space-y-6 text-gray-700 font-jost text-lg leading-relaxed">
             <p>
-              Bathtub enclosure refinishing emerged in Southern California during the 1980s
-              alongside bathtub reglazing services. Ceramic tile bathtub surrounds, ubiquitous in
-              1960s-1980s construction, developed persistent mold, grout deterioration, and
-              discoloration in rental properties throughout Los Angeles, Riverside, and San
-              Bernardino counties.
+              Kitchen countertop refinishing developed alongside bathtub reglazing in the 1980s as
+              Southern California's aging housing stock required affordable kitchen updates. With
+              tile countertops dominating 1970s and 1980s construction, homeowners and property
+              managers needed cost-effective solutions for dated, damaged kitchen surfaces.
             </p>
             <p>
-              Traditional tile replacement required complete demolition, waterproofing
-              installation, new tile work, and often bathtub removal - costing $2,000-$4,000 per
-              bathroom and taking weeks to complete. For multi-unit complex managers facing tenant
-              turnarounds, this expense and timeline were prohibitive.
+              The technique proved especially valuable for rental properties and multi-unit
+              complexes throughout Los Angeles, Riverside, and San Bernardino counties. Traditional
+              countertop replacement required demolition, new materials, and extended downtime -
+              often costing $2,000-$5,000 per kitchen.
             </p>
             <p>
-              Professional enclosure refinishing solved this problem by restoring ceramic tile
-              walls and fiberglass surrounds in place at a fraction of replacement cost in just 24 hours. This rapid
-              approach sealed grout lines, eliminated mold, and created waterproof, mildew-resistant
-              finishes - essential for property managers maintaining competitive rental bathrooms
-              without renovation downtime.
+              Professional kitchen refinishing emerged as the practical alternative, restoring tile
+              and laminate countertops to like-new condition at a fraction of replacement cost in just 24 hours. This
+              rapid, affordable solution became essential for property managers maintaining
+              competitive rental units without major renovation expenses.
             </p>
           </div>
         </div>
@@ -160,7 +155,7 @@ export default function BathtubEnclosureRefinishing() {
       <section className="py-20 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
-            Why Enclosure Refinishing for Rental Properties
+            Why Kitchen Refinishing for Rental Properties
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -169,26 +164,26 @@ export default function BathtubEnclosureRefinishing() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">24hr</div>
-              <p className="font-jost text-gray-700">Quick completion time</p>
+              <p className="font-jost text-gray-700">Quick tenant turnaround</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">10+yr</div>
-              <p className="font-jost text-gray-700">Waterproof finish lifespan</p>
+              <p className="font-jost text-gray-700">Durable finish lifespan</p>
             </div>
           </div>
 
           <div className="mt-12 space-y-4 text-gray-700 font-jost text-lg leading-relaxed">
             <p>
-              Bathtub enclosure refinishing delivers exceptional value for rental property owners
-              and multi-unit complex managers. Instead of expensive tile demolition and
-              replacement, our professional reglazing service restores ceramic tile walls and
-              fiberglass surrounds in a single day with mold-resistant, waterproof finishes.
+              Kitchen countertop refinishing delivers exceptional value for rental property owners.
+              Instead of expensive countertop replacement between tenants, our professional
+              reglazing service restores surfaces in a single day with heat and stain-resistant
+              finishes.
             </p>
             <p>
-              This efficiency is critical for property managers who need quick turnarounds to
-              minimize vacancy periods. Our enclosure refinishing services help property managers
-              throughout Southern California maintain clean, modern bathrooms while controlling
-              renovation costs and avoiding tenant displacement.
+              This efficiency is critical for multi-unit complex managers who need quick turnarounds
+              to minimize vacancy periods. Our kitchen refinishing services help property managers
+              throughout Southern California maintain modern, appealing units while controlling
+              renovation costs.
             </p>
           </div>
         </div>
@@ -245,10 +240,10 @@ export default function BathtubEnclosureRefinishing() {
       {/* CTA Section */}
       <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="section-title mb-6">Ready to Refinish Your Bathtub Enclosure?</h2>
+          <h2 className="section-title mb-6">Ready to Refinish Your Kitchen Countertops?</h2>
           <p className="text-xl mb-8 font-jost">
-            Get a free quote today. Professional enclosure refinishing with mold-resistant,
-            waterproof finish and 2-year warranty.
+            Get a free quote today. Professional kitchen refinishing with heat-resistant finishes
+            and 2-year warranty.
           </p>
           <Link
             to="/contact"

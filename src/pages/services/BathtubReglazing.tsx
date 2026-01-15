@@ -11,7 +11,7 @@ export default function BathtubReglazing() {
         'Complete in just 3-5 hours',
         'Available in custom colors and finishes',
         '2-year warranty on all work',
-        'Lasts 10-15 years with proper care',
+        'Lasts 10+ years with proper care',
       ]}
       processSteps={[
         {
@@ -35,7 +35,7 @@ export default function BathtubReglazing() {
         {
           question: 'How long does bathtub reglazing last?',
           answer:
-            'With proper care and maintenance, a professionally reglazed bathtub can last 10-15 years. We provide detailed care instructions and a 2-year warranty on all our work.',
+            'With proper care and maintenance, a professionally reglazed bathtub can last 10+ years. We provide detailed care instructions and a 2-year warranty on all our work.',
         },
         {
           question: 'Can you match my bathroom color?',

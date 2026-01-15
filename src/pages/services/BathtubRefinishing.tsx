@@ -4,47 +4,47 @@ import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
 import SEO from '../../components/molecules/SEO'
 import BeforeAfterSlider from '../../components/molecules/BeforeAfterSlider'
 
-export default function BathtubEnclosureRefinishing() {
+export default function BathtubRefinishing() {
   const features = [
-    'Ceramic tile wall refinishing',
-    'Fiberglass surround reglazing',
-    'Grout restoration and sealing',
-    'Water damage repair',
-    'Mold and mildew resistant finish',
-    '2-year warranty included',
+    'All bathtub types: fiberglass, acrylic, porcelain, cast iron, ceramic tile',
+    'Crack and chip repair included',
+    'Tub cut-outs and foundation repairs',
+    'Professional paint stripping and surface preparation',
+    'Durable, heat-resistant finish',
+    '2-year warranty on all work',
   ]
 
   const faqs = [
     {
-      question: 'How much does bathtub enclosure refinishing cost?',
+      question: 'How much does bathtub refinishing cost?',
       answer:
-        'Bathtub enclosure refinishing costs up to 90% less than tile replacement. The exact cost depends on size and tile condition. Contact us at (310) 742-0057 for a free quote. Ideal for rental property bathroom updates.',
+        'Bathtub refinishing costs up to 90% less than full replacement. The exact cost depends on the size, condition, and repairs needed. Contact us at (310) 742-0057 for a free quote. Most bathtub reglazing projects are completed within 24 hours, making it perfect for rental property turnarounds.',
     },
     {
-      question: 'Can you refinish ceramic tile walls?',
+      question: 'How long does bathtub reglazing last?',
       answer:
-        'Yes! We refinish ceramic tile bathtub surrounds, restoring grout lines and creating a seamless, waterproof finish. Our tile reglazing process eliminates mold, mildew, and staining.',
+        'With proper care, professional bathtub refinishing lasts 10+ years. All our bathtub and kitchen reglazing projects come with a comprehensive 2-year warranty.',
     },
     {
-      question: 'How long do refinished enclosures last?',
+      question: 'Can you refinish fiberglass and acrylic tubs?',
       answer:
-        'With proper care, refinished bathtub enclosures last 10+ years. All our enclosure refinishing projects include a 2-year warranty and mold-resistant, waterproof coatings.',
+        'Yes! We refinish all bathtub types including fiberglass, acrylic, porcelain, cast iron, and ceramic tile. Our professional reglazing process works on any bathtub material.',
     },
   ]
 
   const relatedServices = [
-    { name: 'Bathtub Refinishing', url: '/services/bathtub-refinishing' },
     { name: 'Kitchen Countertop Refinishing', url: '/services/kitchen-refinishing' },
-    { name: 'Crack & Chip Repair', url: '/services/crack-repair' },
+    { name: 'Sink Refinishing', url: '/services/sink-refinishing' },
+    { name: 'Bathtub Enclosure Refinishing', url: '/services/bathtub-enclosure' },
   ]
 
   return (
     <div>
       <SEO
-        title="Bathtub Enclosure Refinishing - Professional Tile Surround Reglazing"
-        description="Expert bathtub enclosure refinishing for ceramic tile and fiberglass surrounds. Save up to 90% vs replacement. Restore tub walls beautifully. Free quotes."
-        keywords="bathtub enclosure refinishing, tile surround reglazing, ceramic tile refinishing, bathtub wall refinishing, tile reglazing"
-        canonical="https://jlsreglazing.com/services/bathtub-enclosure"
+        title="Bathtub Refinishing - Professional Tub Reglazing Services"
+        description="Expert bathtub refinishing for fiberglass, porcelain, cast iron, and tile tubs. Professional reglazing - Save 90% vs replacement. 24-hour turnaround. Free quotes."
+        keywords="bathtub refinishing, bathtub reglazing, tub refinishing, reglaze bathtub, fiberglass bathtub refinishing, porcelain bathtub refinishing, cast iron bathtub reglazing"
+        canonical="https://jlsreglazing.com/services/bathtub-refinishing"
       />
 
       {/* Hero Section */}
@@ -62,10 +62,10 @@ export default function BathtubEnclosureRefinishing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="hero-title mb-6">Bathtub Enclosure Refinishing & Tile Reglazing</h1>
+            <h1 className="hero-title mb-6">Bathtub Refinishing & Reglazing</h1>
             <p className="text-xl text-gray-100 max-w-3xl font-jost">
-              Professional bathtub enclosure refinishing for ceramic tile walls and fiberglass
-              surrounds. Restore grout, eliminate mold, create waterproof finish.
+              Professional bathtub refinishing for all tub types. Transform worn, damaged tubs to
+              like-new condition at a fraction of replacement cost.
             </p>
           </motion.div>
         </div>
@@ -83,9 +83,9 @@ export default function BathtubEnclosureRefinishing() {
               transition={{ duration: 0.6 }}
             >
               <BeforeAfterSlider
-                beforeImage="/images/2_before.jpg"
-                afterImage="/images/2_after.jpg"
-                alt="Bathtub enclosure refinishing transformation"
+                beforeImage="/images/1_before.jpg"
+                afterImage="/images/1_after.jpg"
+                alt="Bathtub refinishing before and after transformation"
               />
             </motion.div>
 
@@ -110,11 +110,8 @@ export default function BathtubEnclosureRefinishing() {
 
               <div className="mt-8 p-6 bg-[#FB8040] text-white rounded-xl">
                 <p className="text-2xl font-orbitron font-bold mb-2">90% Savings</p>
-                <p className="font-jost mt-2 text-sm opacity-90">
-                  Call (310) 742-0057 for your free quote
-                </p>
                 <p className="font-jost">
-                  Professional enclosure refinishing - eliminate mold and restore tile
+                  Professional bathtub refinishing costs up to 90% less than replacement
                 </p>
                 <p className="font-jost mt-2 text-sm opacity-90">
                   Call (310) 742-0057 for your free quote
@@ -125,32 +122,30 @@ export default function BathtubEnclosureRefinishing() {
         </div>
       </section>
 
-      {/* History of Enclosure Refinishing */}
+      {/* History of Bathtub Reglazing */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
-            The History of Bathtub Enclosure Refinishing in Southern California
+            The History of Bathtub Refinishing in Southern California
           </h2>
           <div className="space-y-6 text-gray-700 font-jost text-lg leading-relaxed">
             <p>
-              Bathtub enclosure refinishing emerged in Southern California during the 1980s
-              alongside bathtub reglazing services. Ceramic tile bathtub surrounds, ubiquitous in
-              1960s-1980s construction, developed persistent mold, grout deterioration, and
-              discoloration in rental properties throughout Los Angeles, Riverside, and San
-              Bernardino counties.
+              Bathtub refinishing emerged in Southern California during the 1970s and 1980s as a
+              practical solution to aging housing stock. As homes built in the post-war boom began
+              showing their age, homeowners and property managers faced expensive bathroom
+              renovations with outdated, worn bathtubs.
             </p>
             <p>
-              Traditional tile replacement required complete demolition, waterproofing
-              installation, new tile work, and often bathtub removal - costing $2,000-$4,000 per
-              bathroom and taking weeks to complete. For multi-unit complex managers facing tenant
-              turnarounds, this expense and timeline were prohibitive.
+              The reglazing industry developed as a cost-effective alternative, particularly vital
+              in Southern California's rental market. With thousands of multi-unit complexes and
+              apartment buildings throughout Los Angeles, San Bernardino, and Riverside counties,
+              property managers needed quick, affordable solutions for tenant turnarounds.
             </p>
             <p>
-              Professional enclosure refinishing solved this problem by restoring ceramic tile
-              walls and fiberglass surrounds in place at a fraction of replacement cost in just 24 hours. This rapid
-              approach sealed grout lines, eliminated mold, and created waterproof, mildew-resistant
-              finishes - essential for property managers maintaining competitive rental bathrooms
-              without renovation downtime.
+              Traditional bathtub replacement required plumbing work, tile removal, and often
+              structural modifications - often costing thousands of dollars per unit and taking weeks to
+              complete. Professional bathtub refinishing solved this problem by restoring existing
+              tubs in 24 hours at a fraction of the cost, revolutionizing rental property maintenance.
             </p>
           </div>
         </div>
@@ -160,7 +155,7 @@ export default function BathtubEnclosureRefinishing() {
       <section className="py-20 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
-            Why Enclosure Refinishing for Rental Properties
+            Why Bathtub Refinishing for Rental Properties
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -169,26 +164,25 @@ export default function BathtubEnclosureRefinishing() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">24hr</div>
-              <p className="font-jost text-gray-700">Quick completion time</p>
+              <p className="font-jost text-gray-700">Quick tenant turnaround</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">10+yr</div>
-              <p className="font-jost text-gray-700">Waterproof finish lifespan</p>
+              <p className="font-jost text-gray-700">Professional finish lifespan</p>
             </div>
           </div>
 
           <div className="mt-12 space-y-4 text-gray-700 font-jost text-lg leading-relaxed">
             <p>
-              Bathtub enclosure refinishing delivers exceptional value for rental property owners
-              and multi-unit complex managers. Instead of expensive tile demolition and
-              replacement, our professional reglazing service restores ceramic tile walls and
-              fiberglass surrounds in a single day with mold-resistant, waterproof finishes.
+              For rental property owners and multi-unit complex managers, bathtub refinishing
+              delivers unmatched ROI. Instead of expensive bathroom remodels between tenants,
+              professional reglazing restores tubs to pristine condition in a single day.
             </p>
             <p>
-              This efficiency is critical for property managers who need quick turnarounds to
-              minimize vacancy periods. Our enclosure refinishing services help property managers
-              throughout Southern California maintain clean, modern bathrooms while controlling
-              renovation costs and avoiding tenant displacement.
+              This rapid turnaround means minimal vacancy time - critical for maintaining positive
+              cash flow. Property managers throughout San Bernardino, Riverside, and Los Angeles
+              rely on our bathtub refinishing services to keep units rent-ready without breaking
+              renovation budgets.
             </p>
           </div>
         </div>
@@ -245,10 +239,10 @@ export default function BathtubEnclosureRefinishing() {
       {/* CTA Section */}
       <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="section-title mb-6">Ready to Refinish Your Bathtub Enclosure?</h2>
+          <h2 className="section-title mb-6">Ready to Refinish Your Bathtub?</h2>
           <p className="text-xl mb-8 font-jost">
-            Get a free quote today. Professional enclosure refinishing with mold-resistant,
-            waterproof finish and 2-year warranty.
+            Get a free quote today. Professional bathtub refinishing with 24-hour turnaround and
+            2-year warranty.
           </p>
           <Link
             to="/contact"

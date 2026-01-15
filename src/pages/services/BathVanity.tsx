@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
 import SEO from '../../components/molecules/SEO'
 import BeforeAfterSlider from '../../components/molecules/BeforeAfterSlider'
+import Button from '../../components/atoms/Button'
 
 export default function BathVanityRefinishing() {
   const features = [
@@ -250,12 +251,9 @@ export default function BathVanityRefinishing() {
             Get a free quote today. Professional bath vanity refinishing with durable finishes and
             2-year warranty.
           </p>
-          <Link
-            to="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg cursor-pointer touch-manipulation select-none"
-          >
+          <Button href="/contact" variant="secondary" size="lg">
             Get Your Free Quote
-          </Link>
+          </Button>
         </div>
       </section>
     </div>

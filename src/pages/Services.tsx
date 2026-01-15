@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import SEO from '../components/molecules/SEO'
 import FAQSection from '../components/organisms/FAQSection'
+import Button from '../components/atoms/Button'
 
 export default function Services() {
   const services = [
@@ -169,12 +170,9 @@ export default function Services() {
           <p className="text-xl mb-8 font-jost">
             Contact us today for a free Reglazing quote. Jorge, our small business owner, is grateful for your business.
           </p>
-          <Link
-            to="/contact"
-            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg cursor-pointer touch-manipulation select-none"
-          >
+          <Button href="/contact" variant="secondary" size="lg">
             Get Your Free Quote
-          </Link>
+          </Button>
         </div>
       </section>
     </div>

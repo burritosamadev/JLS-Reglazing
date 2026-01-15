@@ -1,0 +1,258 @@
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
+import SEO from '../../components/molecules/SEO'
+import BeforeAfterSlider from '../../components/molecules/BeforeAfterSlider'
+
+export default function BathtubRefinishing() {
+  const features = [
+    'All bathtub types: fiberglass, acrylic, porcelain, cast iron, ceramic tile',
+    'Crack and chip repair included',
+    'Tub cut-outs and foundation repairs',
+    'Professional paint stripping and surface preparation',
+    'Durable, heat-resistant finish',
+    '2-year warranty on all work',
+  ]
+
+  const faqs = [
+    {
+      question: 'How much does bathtub refinishing cost?',
+      answer:
+        'Bathtub refinishing costs up to 90% less than full replacement. The exact cost depends on the size, condition, and repairs needed. Contact us at (310) 742-0057 for a free quote. Most bathtub reglazing projects are completed within 24 hours, making it perfect for rental property turnarounds.',
+    },
+    {
+      question: 'How long does bathtub reglazing last?',
+      answer:
+        'With proper care, professional bathtub refinishing lasts 10+ years. All our bathtub and kitchen reglazing projects come with a comprehensive 2-year warranty.',
+    },
+    {
+      question: 'Can you refinish fiberglass and acrylic tubs?',
+      answer:
+        'Yes! We refinish all bathtub types including fiberglass, acrylic, porcelain, cast iron, and ceramic tile. Our professional reglazing process works on any bathtub material.',
+    },
+  ]
+
+  const relatedServices = [
+    { name: 'Kitchen Countertop Refinishing', url: '/services/kitchen-refinishing' },
+    { name: 'Sink Refinishing', url: '/services/sink-refinishing' },
+    { name: 'Bathtub Enclosure Refinishing', url: '/services/bathtub-enclosure' },
+  ]
+
+  return (
+    <div>
+      <SEO
+        title="Bathtub Refinishing - Professional Tub Reglazing Services"
+        description="Expert bathtub refinishing for fiberglass, porcelain, cast iron, and tile tubs. Professional reglazing - Save 90% vs replacement. 24-hour turnaround. Free quotes."
+        keywords="bathtub refinishing, bathtub reglazing, tub refinishing, reglaze bathtub, fiberglass bathtub refinishing, porcelain bathtub refinishing, cast iron bathtub reglazing"
+        canonical="https://jlsreglazing.com/services/bathtub-refinishing"
+      />
+
+      {/* Hero Section */}
+      <section className="bg-[#232423] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            to="/services"
+            className="inline-flex items-center text-gray-300 hover:text-white mb-6 font-jost"
+          >
+            <ArrowLeftIcon className="w-5 h-5 mr-2" />
+            Back to All Services
+          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="hero-title mb-6">Bathtub Refinishing & Reglazing</h1>
+            <p className="text-xl text-gray-100 max-w-3xl font-jost">
+              Professional bathtub refinishing for all tub types. Transform worn, damaged tubs to
+              like-new condition at a fraction of replacement cost.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Service Details */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Before/After Slider */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <BeforeAfterSlider
+                beforeImage="/images/1_before.jpg"
+                afterImage="/images/1_after.jpg"
+                alt="Bathtub refinishing before and after transformation"
+              />
+            </motion.div>
+
+            {/* Features List */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6">
+                What's Included
+              </h2>
+              <ul className="space-y-4">
+                {features.map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <CheckCircleIcon className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 font-jost text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 p-6 bg-[#FB8040] text-white rounded-xl">
+                <p className="text-2xl font-orbitron font-bold mb-2">90% Savings</p>
+                <p className="font-jost">
+                  Professional bathtub refinishing costs up to 90% less than replacement
+                </p>
+                <p className="font-jost mt-2 text-sm opacity-90">
+                  Call (310) 742-0057 for your free quote
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* History of Bathtub Reglazing */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
+            The History of Bathtub Refinishing in Southern California
+          </h2>
+          <div className="space-y-6 text-gray-700 font-jost text-lg leading-relaxed">
+            <p>
+              Bathtub refinishing emerged in Southern California during the 1970s and 1980s as a
+              practical solution to aging housing stock. As homes built in the post-war boom began
+              showing their age, homeowners and property managers faced expensive bathroom
+              renovations with outdated, worn bathtubs.
+            </p>
+            <p>
+              The reglazing industry developed as a cost-effective alternative, particularly vital
+              in Southern California's rental market. With thousands of multi-unit complexes and
+              apartment buildings throughout Los Angeles, San Bernardino, and Riverside counties,
+              property managers needed quick, affordable solutions for tenant turnarounds.
+            </p>
+            <p>
+              Traditional bathtub replacement required plumbing work, tile removal, and often
+              structural modifications - often costing thousands of dollars per unit and taking weeks to
+              complete. Professional bathtub refinishing solved this problem by restoring existing
+              tubs in 24 hours at a fraction of the cost, revolutionizing rental property maintenance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Refinishing */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
+            Why Bathtub Refinishing for Rental Properties
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">90%</div>
+              <p className="font-jost text-gray-700">Cost savings vs replacement</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">24hr</div>
+              <p className="font-jost text-gray-700">Quick tenant turnaround</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">10+yr</div>
+              <p className="font-jost text-gray-700">Professional finish lifespan</p>
+            </div>
+          </div>
+
+          <div className="mt-12 space-y-4 text-gray-700 font-jost text-lg leading-relaxed">
+            <p>
+              For rental property owners and multi-unit complex managers, bathtub refinishing
+              delivers unmatched ROI. Instead of expensive bathroom remodels between tenants,
+              professional reglazing restores tubs to pristine condition in a single day.
+            </p>
+            <p>
+              This rapid turnaround means minimal vacancy time - critical for maintaining positive
+              cash flow. Property managers throughout San Bernardino, Riverside, and Los Angeles
+              rely on our bathtub refinishing services to keep units rent-ready without breaking
+              renovation budgets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-gray-700 font-jost leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-8 text-center">
+            Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.url}
+                to={service.url}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              >
+                <p className="font-orbitron font-semibold text-[#232423] hover:text-[#FB8040]">
+                  {service.name}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-[#FB8040] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title mb-6">Ready to Refinish Your Bathtub?</h2>
+          <p className="text-xl mb-8 font-jost">
+            Get a free quote today. Professional bathtub refinishing with 24-hour turnaround and
+            2-year warranty.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+          >
+            Get Your Free Quote
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

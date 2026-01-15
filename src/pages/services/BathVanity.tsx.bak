@@ -1,0 +1,264 @@
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
+import SEO from '../../components/molecules/SEO'
+import BeforeAfterSlider from '../../components/molecules/BeforeAfterSlider'
+
+export default function BathVanityRefinishing() {
+  const features = [
+    'Cultured marble and laminate vanity refinishing',
+    'Integrated and drop-in sink reglazing',
+    'Cabinet surface restoration',
+    'Custom color matching available',
+    'Chip and crack repair',
+    '2-year warranty included',
+  ]
+
+  const faqs = [
+    {
+      question: 'How much does bath vanity refinishing cost?',
+      answer:
+        'Bath vanity refinishing costs up to 90% less than vanity replacement. The exact cost depends on size and materials. Contact us at (310) 742-0057 for a free quote. Ideal for rental property bathroom updates.',
+    },
+    {
+      question: 'What types of vanities can be refinished?',
+      answer:
+        'We refinish cultured marble vanities, laminate countertops, tile surfaces, and integrated sinks. Our professional vanity reglazing process restores worn surfaces with durable, waterproof finishes.',
+    },
+    {
+      question: 'How long do refinished bath vanities last?',
+      answer:
+        'With proper care, refinished bath vanities last 10+ years. All our bathroom vanity refinishing projects include a 2-year warranty and professional-grade materials.',
+    },
+  ]
+
+  const relatedServices = [
+    { name: 'Bathtub Refinishing', url: '/services/bathtub-refinishing' },
+    { name: 'Sink Refinishing', url: '/services/sink-refinishing' },
+    { name: 'Kitchen Countertop Refinishing', url: '/services/kitchen-refinishing' },
+  ]
+
+  return (
+    <div>
+      <SEO
+        title="Bath Vanity Refinishing - Professional Bathroom Vanity Reglazing"
+        description="Expert bath vanity refinishing for cultured marble and laminate. Save up to 90% vs replacement. Restore bathroom vanities beautifully. Free quotes."
+        keywords="bath vanity refinishing, bathroom vanity reglazing, vanity refinishing, cultured marble refinishing, bathroom vanity restoration"
+        canonical="https://jlsreglazing.com/services/bath-vanity-refinishing"
+      />
+
+      {/* Hero Section */}
+      <section className="bg-[#232423] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            to="/services"
+            className="inline-flex items-center text-gray-300 hover:text-white mb-6 font-jost"
+          >
+            <ArrowLeftIcon className="w-5 h-5 mr-2" />
+            Back to All Services
+          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="hero-title mb-6">Bath Vanity Refinishing & Reglazing</h1>
+            <p className="text-xl text-gray-100 max-w-3xl font-jost">
+              Professional bath vanity refinishing for cultured marble, laminate, and integrated
+              sinks. Transform dated bathroom vanities at a fraction of replacement cost.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Service Details */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Before/After Slider */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <BeforeAfterSlider
+                beforeImage="/images/3_before.jpg"
+                afterImage="/images/3_after.jpg"
+                alt="Bath vanity refinishing transformation"
+              />
+            </motion.div>
+
+            {/* Features List */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6">
+                What's Included
+              </h2>
+              <ul className="space-y-4">
+                {features.map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <CheckCircleIcon className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 font-jost text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 p-6 bg-[#FB8040] text-white rounded-xl">
+                <p className="text-2xl font-orbitron font-bold mb-2">90% Savings</p>
+                <p className="font-jost mt-2 text-sm opacity-90">
+                  Call (310) 742-0057 for your free quote
+                </p>
+                <p className="font-jost">
+                  Professional bath vanity refinishing - cost-effective bathroom update
+                </p>
+                <p className="font-jost mt-2 text-sm opacity-90">
+                  Call (310) 742-0057 for your free quote
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* History of Bath Vanity Reglazing */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
+            The History of Bath Vanity Refinishing in Southern California
+          </h2>
+          <div className="space-y-6 text-gray-700 font-jost text-lg leading-relaxed">
+            <p>
+              Bath vanity refinishing developed alongside bathtub reglazing in Southern
+              California's rental market during the 1980s and 1990s. Cultured marble vanities,
+              popular in 1970s and 1980s construction, frequently showed wear, stains, and chips
+              after years of tenant use in apartment buildings throughout Los Angeles, Riverside,
+              and San Bernardino counties.
+            </p>
+            <p>
+              Traditional vanity replacement required demolition, plumbing modifications, and often
+              matching discontinued fixtures - often costing hundreds to over a thousand dollars per
+              unit. For multi-unit complexes facing turnover between tenants, these expenses accumulated rapidly
+              and extended vacancy periods.
+            </p>
+            <p>
+              Professional bath vanity refinishing emerged as the practical solution, restoring
+              cultured marble, laminate, and integrated sink vanities to like-new condition for
+              at a fraction of replacement cost in just hours. This rapid, affordable approach became essential for
+              property managers maintaining competitive rental bathrooms without major renovation
+              budgets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Refinishing */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-6 text-center">
+            Why Bath Vanity Refinishing for Rental Properties
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">90%</div>
+              <p className="font-jost text-gray-700">Cost savings vs replacement</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">Same Day</div>
+              <p className="font-jost text-gray-700">Quick service completion</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl font-orbitron font-bold text-[#FB8040] mb-2">10+yr</div>
+              <p className="font-jost text-gray-700">Durable finish lifespan</p>
+            </div>
+          </div>
+
+          <div className="mt-12 space-y-4 text-gray-700 font-jost text-lg leading-relaxed">
+            <p>
+              Bath vanity refinishing delivers exceptional value for rental property owners and
+              multi-unit complex managers. Instead of expensive bathroom remodels between tenants,
+              our professional reglazing service restores vanities and integrated sinks in a single
+              day with durable, waterproof finishes.
+            </p>
+            <p>
+              This efficiency is critical for property managers who need quick turnarounds to
+              minimize vacancy periods. Our bath vanity refinishing services help property managers
+              throughout Southern California maintain modern, appealing bathrooms while controlling
+              renovation costs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-orbitron font-semibold text-[#232423] mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-gray-700 font-jost leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-semibold text-[#232423] mb-8 text-center">
+            Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.url}
+                to={service.url}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              >
+                <p className="font-orbitron font-semibold text-[#232423] hover:text-[#FB8040]">
+                  {service.name}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-[#FB8040] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title mb-6">Ready to Refinish Your Bath Vanity?</h2>
+          <p className="text-xl mb-8 font-jost">
+            Get a free quote today. Professional bath vanity refinishing with durable finishes and
+            2-year warranty.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-white hover:bg-gray-100 text-[#FB8040] px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+          >
+            Get Your Free Quote
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

@@ -1,6 +1,5 @@
 import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import { analytics } from '../../lib/analytics'
-import LanguageSwitcher from '../molecules/LanguageSwitcher'
 
 export default function TopBar() {
   return (
@@ -28,13 +27,8 @@ export default function TopBar() {
             </a>
           </div>
 
-          {/* Language Switcher & Social Media Icons */}
-          <div className="flex items-center gap-3">
-            {/* Language Switcher */}
-            <LanguageSwitcher />
-
-            {/* Social Icons - Hidden on very small screens */}
-            <div className="hidden sm:flex items-center gap-3">
+          {/* Social Media Icons */}
+          <div className="hidden sm:flex items-center gap-3">
             <a
               href="https://www.facebook.com/profile.php?id=61586186871010"
               target="_blank"
@@ -79,7 +73,6 @@ export default function TopBar() {
             >
               <EnvelopeIcon className="w-5 h-5" />
             </a>
-            </div>
           </div>
         </div>
       </div>

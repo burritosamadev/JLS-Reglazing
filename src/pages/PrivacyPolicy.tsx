@@ -179,20 +179,29 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 4: Data Sharing */}
+            {/* Section 4: Data Sharing and Transfer Policy */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-12"
+              className="mb-12 bg-gray-50 border-l-4 border-gray-600 p-6 rounded-r-lg"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                4. Data Sharing
+                4. Data Sharing and Transfer Policy
               </h2>
-              <ul className="list-disc pl-6 mb-6 text-gray-700 font-jost space-y-2">
-                <li>Customer data is not shared with 3rd parties for promotional or marketing purposes.</li>
-                <li>Mobile opt-in and consent are never shared with anyone for any purpose. Any information sharing that may be mentioned elsewhere in this policy excludes mobile opt-in data.</li>
-              </ul>
+              <div className="space-y-4 text-gray-700 font-jost">
+                <p className="font-semibold">
+                  We do not transfer or share your personal data with any external organizations under any circumstances, including with your consent.
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Customer data is not shared with 3rd parties for promotional or marketing purposes.</li>
+                  <li>Mobile opt-in and consent are never shared with anyone for any purpose. Any information sharing that may be mentioned elsewhere in this policy excludes mobile opt-in data.</li>
+                  <li>Strict internal policies and controls are in place to prevent unauthorized sharing of user data.</li>
+                </ul>
+                <p className="text-sm italic">
+                  Note: We use third-party service providers (Twilio, Supabase, n8n) solely to operate our business and deliver services to you. These providers are contractually obligated to protect your data and may not use it for any other purpose.
+                </p>
+              </div>
             </motion.div>
 
             {/* Section 5: Messaging Terms and Conditions */}
@@ -205,6 +214,24 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
                 5. Messaging Terms and Conditions
               </h2>
+
+              <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-3">
+                Types of Messages You Will Receive
+              </h3>
+              <p className="text-gray-700 font-jost mb-4">
+                You will receive <strong>account alerts and promotional messages</strong> including:
+              </p>
+              <ul className="list-disc pl-6 mb-6 text-gray-700 font-jost space-y-2">
+                <li>Appointment reminders and confirmations</li>
+                <li>Service updates and project status notifications</li>
+                <li>Quote confirmations and estimates</li>
+                <li>Follow-up communications regarding your service request</li>
+                <li>Promotional offers and special discounts (optional)</li>
+              </ul>
+
+              <h3 className="text-xl font-orbitron font-semibold text-navy-900 mb-3">
+                Your Consent
+              </h3>
               <p className="text-gray-700 font-jost mb-4">
                 By providing your phone number and agreeing to receive texts, you consent to receive text messages from JL BATHTUB RENOVATION SERVICES, from 310-742-0057 regarding customer care. Consent is not a condition of purchase. Message frequency varies. Message & data rates may apply. You can reply STOP to unsubscribe at any time or HELP for assistance. You can also contact us at 310-742-0057 or jorge@jlsreglazing.com. Mobile opt-in information is never shared with third parties.
               </p>

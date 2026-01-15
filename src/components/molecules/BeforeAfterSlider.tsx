@@ -14,6 +14,7 @@ export default function BeforeAfterSlider({
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50)
   const [isDragging, setIsDragging] = useState(false)
+  const [isHovering, setIsHovering] = useState(false)
 
   const handleMove = (clientX: number, rect: DOMRect) => {
     const x = Math.max(0, Math.min(clientX - rect.left, rect.width))
@@ -23,11 +24,19 @@ export default function BeforeAfterSlider({
 
   const handleMouseDown = () => setIsDragging(true)
   const handleMouseUp = () => setIsDragging(false)
+  const handleMouseEnter = () => setIsHovering(true)
+  const handleMouseLeave = () => {
+    setIsHovering(false)
+    setIsDragging(false)
+  }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return
-    const rect = e.currentTarget.getBoundingClientRect()
-    handleMove(e.clientX, rect)
+    // On desktop: glide on hover (no need to click/drag)
+    // On mobile: handled by touch events
+    if (isHovering || isDragging) {
+      const rect = e.currentTarget.getBoundingClientRect()
+      handleMove(e.clientX, rect)
+    }
   }
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -43,9 +52,10 @@ export default function BeforeAfterSlider({
       transition={{ duration: 0.5 }}
       className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-2xl cursor-col-resize select-none"
       onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseUp}
     >
@@ -53,12 +63,12 @@ export default function BeforeAfterSlider({
       <div className="absolute inset-0">
         <picture>
           <source
-            srcSet={`${afterImage.replace('.jpg', '-800w.webp')} 800w, ${afterImage.replace('.jpg', '.webp')} 1536w`}
+            srcSet={`${afterImage.replace('.webp', '-800w.webp')} 800w, ${afterImage} 1536w`}
             sizes="(max-width: 768px) 100vw, 800px"
             type="image/webp"
           />
           <img
-            src={afterImage}
+            src={afterImage.replace('.webp', '.jpg')}
             alt={`${alt} - After`}
             className="w-full h-full object-cover"
             draggable={false}
@@ -79,12 +89,12 @@ export default function BeforeAfterSlider({
       >
         <picture>
           <source
-            srcSet={`${beforeImage.replace('.jpg', '-800w.webp')} 800w, ${beforeImage.replace('.jpg', '.webp')} 1536w`}
+            srcSet={`${beforeImage.replace('.webp', '-800w.webp')} 800w, ${beforeImage} 1536w`}
             sizes="(max-width: 768px) 100vw, 800px"
             type="image/webp"
           />
           <img
-            src={beforeImage}
+            src={beforeImage.replace('.webp', '.jpg')}
             alt={`${alt} - Before`}
             className="w-full h-full object-cover"
             draggable={false}

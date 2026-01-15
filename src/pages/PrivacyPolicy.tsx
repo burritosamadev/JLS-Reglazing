@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import SEO from '../components/molecules/SEO'
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Privacy Policy"
+        description="Privacy Policy for JLS Reglazing. Learn how we collect, use, and protect your personal information."
+        canonical="https://jlsreglazing.com/privacy-policy"
+      />
       {/* Hero Section */}
       <section className="bg-navy-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +38,7 @@ export default function PrivacyPolicy() {
               className="mb-12"
             >
               <p className="text-lg text-gray-700 font-jost leading-relaxed mb-6">
-                JL Bath Renovation Services ("we," "our," or "us") respects your privacy and is
+                JL Bathtub Renovation Services ("we," "our," or "us") respects your privacy and is
                 committed to protecting your personal information. This Privacy Policy explains how
                 we collect, use, share, and safeguard your information when you visit our website
                 or use our services.
@@ -120,7 +126,7 @@ export default function PrivacyPolicy() {
               <p className="text-gray-700 font-jost mb-4">
                 By providing your phone number and checking the consent box on our contact or quote
                 forms, you expressly consent to receive text messages (SMS) and/or WhatsApp messages
-                from JL Bath Renovation Services regarding:
+                from JL Bathtub Renovation Services regarding:
               </p>
               <ul className="list-disc pl-6 mb-6 text-gray-700 font-jost space-y-2">
                 <li>Quote confirmations and project estimates</li>
@@ -382,7 +388,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="space-y-2 text-gray-700 font-jost">
                 <p>
-                  <strong>JL Bath Renovation Services</strong>
+                  <strong>JL Bathtub Renovation Services</strong>
                 </p>
                 <p>
                   Email:{' '}
@@ -390,7 +396,7 @@ export default function PrivacyPolicy() {
                     jorge@jlsreglazing.com
                   </a>
                 </p>
-                <p>Phone: (XXX) XXX-XXXX</p>
+                <p>Phone: (310) 742-0057</p>
                 <p>Service Areas: San Bernardino, Riverside, Hemet, Los Angeles, Victorville</p>
               </div>
             </motion.div>

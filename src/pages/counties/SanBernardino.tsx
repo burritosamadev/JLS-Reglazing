@@ -32,7 +32,7 @@ export default function SanBernardino() {
                 Serving San Bernardino County Residents
               </h2>
               <p className="text-lg text-gray-700 font-jost mb-6 leading-relaxed">
-                For over 20 years, JL Bath Renovation Services has been the trusted choice for
+                For over 20 years, JL Bathtub Renovation Services has been the trusted choice for
                 bathtub reglazing in San Bernardino County. Whether you're in San
                 Bernardino, Fontana, Rancho Cucamonga, or anywhere in the county, we bring
                 professional reglazing services directly to your home or business.

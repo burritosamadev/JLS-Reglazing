@@ -31,7 +31,7 @@ export default function LosAngeles() {
                 Serving Los Angeles County Properties
               </h2>
               <p className="text-lg text-gray-700 font-jost mb-6 leading-relaxed">
-                JL Bath Renovation Services brings over 20 years of reglazing expertise to Los
+                JL Bathtub Renovation Services brings over 20 years of reglazing expertise to Los
                 Angeles County. From downtown LA apartments to suburban family homes in Pasadena,
                 Glendale, and surrounding areas, we provide professional refinishing services that
                 save property owners thousands compared to replacement.

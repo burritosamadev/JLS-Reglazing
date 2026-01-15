@@ -41,7 +41,7 @@ export default function KitchenCountertop() {
         {
           question: 'How durable is the reglazing finish?',
           answer:
-            'Our reglazing creates a hard, durable surface that is heat and stain resistant. With proper care, it can last 7-10 years or more.',
+            'Our reglazing creates a hard, durable surface that is heat and stain resistant. With proper care, it can last 10+ years.',
         },
         {
           question: 'Can you create a stone or granite look?',

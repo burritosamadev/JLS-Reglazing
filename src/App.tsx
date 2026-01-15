@@ -14,6 +14,15 @@ import Hemet from './pages/counties/Hemet'
 import LosAngeles from './pages/counties/LosAngeles'
 import Victorville from './pages/counties/Victorville'
 
+// Individual Service Pages
+import BathtubRefinishing from './pages/services/BathtubRefinishing'
+import KitchenRefinishing from './pages/services/KitchenRefinishing'
+import SinkRefinishing from './pages/services/SinkRefinishing'
+import BathVanityRefinishing from './pages/services/BathVanity'
+import CrackRepair from './pages/services/CrackRepair'
+import BathtubEnclosureRefinishing from './pages/services/EnclosureRefinishing'
+import CutOutRepairs from './pages/services/CutOutRepairs'
+
 // Scroll to top component
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -24,14 +33,6 @@ function ScrollToTop() {
 
   return null
 }
-// Individual Service Pages - Disabled for now, re-enable later
-// import BathtubReglazing from './pages/services/BathtubReglazing'
-// import KitchenCountertop from './pages/services/KitchenCountertop'
-// import SinkRefinishing from './pages/services/SinkRefinishing'
-// import BathVanity from './pages/services/BathVanity'
-// import CrackRepair from './pages/services/CrackRepair'
-// import EnclosureRefinishing from './pages/services/EnclosureRefinishing'
-// import CutOutRepairs from './pages/services/CutOutRepairs'
 
 function AppContent() {
   return (
@@ -51,14 +52,14 @@ function AppContent() {
           <Route path="/hemet-reglazing" element={<Hemet />} />
           <Route path="/los-angeles-reglazing" element={<LosAngeles />} />
           <Route path="/victorville-reglazing" element={<Victorville />} />
-          {/* Individual Service Pages - Disabled for now, re-enable later */}
-          {/* <Route path="/services/bathtub-reglazing" element={<BathtubReglazing />} /> */}
-          {/* <Route path="/services/kitchen-countertop-reglazing" element={<KitchenCountertop />} /> */}
-          {/* <Route path="/services/sink-refinishing" element={<SinkRefinishing />} /> */}
-          {/* <Route path="/services/bath-vanity-restoration" element={<BathVanity />} /> */}
-          {/* <Route path="/services/crack-chip-repair" element={<CrackRepair />} /> */}
-          {/* <Route path="/services/bathtub-enclosure-refinishing" element={<EnclosureRefinishing />} /> */}
-          {/* <Route path="/services/cut-out-repairs" element={<CutOutRepairs />} /> */}
+          {/* Individual Service Pages */}
+          <Route path="/services/bathtub-refinishing" element={<BathtubRefinishing />} />
+          <Route path="/services/kitchen-refinishing" element={<KitchenRefinishing />} />
+          <Route path="/services/sink-refinishing" element={<SinkRefinishing />} />
+          <Route path="/services/bath-vanity-refinishing" element={<BathVanityRefinishing />} />
+          <Route path="/services/crack-repair" element={<CrackRepair />} />
+          <Route path="/services/bathtub-enclosure" element={<BathtubEnclosureRefinishing />} />
+          <Route path="/services/cut-out-repairs" element={<CutOutRepairs />} />
         </Routes>
       </Layout>
     </>

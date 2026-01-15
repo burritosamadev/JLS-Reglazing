@@ -9,6 +9,9 @@ import {
   ClockIcon,
   ViewfinderCircleIcon,
 } from '@heroicons/react/24/outline'
+import SEO from '../components/molecules/SEO'
+import StructuredData from '../components/molecules/StructuredData'
+import { generateHowToSchema } from '../lib/seo'
 
 export default function Process() {
   const steps = [
@@ -64,6 +67,13 @@ export default function Process() {
 
   return (
     <div>
+      <SEO
+        title="Our Bathtub Refinishing Process - Professional 7-Step Method"
+        description="Learn about our professional bathtub and kitchen refinishing process. Multi-layer sanding, crack repair, acid etching, and durable coating application. 2-year warranty."
+        keywords="bathtub refinishing process, how bathtub reglazing works, refinishing steps, professional reglazing method, bathtub restoration process"
+        canonical="https://jlsreglazing.com/process"
+      />
+      <StructuredData data={generateHowToSchema()} />
       {/* Hero Section */}
       <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

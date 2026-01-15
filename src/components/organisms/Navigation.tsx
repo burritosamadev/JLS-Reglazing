@@ -5,6 +5,7 @@ import Button from '../atoms/Button'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
   const location = useLocation()
 
   // Helper function to check if link is active
@@ -17,11 +18,21 @@ export default function Navigation() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
+    { name: 'Services', path: '/services', hasDropdown: true },
     { name: 'Process', path: '/process' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
+  ]
+
+  const serviceLinks = [
+    { name: 'Bathtub Refinishing', path: '/services/bathtub-refinishing' },
+    { name: 'Kitchen Refinishing', path: '/services/kitchen-refinishing' },
+    { name: 'Sink Refinishing', path: '/services/sink-refinishing' },
+    { name: 'Bath Vanity Refinishing', path: '/services/bath-vanity-refinishing' },
+    { name: 'Crack & Chip Repair', path: '/services/crack-repair' },
+    { name: 'Bathtub Enclosure', path: '/services/bathtub-enclosure' },
+    { name: 'Cut-Out Repairs', path: '/services/cut-out-repairs' },
   ]
 
   return (
@@ -34,19 +45,59 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-jost font-medium transition-all duration-200 ${
-                  isActive(link.path)
-                    ? 'text-white border-b-2 border-[#FB8040]'
-                    : 'text-gray-100 hover:text-[#FB8040] border-b-2 border-transparent'
-                }`}
-              >
-                {link.name}
-              </Link>
+              link.hasDropdown ? (
+                <div
+                  key={link.path}
+                  className="relative group"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <Link
+                    to={link.path}
+                    className={`font-jost font-medium transition-all duration-200 pb-2 block ${
+                      isActive(link.path)
+                        ? 'text-white border-b-2 border-[#FB8040]'
+                        : 'text-gray-100 hover:text-[#FB8040] border-b-2 border-transparent'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                  {servicesDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute top-full left-0 pt-2 w-64 z-50"
+                    >
+                      <div className="bg-[#232423] shadow-xl rounded-lg overflow-hidden">
+                        {serviceLinks.map((service) => (
+                          <Link
+                            key={service.path}
+                            to={service.path}
+                            className="block px-4 py-3 text-gray-100 hover:bg-[#FB8040] hover:text-white transition-colors font-jost"
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-jost font-medium transition-all duration-200 ${
+                    isActive(link.path)
+                      ? 'text-white border-b-2 border-[#FB8040]'
+                      : 'text-gray-100 hover:text-[#FB8040] border-b-2 border-transparent'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -91,18 +142,63 @@ export default function Navigation() {
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                  isActive(link.path)
-                    ? 'bg-[#FB8040] text-white font-semibold'
-                    : 'text-gray-100 hover:bg-[#FB8040]/20 hover:text-white'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
+              link.hasDropdown ? (
+                <div key={link.path}>
+                  <button
+                    onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                    className={`w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors flex justify-between items-center ${
+                      isActive(link.path)
+                        ? 'bg-[#FB8040] text-white font-semibold'
+                        : 'text-gray-100 hover:bg-[#FB8040]/20 hover:text-white'
+                    }`}
+                  >
+                    {link.name}
+                    <svg
+                      className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {servicesDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="ml-4 mt-1 space-y-1"
+                    >
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.path}
+                          to={service.path}
+                          className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-[#FB8040]/20 hover:text-white transition-colors"
+                          onClick={() => {
+                            setServicesDropdownOpen(false)
+                            setIsOpen(false)
+                          }}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive(link.path)
+                      ? 'bg-[#FB8040] text-white font-semibold'
+                      : 'text-gray-100 hover:bg-[#FB8040]/20 hover:text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <div className="mt-4" onClick={() => setIsOpen(false)}>
               <Button href="/contact" variant="primary" size="md" fullWidth>

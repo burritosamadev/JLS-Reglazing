@@ -1,78 +1,71 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import {
-  CurrencyDollarIcon,
-  BoltIcon,
-  CheckCircleIcon,
-} from '@heroicons/react/24/outline'
+import { CheckCircleIcon } from '@heroicons/react/24/outline'
+import SEO from '../components/molecules/SEO'
+import FAQSection from '../components/organisms/FAQSection'
 
 export default function Services() {
   const services = [
     {
-      title: 'Bathtub Reglazing & Refinishing',
-      path: '/services/bathtub-reglazing',
+      title: 'Bathtub Refinishing and Reglazing',
+      path: '/services/bathtub-refinishing',
       description:
-        'Transform your worn, cracked, or discolored bathtub with our professional reglazing services. We restore porcelain, fiberglass, and acrylic tubs to like-new condition at a fraction of replacement cost.',
+        'Tub refinishing, fiberglass, acrylic, tile, porcelain, cast-iron. We restore to like-new condition at a fraction of replacement cost.',
       features: [
-        'All bathtub types (porcelain, fiberglass, acrylic)',
-        'Color matching and custom colors available',
-        'Crack and chip repair included',
-        '2-year warranty on all work',
+        'All bathtub types tile, fiberglass, acrylic, porcelain)',
+        'Crack and chip repairs',
+        'Bat tub cut outs and foundation repairs',
       ],
     },
     {
-      title: 'Kitchen Countertop Reglazing',
-      path: '/services/kitchen-countertop-reglazing',
+      title: 'Kitchen Countertop Refinishing and Reglazing',
+      path: '/services/kitchen-refinishing',
       description:
         'Give your kitchen a fresh look without the expense and hassle of full replacement. Our reglazing service restores tile, laminate, and solid surface countertops.',
       features: [
-        'Tile countertop reglazing',
-        'Laminate surface restoration',
+        'Tile and laminate countertop and bar top reglazing',
+        'White and multi-spec options for residential unit-complexes',
         'Heat and stain resistant finish',
-        'Multiple color options',
       ],
     },
     {
-      title: 'Sink Refinishing',
+      title: 'Sink Refinishing and Reglazing',
       path: '/services/sink-refinishing',
       description:
         'Restore your kitchen sink to pristine condition. Perfect for porcelain, cast iron, and stainless steel sinks showing signs of wear.',
       features: [
-        'Porcelain and cast iron sinks',
-        'Stainless steel reglazing',
+        'Porcelain and Stainless steel sinks',
         'Rust and stain removal',
-        'Long-lasting protective coating',
+        'Heat and stain resistant finish',
       ],
     },
     {
-      title: 'Bath Vanity Restoration',
-      path: '/services/bath-vanity-restoration',
+      title: 'Bath Vanity Refinishing and Reglazing',
+      path: '/services/bath-vanity-refinishing',
       description:
-        'Complete vanity refinishing including countertops and sinks. Update your bathroom aesthetic without replacement costs.',
+        'Restore your restroom and bath vanity with a professional refinish.',
       features: [
-        'Vanity top reglazing',
-        'Integrated sink refinishing',
-        'Custom color matching',
-        'Quick turnaround time',
+        'Porcelain and stainless steel Bath Vanity reglazing',
+        'Rust and stain removal',
+        'Heat and stain resistant finish',
       ],
     },
     {
       title: 'Crack & Chip Repair',
-      path: '/services/crack-chip-repair',
+      path: '/services/crack-repair',
       description:
         'Professional repair for cracks and chips of all sizes. We restore structural integrity and appearance to damaged surfaces.',
       features: [
-        'All crack sizes repaired',
-        'Chip and gouge restoration',
-        'Seamless color matching',
-        'Reinforced bonding agents',
+        'All crack sizes and fissured repaired',
+        'Weak tub foundations',
+        'Uneven kitchen countertops',
       ],
     },
     {
-      title: 'Bathtub Enclosure Refinishing',
-      path: '/services/bathtub-enclosure-refinishing',
+      title: 'Bathtub Enclosure Refinishing and Reglazing',
+      path: '/services/bathtub-enclosure',
       description:
-        'Refresh your entire bathtub enclosure, including walls and surrounds. Perfect for tile and fiberglass installations.',
+        'Refresh your entire bathtub enclosure, including surrounding walls. Or reglaze your tub only, choice is up to you!',
       features: [
         'Tile wall reglazing',
         'Fiberglass surround restoration',
@@ -96,6 +89,12 @@ export default function Services() {
 
   return (
     <div>
+      <SEO
+        title="Complete Refinishing & Reglazing Services - Bathtub, Kitchen, Tile"
+        description="Professional bathtub refinishing, kitchen countertop reglazing, sink restoration, and tile refinishing. Licensed & insured. 2-year warranty. Serving Southern California."
+        keywords="bathtub refinishing, kitchen countertop refinishing, tile reglazing, sink refinishing, bathtub reglazing, porcelain refinishing, fiberglass bathtub refinishing"
+        canonical="https://jlsreglazing.com/services"
+      />
       {/* Hero Section */}
       <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +104,7 @@ export default function Services() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="hero-title mb-6">Complete Reglazing & Refinishing Services</h1>
+            <h1 className="hero-title mb-6">Complete Refinishing & Reglazing Services</h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto font-jost">
               Professional bathtub, kitchen, and tile reglazing services for residential and
               commercial properties in Southern California
@@ -140,7 +139,7 @@ export default function Services() {
                 <p className="text-gray-700 font-jost mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start">
                       <CheckCircleIcon className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
@@ -148,51 +147,27 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                {/* Learn More buttons - Disabled for now, re-enable later */}
-                {/* <Link
+                <Link
                   to={service.path}
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-jost font-semibold transition-all duration-200 transform hover:scale-105"
+                  className="inline-block bg-[#FB8040] hover:bg-[#e6743a] text-white px-6 py-3 rounded-lg font-jost font-semibold transition-all duration-200 transform hover:scale-105 shadow-md"
                 >
                   Learn More
-                </Link> */}
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Value Proposition */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-8">
-              <CurrencyDollarIcon className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-3">
-                Save Up to <span className="text-[#FB8040] font-bold">90%</span>
-              </h3>
-              <p className="text-gray-700 font-jost">
-                Reglazing costs a fraction of replacement. Keep more money in your pocket.
-              </p>
-            </div>
-            <div className="p-8">
-              <BoltIcon className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-3">
-                Quick Turnaround
-              </h3>
-              <p className="text-gray-700 font-jost">
-                Most projects completed in 1-2 days. Minimal disruption to your routine.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-8 font-jost">
-            Contact us today for a free quote. Experience the JLS Reglazing difference.
+            Contact us today for a free Reglazing quote. Jorge, our small business owner, is grateful for your business.
           </p>
           <Link
             to="/contact"

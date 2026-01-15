@@ -11,6 +11,7 @@ export default function VideoShowcase() {
           <video
             controls
             preload="none"
+            poster="/images/reglazing-process-thumbnail.jpg"
             className="w-full aspect-video object-contain"
           >
             <source src="/videos/video6.mp4" type="video/mp4" />

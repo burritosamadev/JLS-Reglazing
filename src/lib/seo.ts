@@ -19,11 +19,6 @@ interface LocalBusinessSchema {
     longitude: number
   }
   areaServed: Array<{ '@type': string; name: string }>
-  aggregateRating?: {
-    '@type': string
-    ratingValue: string
-    reviewCount: string
-  }
   openingHoursSpecification?: {
     '@type': string
     dayOfWeek: string[]
@@ -59,13 +54,13 @@ export const generateLocalBusinessSchema = (): LocalBusinessSchema => {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'JL Bath Renovation Services',
+    name: 'JL Bathtub Renovation Services',
     image: 'https://jlsreglazing.com/images/logo.jpg',
     description: 'Professional bathtub and kitchen reglazing services in Southern California. 20+ years experience, 4,000+ units serviced.',
     '@id': 'https://jlsreglazing.com',
     url: 'https://jlsreglazing.com',
     telephone: '+1-310-742-0057',
-    priceRange: '$$',
+    priceRange: '$300-$600',
     address: {
       '@type': 'PostalAddress',
       addressRegion: 'CA',
@@ -78,11 +73,6 @@ export const generateLocalBusinessSchema = (): LocalBusinessSchema => {
       { '@type': 'City', name: 'Los Angeles' },
       { '@type': 'City', name: 'Victorville' },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '150',
-    },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -99,7 +89,7 @@ export const generateServiceSchema = (): ServiceSchema => {
     serviceType: 'Bathtub Reglazing and Refinishing',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'JL Bath Renovation Services',
+      name: 'JL Bathtub Renovation Services',
     },
     areaServed: [
       'San Bernardino County',
@@ -155,11 +145,122 @@ export const generateCountySchema = (county: string) => {
     serviceType: `Bathtub Reglazing in ${county}`,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'JL Bath Renovation Services',
+      name: 'JL Bathtub Renovation Services',
     },
     areaServed: {
       '@type': 'City',
       name: county,
     },
+  }
+}
+
+export const generateFAQSchema = () => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the difference between bathtub reglazing and refinishing?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Bathtub reglazing and bathtub refinishing are the same professional restoration process. While some use "reglazing" to specifically describe the application of a new coating, refinishing is the broader term that encompasses the entire process: surface preparation, repairs (such as chips, cracks, and tub cut outs), acid etching, and applying a durable finish. The result is always the same: a like-new surface at a fraction of replacement cost.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does bathtub refinishing cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Bathtub refinishing costs up to 90% less than full replacement. The exact cost depends on the condition of your tub, repairs needed, and project scope. Contact us at (310) 742-0057 for a free quote. Most bathtub reglazing projects are completed within 24 hours.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does bathtub reglazing last?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'With proper care, professional bathtub refinishing lasts 10-15 years or more. All our bathtub and kitchen reglazing projects come with a comprehensive 2-year warranty. We use only professional-grade materials and proven techniques for long-lasting, durable results.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does the refinishing process take?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most bathtub and kitchen refinishing projects are completed within 24 hours. This makes our service perfect for rental property turnarounds and multi-unit complexes. The surface is ready to use after proper curing time (typically 48-72 hours).',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What areas do you serve?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We proudly serve Southern California including San Bernardino County, Riverside County, Los Angeles County, Hemet, and Victorville. With over 20 years of experience and 4,000+ units serviced, JLS Reglazing is your trusted local bathtub and kitchen refinishing expert.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you refinish fiberglass and acrylic tubs?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! We refinish all bathtub types including fiberglass, acrylic, porcelain, cast iron, and tile. Our professional reglazing process works on any bathtub material and includes crack repair, chip repair, and tub cut out foundation repairs.',
+        },
+      },
+    ],
+  }
+}
+
+export const generateHowToSchema = () => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Professional Bathtub Refinishing Process',
+    description: 'Learn the 7-step professional bathtub reglazing process used by JLS Reglazing to restore bathtubs to like-new condition.',
+    totalTime: 'PT24H',
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: 'Surface Preparation and Paint Stripping',
+        text: 'Multi-layer sanding to remove old paint and prepare the surface for refinishing.',
+        position: 1,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Crack and Chip Repair',
+        text: 'Professional repair of all cracks, chips, and surface damage using high-grade materials.',
+        position: 2,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Foundation Repair (if needed)',
+        text: 'Tub cut out and foundation repairs for weak or damaged bathtub structures.',
+        position: 3,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Deep Cleaning',
+        text: 'Thorough cleaning to remove all debris, oils, and contaminants.',
+        position: 4,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Acid Etching',
+        text: 'Professional acid etching to ensure maximum adhesion of the new coating.',
+        position: 5,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Primer Application',
+        text: 'Application of professional-grade bonding primer for long-lasting results.',
+        position: 6,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Final Coating',
+        text: 'Multiple coats of durable, heat-resistant refinishing material for a factory-quality finish.',
+        position: 7,
+      },
+    ],
   }
 }

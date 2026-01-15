@@ -4,10 +4,17 @@ import ServiceAreaMap from '../components/organisms/ServiceAreaMap'
 import Card from '../components/atoms/Card'
 import Heading from '../components/atoms/Heading'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
+import SEO from '../components/molecules/SEO'
 
 export default function Contact() {
   return (
     <div>
+      <SEO
+        title="Get Your Free Refinishing Quote - Contact JLS Reglazing"
+        description="Contact JLS Reglazing for professional bathtub and kitchen refinishing quotes. 24-hour turnaround. Serving San Bernardino, Riverside, Hemet, Los Angeles, Victorville. Call (310) 742-0057."
+        keywords="bathtub refinishing quote, kitchen reglazing estimate, free quote San Bernardino, bathtub reglazing contact, refinishing cost estimate"
+        canonical="https://jlsreglazing.com/contact"
+      />
       {/* Hero Section */}
       <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,10 +24,9 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="hero-title mb-6">Get Your Free Quote</h1>
+            <h1 className="hero-title mb-6">Get Your Free Refinishing Quote</h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto font-jost">
-              Professional bathtub, tile, and porcelain reglazing. Serving both commercial and
-              residential properties.
+              Professional bathtub, kitchen countertop, and tile refinishing. Quick turnaround for multi-unit complexes and rental properties.
             </p>
           </motion.div>
         </div>
@@ -96,23 +102,23 @@ export default function Contact() {
                 <ol className="space-y-3 text-sm text-blue-800 font-jost">
                   <li className="flex items-start">
                     <span className="font-bold mr-2">1.</span>
-                    <span>Submit your quote request</span>
+                    <span>Contact Us - Fill out the quote form or call for immediate assistance. We provide quotes over the phone for standard bathtub and kitchen refinishing projects.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">2.</span>
-                    <span>We analyze your needs and provide a detailed quote</span>
+                    <span>Get Your Quote - Receive your personalized quote within 24 hours. We provide transparent pricing for all tub reglazing, kitchen countertop refinishing, and repair services.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">3.</span>
-                    <span>Schedule your reglazing service</span>
+                    <span>Schedule Service - Choose a convenient time. We work with your schedule and offer flexible timing for multi-unit complexes and rental property turnarounds.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">4.</span>
-                    <span>Professional service completed in 1-2 days</span>
+                    <span>Professional Refinishing - Our team arrives on time with all necessary equipment. Most bathtub and kitchen refinishing projects are completed within 24 hours.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="font-bold mr-2">5.</span>
-                    <span>Enjoy your like-new surfaces with 2-year warranty</span>
+                    <span>Enjoy Your Results - Your refinished surfaces are ready to use after proper curing time. All work comes with our 2-year warranty for complete peace of mind.</span>
                   </li>
                 </ol>
               </div>
@@ -125,23 +131,23 @@ export default function Contact() {
                 <ul className="space-y-2 text-sm text-green-800 font-jost">
                   <li className="flex items-center">
                     <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
-                    <span>20+ years experience</span>
+                    <span>20+ years of professional bathtub and kitchen refinishing experience</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
-                    <span>4,000+ units serviced</span>
+                    <span>Quick 24-hour turnaround for rental properties and multi-unit complexes</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
-                    <span>Licensed & insured</span>
+                    <span>Licensed and insured with comprehensive 2-year warranty</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
-                    <span>2-year warranty</span>
+                    <span>90% cost savings compared to replacement</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
-                    <span>Hispanic-owned & operated</span>
+                    <span>Tub cut outs, foundation repairs, chips, cracks, and full refinishing services</span>
                   </li>
                 </ul>
               </div>

@@ -135,7 +135,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} JL Bath Renovation Services. All rights reserved.</p>
+          <p>&copy; {currentYear} JL Bathtub Renovation Services. All rights reserved.</p>
           <p className="mt-2">Hispanic-Owned & Operated | 2-Year Warranty</p>
           <p className="mt-3">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-blue-600 transition-colors">

@@ -1,0 +1,415 @@
+================================================================================
+JLS REGLAZING WEBSITE COPY - MASTER DOCUMENT
+================================================================================
+Instructions: Edit the text in this file, save it, and let me know when ready.
+I will then update all the corresponding HTML files with your new copy.
+
+SEO IMPORTANCE LEGEND:
+[CRITICAL SEO] = Most important for search rankings (H1, Title, Meta Description)
+[HIGH SEO] = Important for search (H2, H3 headings)
+[MEDIUM SEO] = Helpful for search (body copy, image alt text)
+[LOW SEO] = Minimal SEO impact (button text, labels)
+
+================================================================================
+HOME PAGE (src/pages/Home.tsx)
+================================================================================
+
+---[CRITICAL SEO]---
+<title> TAG (appears in browser tab and Google search results):
+Professional Bathtub & Kitchen Refinishing | JLS Reglazing
+
+<meta description> TAG (appears under title in Google search results):
+Bathtub and kitchen refinishing services with quick same day unit turnaround. Chips, cracks, cut-out, and foundation repairs. 
+
+<meta keywords> TAG:
+bathtub reglazing, bathtub refinishing, kitchen reglazing, kitchen refinishing, San Bernardino, Riverside, Los Angeles, tile refinishing, porcelain refinishing, tile reglazing, porcelain reglazing, bath cut-out repair, bathtub repair, refinish kitchen countertops, tub reglazing, reglaze bathtub
+
+---[CRITICAL SEO]---
+<h1> HERO HEADLINE (main page title):
+Professional Bathtub & Kitchen Refinishing
+
+---[MEDIUM SEO]---
+<p> HERO SUBHEADLINE:
+We work with multi-unit complexes and small home owners to reglaze tubs, bath vanities, kitchen countertops, kitchen sinks, and more. Bathtub refinishing cost is 90% cheaper than traditional replacement, call now for quick quote. 
+
+
+---[HIGH SEO]---
+<h2> FORM SECTION TITLE (Hero):
+Get Your Free Reglazing Quote
+
+---[LOW SEO]---
+<p> FORM DESCRIPTION (Hero):
+Fill out the form below and we'll contact you within 24 hours with a personalized reglazing quote.
+
+---[MEDIUM SEO]---
+STATS CARDS (3 cards with numbers):
+Card 1: 20+ Years Experience
+Card 2: 4,000+ Units Serviced
+Card 3: 2-Year Guarantee
+
+---[HIGH SEO]---
+<h2> SERVICES SECTION TITLE:
+Refinishing Services
+
+---[MEDIUM SEO]---
+<p> SERVICES SECTION SUBTITLE:
+Below you will find a list of surfaces we refinish / reglaze within the Los Angeles, San Bernardino, and surrounding areas. Text or call for more information or custom refinishing services like Jacuzzis, Pools, Fridges, etc.
+
+
+---[MEDIUM SEO]---
+SERVICE CARDS (6 services):
+1. Bathtub Refinishing
+   Description: Professinal fiberglass, acrylic, cast iron, tile, and porcelain reglazing. We fix cracks, peeling, and weak tub foundaations (tub cut outs)
+   
+   
+    
+
+2. Kitchen Refinishing
+   Description: Professinal kitchen countertops and bar top reglazing. We repair cracks and damage from use overtime, leaving kitchen surfaces shiny and like new.
+
+3. Sink & Vanity Refinishing
+   Description: Kitchen sink and bathroom vanity reglazing. Tile, stainless steel, in all shapes and sizes. 
+
+4. Repairs: Tub Cut Outs and Foundation Repairs, Chips, Cracks, Paint Stripping
+   Description: Professional tub and kitchen surface repairs. We repair weak tub foundations, cracks and fissures, to uneven kitchen counters. We sand and profesisonally strip your tubs, sinks, and kitchen surfaces of paint before applying a new and shiny coat. 
+
+5. Paint Peeling
+   Description: Professional sanding and removal of original coat of paint. We strip the paint using acid, before applying a fresh coat of paint. 
+
+6. Bathroom Foundation Repair: Tub Cut Outs
+   Description: We work and have serviced elderly homes and retirnement home complexes. Our tub cut outs leave weak bathtub foundations feeling sturdy without having to replace the entire tub. 
+
+---[LOW SEO]---
+<button> VIEW ALL SERVICES BUTTON:
+View All Refinishing Services
+
+---[HIGH SEO]---
+<h2> STATS SECTION (4 stats):
+20+ Years Experience
+4,000+ Units Serviced
+24-Hour Turnaround
+2-Year Warranty
+
+---[HIGH SEO]---
+<h2> SERVICE AREAS SECTION TITLE:
+Refinishing Service Areas
+
+---[MEDIUM SEO]---
+<p> SERVICE AREAS SUBTITLE:
+Proudly serving Southern California with professional refinishing and reglazing services
+
+---[MEDIUM SEO]---
+SERVICE AREA LINKS (5 locations):
+1. Los Angeles
+2. San Bernardino
+3. Riverside
+4. Hemet
+5. Victorville
+
+---[HIGH SEO]---
+<h2> QUOTE FORM SECTION TITLE (Bottom):
+Get Your Free Reglazing Quote Today
+
+---[MEDIUM SEO]---
+<p> QUOTE FORM DESCRIPTION (Bottom):
+Fill out the form below and we'll contact you within 24 hours
+
+---[HIGH SEO]---
+<h2> FINAL CTA SECTION TITLE:
+Refinish your Tub or Kitchen Surface Today
+
+---[MEDIUM SEO]---
+<p> FINAL CTA DESCRIPTION:
+Get a professional reglazing quote today. Save up to 90% compared to replacement costs.
+
+---[LOW SEO]---
+<button> FINAL CTA BUTTON:
+Contact Us Today
+
+
+================================================================================
+SERVICES PAGE (src/pages/Services.tsx)
+================================================================================
+
+---[CRITICAL SEO]---
+<h1> PAGE TITLE:
+Complete Refinishing & Reglazing Services
+
+---[MEDIUM SEO]---
+<p> PAGE SUBTITLE:
+Professional bathtub, kitchen, and tile reglazing services for residential and commercial properties in Southern California
+
+---[HIGH SEO]---
+<h3> SERVICE CARDS (7 services):
+
+1. Bathtub Refinishing and Reglazing
+   Description: Tub refinishing, fiberglass, acrylic, tile, porcelain, cast-iron. We restore to like-new condition at a fraction of replacement cost.
+   Features:
+   - All bathtub types tile, fiberglass, acrylic, porcelain)
+   - Crack and chip repairs
+   - Bat tub cut outs and foundation repairs
+
+2. Kitchen Countertop Refinishing and Reglazing
+   Description: Give your kitchen a fresh look without the expense and hassle of full replacement. Our reglazing service restores tile, laminate, and solid surface countertops.
+   Features:
+   - Tile and laminate countertop and bar top reglazing
+   - White and multi-spec options for residential unit-complexes 
+   - Heat and stain resistant finish
+
+3. Sink Refinishing and Reglazing
+   Description: Restore your kitchen sink to pristine condition. Perfect for porcelain, cast iron, and stainless steel sinks showing signs of wear.
+   Features:
+   - Porcelain and Stainless steel sinks
+   - Rust and stain removal
+   - Heat and stain resistant finish
+
+4. Bath Vanity Refinishing and Reglazing
+   Description: Restore your restroom and bath vanity with a professional refinish. 
+   Features:
+   - Porcelain and stainless steel Bath Vanity reglazing
+   - Rust and stain removal
+   - Heat and stain resistant finish
+
+5. Crack & Chip Repair
+   Description: Professional repair for cracks and chips of all sizes. We restore structural integrity and appearance to damaged surfaces.
+   Features:
+   - All crack sizes and fissured repaired
+   - Weak tub foundations
+   - Uneven kitchen countertops
+
+6. Bathtub Enclosure Refinishing and Reglazing
+   Description: Refresh your entire bathtub enclosure, including surrounding walls. Or reglaze your tub only, choice is up to you!
+   Features:
+   - Tile wall reglazing
+   - Fiberglass surround restoration
+   - Grout line preservation
+   - Mold and mildew resistant finish
+
+7. Cut-Out Repairs
+   Description: Expert repair of cut-outs and large damaged areas using professional-grade fiberglass patching techniques.
+   Features:
+   - Fiberglass patch installation
+   - Cut-out restoration
+   - Structural reinforcement
+   - Seamless refinish and integration
+
+---[HIGH SEO]---
+<h3> VALUE PROPOSITION CARDS (2 cards):
+
+Card 1: Save Up to 90%
+Description: Reglazing costs a fraction of replacement. Perfect for quick rental unit turnarounds. 
+
+Card 2: Quick Unit Turnover
+Description: Most projects completed within 24 hours. Get your unit ready for your next tenant as quickly as possible. 
+
+---[HIGH SEO]---
+<h2> FINAL CTA SECTION:
+Ready to Get Started?
+
+---[MEDIUM SEO]---
+<p> FINAL CTA DESCRIPTION:
+Contact us today for a free Reglazing quote. Jorge, our small business owner, is grateful for your business. 
+
+---[LOW SEO]---
+<button> CTA BUTTON:
+Get Your Free Reglazing Quote
+
+
+================================================================================
+ABOUT PAGE (src/pages/About.tsx)
+================================================================================
+
+---[CRITICAL SEO]---
+<h1> PAGE TITLE:
+About JL Bath Renovation Services (JLSReglazing.com)
+
+---[MEDIUM SEO]---
+<p> PAGE SUBTITLE:
+Two decades of professional bathtub and kitchen refinishing throughout Southern California
+
+---[HIGH SEO]---
+<h2> JORGE'S STORY SECTION:
+Our Story
+
+---[MEDIUM SEO]---
+<p> STORY PARAGRAPHS (3 paragraphs):
+
+Paragraph 1:
+For over 20 years, Jorge Saldana has been refinishing bathtubs and kitchen countertops throughout Southern California. What started with a passion for quality craftsmanship has grown into a trusted business serving multi-unit complexes, rental properties, and homeowners across Los Angeles, San Bernardino, and Riverside counties.
+
+Paragraph 2:
+With more than 4,000 units serviced, JL Bath Renovation Services specializes in quick rental unit turnarounds and multi-unit complex refinishing. Every project receives Jorge's personal attention, from tub cut outs and foundation repairs to full kitchen countertop reglazing—ensuring results that exceed expectations at a fraction of replacement cost.
+
+Paragraph 3:
+As a proud Hispanic-owned and operated business, we bring technical excellence and a commitment to our community. The values of hard work, integrity, and customer satisfaction have been our foundation from day one, making us the go-to choice for property managers and homeowners who need fast, professional refinishing services.
+
+---[HIGH SEO]---
+<h2> CREDENTIALS SECTION TITLE:
+Our Credentials
+
+---[MEDIUM SEO]---
+<p> CREDENTIALS SUBTITLE:
+Licensed, insured, and committed to professional bathtub and kitchen refinishing excellence
+
+---[MEDIUM SEO]---
+CREDENTIAL CARDS (6 credentials):
+1. 20+ Years Experience
+2. 4,000+ Units Serviced
+3. Licensed & Insured
+4. Hispanic-Owned Business
+5. 2-Year Warranty
+6. Residential & Commercial
+
+---[HIGH SEO]---
+<h2> WHY CHOOSE US SECTION TITLE:
+Why Choose JLS Reglazing?
+
+---[HIGH SEO]---
+<h3> WHY CHOOSE US CARDS (4 cards):
+
+Card 1 Title: Experience You Can Trust
+Card 1 Description:
+Two decades of hands-on bathtub and kitchen refinishing experience means we've seen it all. From standard tub reglazing to complex tub cut outs and foundation repairs for multi-unit complexes, we have the expertise to handle any refinishing project with professional results.
+
+Card 2 Title: Quality Guaranteed
+Card 2 Description:
+Every bathtub refinishing and kitchen reglazing project comes with our comprehensive 2-year warranty. We use only professional-grade materials and proven techniques that ensure long-lasting, like-new results you can count on.
+
+Card 3 Title: Cost-Effective Solutions
+Card 3 Description:
+Save up to 90% compared to replacement costs. Our bathtub and kitchen refinishing services deliver like-new results at a fraction of the price, making quality updates accessible for rental property turnarounds and multi-unit complexes.
+
+Card 4 Title: Fast Turnaround
+Card 4 Description:
+Most projects completed within 24 hours. Perfect for property managers who need quick rental unit turnarounds. From initial quote to project completion, we provide clear communication, professional service, and fast results that keep your units ready for tenants.
+
+---[HIGH SEO]---
+<h2> SERVICE AREAS SECTION TITLE:
+Proudly Serving Southern California
+
+---[MEDIUM SEO]---
+<p> SERVICE AREAS LIST:
+San Bernardino County • Riverside County • Hemet • Los Angeles County • Victorville
+
+---[HIGH SEO]---
+<h2> FINAL CTA SECTION TITLE:
+Ready to Work with Us?
+
+---[MEDIUM SEO]---
+<p> FINAL CTA DESCRIPTION:
+Experience the difference that 20 years of bathtub and kitchen refinishing expertise makes. Get your free quote today.
+
+---[LOW SEO]---
+<button> CTA BUTTON:
+Contact Us Today
+
+
+================================================================================
+CONTACT PAGE (src/pages/Contact.tsx)
+================================================================================
+
+---[CRITICAL SEO]---
+<h1> PAGE TITLE:
+Get Your Free Refinishing Quote
+
+---[MEDIUM SEO]---
+<p> PAGE SUBTITLE:
+Professional bathtub, kitchen countertop, and tile refinishing. Quick turnaround for multi-unit complexes and rental properties.
+
+---[MEDIUM SEO]---
+CONTACT INFORMATION:
+Email: jorge@jlsreglazing.com
+Phone (English): +1 (310) 742-0057
+Phone (Spanish): +1 (424) 381-5170
+
+---[MEDIUM SEO]---
+SERVICE AREAS:
+San Bernardino • Riverside • Hemet • Los Angeles • Victorville
+
+---[HIGH SEO]---
+<h2> HOW IT WORKS SECTION TITLE:
+How It Works
+
+---[MEDIUM SEO]---
+HOW IT WORKS STEPS (5 steps):
+
+Step 1: Contact Us
+Fill out the quote form or call for immediate assistance. We provide quotes over the phone for standard bathtub and kitchen refinishing projects.
+
+Step 2: Get Your Quote
+Receive your personalized quote within 24 hours. We provide transparent pricing for all tub reglazing, kitchen countertop refinishing, and repair services.
+
+Step 3: Schedule Service
+Choose a convenient time. We work with your schedule and offer flexible timing for multi-unit complexes and rental property turnarounds.
+
+Step 4: Professional Refinishing
+Our team arrives on time with all necessary equipment. Most bathtub and kitchen refinishing projects are completed within 24 hours.
+
+Step 5: Enjoy Your Results
+Your refinished surfaces are ready to use after proper curing time. All work comes with our 2-year warranty for complete peace of mind.
+
+---[HIGH SEO]---
+<h2> WHY CHOOSE US SECTION TITLE:
+Why Choose JLS Reglazing?
+
+---[MEDIUM SEO]---
+WHY CHOOSE US BULLET POINTS (5 points):
+• 20+ years of professional bathtub and kitchen refinishing experience
+• Quick 24-hour turnaround for rental properties and multi-unit complexes
+• Licensed and insured with comprehensive 2-year warranty
+• 90% cost savings compared to replacement
+• Tub cut outs, foundation repairs, chips, cracks, and full refinishing services
+
+
+================================================================================
+WHAT IS REGLAZING SECTION (appears on multiple pages)
+(src/components/organisms/WhatIsReglazingSection.tsx)
+================================================================================
+
+---[HIGH SEO]---
+<h2> SECTION TITLE:
+What is Bathtub Refinishing?
+
+---[MEDIUM SEO]---
+<p> OPENING PARAGRAPH:
+Transform your bathtub and kitchen surfaces without the cost and hassle of replacement
+
+---[MEDIUM SEO]---
+<p> MAIN DESCRIPTION:
+Bathtub refinishing (also called reglazing or resurfacing) is a professional process that restores worn bathtubs, kitchen sinks, and countertops to like-new condition without replacement. We repair cracks, chips, tub cut outs, and weak foundations before applying a durable, factory-quality finish.
+
+---[HIGH SEO]---
+<h3> BENEFITS SECTION TITLE:
+Benefits of Professional Refinishing
+
+---[MEDIUM SEO]---
+BENEFITS LIST (4 benefits):
+• Save up to 90% compared to bathtub or kitchen replacement
+• Completed in 24 hours—perfect for rental unit turnarounds
+• Durable, heat-resistant finish for long-lasting results
+• 2-year warranty included on all refinishing services
+
+---[HIGH SEO]---
+<h3> SUBSECTION TITLE:
+Bathtub Reglazing vs Refinishing: What's the Difference?
+
+---[MEDIUM SEO]---
+<p> REGLAZING VS REFINISHING EXPLANATION:
+Bathtub reglazing and bathtub refinishing are often used interchangeably, and for good reason—they refer to the same professional restoration process. While some use "reglazing" to specifically describe the application of a new coating, refinishing is the broader term that encompasses the entire process: surface preparation, repairs (such as chips, cracks, and tub cut outs), acid etching, and applying a durable finish. Whether you search for "bathtub reglazing near me" or "bathtub refinishing," you'll find the same high-quality service. At JLS Reglazing, we specialize in both terms because we provide complete bathtub and kitchen surface restoration—from foundation repairs to the final glossy coat. The result is always the same: a like-new surface at a fraction of replacement cost.
+
+
+================================================================================
+NOTES FOR UPDATING
+================================================================================
+1. Edit only the text content in this file (after the colons and descriptions)
+2. Do NOT edit the labels like [CRITICAL SEO], <h1>, etc. - these help me map back to code
+3. Keep line breaks for readability - they won't affect the website
+4. Save this file when done
+5. Let me know and I'll update all the website files with your new copy
+
+IMPORTANT SEO TIPS:
+- [CRITICAL SEO] items have biggest impact on Google rankings
+- Include location names (San Bernardino, Riverside, etc.) for local SEO
+- Use action words like "Professional", "Expert", "Transform"
+- Keep meta description under 160 characters
+- Use specific numbers (90%, 20+ years, 4,000+ units)

@@ -30,7 +30,7 @@ export default function Victorville() {
             <div>
               <h2 className="section-title text-[#232423] mb-6">Serving Victorville Residents</h2>
               <p className="text-lg text-gray-700 font-jost mb-6 leading-relaxed">
-                For over 20 years, JL Bath Renovation Services has been providing professional
+                For over 20 years, JL Bathtub Renovation Services has been providing professional
                 reglazing services to homeowners and businesses in Victorville and the High Desert
                 area. We understand the unique needs of High Desert properties and deliver
                 exceptional results at affordable prices.

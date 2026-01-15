@@ -1,63 +1,76 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import BeforeAfterSlider from '../components/molecules/BeforeAfterSlider'
-import { StarIcon } from '@heroicons/react/24/solid'
+import SEO from '../components/molecules/SEO'
 
 export default function Gallery() {
   const projects = [
     {
       id: 1,
-      before: '/images/1_before.jpg',
-      after: '/images/1_after.jpg',
-      title: 'Bathtub Restoration',
-      description: 'Complete bathtub reglazing with chip repair',
+      before: '/images/1_before.webp',
+      after: '/images/1_after.webp',
+      title: 'Bathtub Refinishing with Foundation Repair',
+      description: 'Severe damage restoration including peeling paint removal, tub cut-out repair, and tile wall refinishing',
+      alt: 'Bathtub refinishing before and after - heavily damaged tub with foundation repair and tile wall reglazing in San Bernardino',
     },
     {
       id: 2,
-      before: '/images/2_before.jpg',
-      after: '/images/2_after.jpg',
-      title: 'Kitchen Countertop Refinishing',
-      description: 'Full kitchen countertop reglazing transformation',
+      before: '/images/2_before.webp',
+      after: '/images/2_after.webp',
+      title: 'Bathtub Enclosure Refinishing with Tile Surround',
+      description: 'Complete jacuzzi tub and tile surround reglazing - grout restoration and surface refinishing',
+      alt: 'Bathtub enclosure refinishing before and after - jacuzzi tub with tile surround professional reglazing in Riverside',
     },
     {
       id: 3,
-      before: '/images/3_before.jpg',
-      after: '/images/3_after.jpg',
-      title: 'Tile Reglazing',
-      description: 'Professional tile surface restoration',
+      before: '/images/3_before.webp',
+      after: '/images/3_after.webp',
+      title: 'Bathtub Refinishing - Stain and Mildew Removal',
+      description: 'Professional bathtub reglazing with fiberglass surround restoration and caulk line repair',
+      alt: 'Bathtub refinishing before and after - stained tub and surround restored to pristine condition in Los Angeles',
     },
     {
       id: 4,
-      before: '/images/4_before.jpg',
-      after: '/images/4_after.jpg',
-      title: 'Bathtub Enclosure',
-      description: 'Complete bathtub enclosure refinishing',
+      before: '/images/4_before.webp',
+      after: '/images/4_after.webp',
+      title: '',
+      description: '',
+      alt: 'Bathtub refinishing project before and after transformation',
     },
     {
       id: 5,
-      before: '/images/5_before.jpg',
-      after: '/images/5_after.jpg',
-      title: 'Vanity Restoration',
-      description: 'Bathroom vanity reglazing and repair',
+      before: '/images/5_before.webp',
+      after: '/images/5_after.webp',
+      title: '',
+      description: '',
+      alt: 'Refinishing project before and after transformation',
     },
     {
       id: 6,
-      before: '/images/6_before.jpg',
-      after: '/images/6_after.jpg',
-      title: 'Multi-Unit Property',
-      description: 'Commercial property bathroom restoration',
+      before: '/images/6_before.webp',
+      after: '/images/6_after.webp',
+      title: '',
+      description: '',
+      alt: 'Refinishing project before and after transformation',
     },
     {
       id: 7,
-      before: '/images/7_before.jpg',
-      after: '/images/7_after.jpg',
-      title: 'Complete Bathroom Reglaze',
-      description: 'Full bathroom reglazing project',
+      before: '/images/7_before.webp',
+      after: '/images/7_after.webp',
+      title: '',
+      description: '',
+      alt: 'Refinishing project before and after transformation',
     },
   ]
 
   return (
     <div>
+      <SEO
+        title="Before & After Gallery - Bathtub & Kitchen Refinishing Results"
+        description="See our bathtub and kitchen refinishing transformations. 4,000+ units serviced across Southern California. Professional reglazing results with 2-year warranty."
+        keywords="bathtub refinishing before after, kitchen reglazing gallery, bathtub reglazing results, refinishing photos, Southern California"
+        canonical="https://jlsreglazing.com/gallery"
+      />
       {/* Hero Section */}
       <section className="bg-neutral-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +94,7 @@ export default function Gallery() {
                 <BeforeAfterSlider
                   beforeImage={project.before}
                   afterImage={project.after}
-                  alt={project.title}
+                  alt={project.alt}
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -114,87 +127,13 @@ export default function Gallery() {
               <p className="text-xl font-jost">Units Serviced</p>
             </div>
             <div>
-              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">100%</div>
-              <p className="text-xl font-jost">Satisfaction Rate</p>
+              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">24-Hour</div>
+              <p className="text-xl font-jost">Turnaround</p>
             </div>
             <div>
               <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">2-Year</div>
               <p className="text-xl font-jost">Warranty</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-title text-[#232423] mb-4">What Our Customers Say</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 rounded-xl p-8"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-8 h-8 text-yellow-500" />
-                ))}
-              </div>
-              <p className="text-gray-700 font-jost mb-4 italic">
-                "Outstanding work! Our bathtub looks brand new. Jorge and his team were
-                professional, punctual, and the quality exceeded our expectations."
-              </p>
-              <p className="font-orbitron font-semibold text-[#232423]">
-                - San Bernardino Homeowner
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gray-100 rounded-xl p-8"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-8 h-8 text-yellow-500" />
-                ))}
-              </div>
-              <p className="text-gray-700 font-jost mb-4 italic">
-                "Saved thousands compared to replacement. The kitchen countertops look amazing and
-                the 2-year warranty gives us peace of mind."
-              </p>
-              <p className="font-orbitron font-semibold text-[#232423]">
-                - Riverside Property Manager
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-100 rounded-xl p-8"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-8 h-8 text-yellow-500" />
-                ))}
-              </div>
-              <p className="text-gray-700 font-jost mb-4 italic">
-                "Highly recommend! Jorge's expertise and attention to detail transformed our
-                apartment complex bathrooms. Excellent value for money."
-              </p>
-              <p className="font-orbitron font-semibold text-[#232423]">
-                - Los Angeles Property Owner
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

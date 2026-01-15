@@ -8,6 +8,7 @@ import {
   ShieldCheckIcon,
   BuildingOffice2Icon,
 } from '@heroicons/react/24/outline'
+import SEO from '../components/molecules/SEO'
 
 export default function About() {
   const credentials = [
@@ -21,6 +22,12 @@ export default function About() {
 
   return (
     <div>
+      <SEO
+        title="About JL Bathtub Renovation Services - 20+ Years of Excellence"
+        description="Two decades of professional bathtub and kitchen refinishing throughout Southern California. 4,000+ units serviced. Licensed, insured, Hispanic-owned business with 2-year warranty."
+        keywords="bathtub refinishing company, kitchen reglazing business, Southern California refinishing, licensed bathtub reglazing, Hispanic-owned business"
+        canonical="https://jlsreglazing.com/about"
+      />
       {/* Hero Section */}
       <section className="bg-[#232423] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,9 +37,9 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="hero-title mb-6">About JL Bath Renovation Services</h1>
+            <h1 className="hero-title mb-6">About JL Bathtub Renovation Services (JLSReglazing.com)</h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto font-jost">
-              Two decades of excellence in bathtub and kitchen reglazing
+              Two decades of professional bathtub and kitchen refinishing throughout Southern California
             </p>
           </motion.div>
         </div>
@@ -89,20 +96,13 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-gray-700 font-jost text-lg leading-relaxed">
                 <p>
-                  For over 20 years, Jorge Saldana has been transforming bathrooms and kitchens
-                  throughout Southern California. What started as a passion for craftsmanship has
-                  grown into a trusted business serving thousands of satisfied customers.
+                  For over 20 years, Jorge Saldana has been refinishing bathtubs and kitchen countertops throughout Southern California. What started with a passion for quality craftsmanship has grown into a trusted business serving multi-unit complexes, rental properties, and homeowners across Los Angeles, San Bernardino, and Riverside counties.
                 </p>
                 <p>
-                  With more than 4,000 units serviced, JL Bath Renovation Services has become
-                  synonymous with quality, reliability, and exceptional customer service. Every
-                  project receives Jorge's personal attention and expertise, ensuring results that
-                  exceed expectations.
+                  With more than 4,000 units serviced, JL Bathtub Renovation Services specializes in quick rental unit turnarounds and multi-unit complex refinishing. Every project receives Jorge's personal attention, from tub cut outs and foundation repairs to full kitchen countertop reglazing—ensuring results that exceed expectations at a fraction of replacement cost.
                 </p>
                 <p>
-                  As a proud Hispanic-owned and operated business, we bring not just technical
-                  excellence, but also a commitment to our community and the values of hard work,
-                  integrity, and customer satisfaction that have been our foundation from day one.
+                  As a proud Hispanic-owned and operated business, we bring technical excellence and a commitment to our community. The values of hard work, integrity, and customer satisfaction have been our foundation from day one, making us the go-to choice for property managers and homeowners who need fast, professional refinishing services.
                 </p>
               </div>
             </motion.div>
@@ -116,7 +116,7 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="section-title text-[#232423] mb-4">Our Credentials</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
-              Certified, insured, and committed to excellence
+              Licensed, insured, and committed to professional bathtub and kitchen refinishing excellence
             </p>
           </div>
 
@@ -160,9 +160,7 @@ export default function About() {
                 Experience You Can Trust
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Two decades of hands-on experience means we've seen it all. From standard bathtubs
-                to complex commercial projects, we have the expertise to handle any reglazing
-                challenge with professional results.
+                Two decades of hands-on bathtub and kitchen refinishing experience means we've seen it all. From standard tub reglazing to complex tub cut outs and foundation repairs for multi-unit complexes, we have the expertise to handle any refinishing project with professional results.
               </p>
             </div>
 
@@ -171,9 +169,7 @@ export default function About() {
                 Quality Guaranteed
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Every project comes with our comprehensive 2-year warranty. We use only
-                professional-grade materials and proven techniques that ensure long-lasting,
-                beautiful results you can count on.
+                Every bathtub refinishing and kitchen reglazing project comes with our comprehensive 2-year warranty. We use only professional-grade materials and proven techniques that ensure long-lasting, like-new results you can count on.
               </p>
             </div>
 
@@ -182,20 +178,16 @@ export default function About() {
                 Cost-Effective Solutions
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Save up to <span className="font-bold text-[#FB8040]">90%</span> compared to replacement costs. Our reglazing services deliver
-                like-new results at a fraction of the price, making quality bathroom and kitchen
-                updates accessible to everyone.
+                Save up to 90% compared to replacement costs. Our bathtub and kitchen refinishing services deliver like-new results at a fraction of the price, making quality updates accessible for rental property turnarounds and multi-unit complexes.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-orbitron font-semibold text-[#232423] mb-4">
-                Customer-Focused Service
+                Fast Turnaround
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Your satisfaction is our priority. From the initial quote to project completion,
-                we provide clear communication, professional service, and exceptional results that
-                exceed expectations.
+                Most projects completed within 24 hours. Perfect for property managers who need quick rental unit turnarounds. From initial quote to project completion, we provide clear communication, professional service, and fast results that keep your units ready for tenants.
               </p>
             </div>
           </div>
@@ -219,7 +211,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-title mb-6">Ready to Work with Us?</h2>
           <p className="text-xl mb-8 font-jost">
-            Experience the difference that 20 years of expertise makes. Get your free quote today.
+            Experience the difference that 20 years of bathtub and kitchen refinishing expertise makes. Get your free quote today.
           </p>
           <Link
             to="/contact"

@@ -14,43 +14,42 @@ import {
   BeakerIcon,
   WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline'
-import { StarIcon } from '@heroicons/react/24/solid'
 
 export default function Home() {
   const services = [
     {
-      title: 'Bathtub Reglazing',
-      description: 'Professional bathtub refinishing and restoration',
+      title: 'Bathtub Refinishing and Reglazing',
+      description: 'Expert bathtub refinishing for fiberglass, porcelain, cast iron, and ceramic tile surfaces. Transform worn tubs with professional reglazing - fraction of replacement cost.',
       Icon: SparklesIcon,
       image: '/images/1_after.jpg',
     },
     {
-      title: 'Kitchen Reglazing',
-      description: 'Transform your kitchen surfaces at a fraction of replacement cost',
+      title: 'Kitchen Countertop Refinishing and Reglazing',
+      description: 'Kitchen countertop refinishing that restores tile and laminate surfaces. Professional kitchen reglazing delivers durable, heat-resistant finishes for rental units and homes.',
       Icon: HomeModernIcon,
       image: '/images/solo_4.jpg',
     },
     {
-      title: 'Sink & Vanity Reglazing',
-      description: 'Kitchen and bathroom sink reglazing services',
+      title: 'Sink Refinishing and Reglazing',
+      description: 'Professional sink refinishing for kitchen and bathroom. We reglaze porcelain and stainless steel sinks, removing rust and stains while restoring shine.',
       Icon: BeakerIcon,
       image: '/images/2_after.jpg',
     },
     {
-      title: 'Repairs: Chips, Cracks',
-      description: 'Professional repair for all sizes of cracks and chips',
+      title: 'Bath Vanity Refinishing and Reglazing',
+      description: 'Bathroom vanity refinishing and reglazing services. Restore bath vanity surfaces with professional refinishing techniques and durable coatings.',
       Icon: WrenchScrewdriverIcon,
       image: '/images/3_after.jpg',
     },
     {
-      title: 'Paint Peeling',
-      description: 'Expert solutions for peeling paint restoration',
+      title: 'Crack & Chip Repair',
+      description: 'Expert crack and chip repair for bathtubs and countertops. We fix structural damage, weak foundations, and surface imperfections before refinishing.',
       Icon: SparklesIcon,
       image: '/images/4_after.jpg',
     },
     {
-      title: 'Bathroom Foundation Repair',
-      description: 'Professional foundation repair and restoration',
+      title: 'Bathtub Enclosure Refinishing and Reglazing',
+      description: 'Complete bathtub enclosure refinishing including tile walls and tub surrounds. Ceramic tile reglazing with mold-resistant, waterproof finishes.',
       Icon: HomeModernIcon,
       image: '/images/5_after.jpg',
     },
@@ -59,10 +58,10 @@ export default function Home() {
   return (
     <div>
       <SEO
-        title="Professional Bathtub & Kitchen Refinishing"
-        description="Expert bathtub and kitchen reglazing services in Southern California. 20+ years experience, 4,000+ units serviced. Licensed, insured, 2-year warranty. Save 90% vs replacement."
+        title="Professional Bathtub & Kitchen Refinishing | JLS Reglazing"
+        description="Bathtub and kitchen refinishing services with quick same day unit turnaround. Chips, cracks, cut-out, and foundation repairs."
         canonical="https://jlsreglazing.com/"
-        keywords="bathtub reglazing, bathtub refinishing, kitchen reglazing, San Bernardino, Riverside, Los Angeles, tile reglazing, porcelain refinishing"
+        keywords="bathtub reglazing, bathtub refinishing, kitchen reglazing, kitchen refinishing, San Bernardino, Riverside, Los Angeles, tile refinishing, porcelain refinishing, tile reglazing, porcelain reglazing, bath cut-out repair, bathtub repair, refinish kitchen countertops, tub reglazing, reglaze bathtub"
       />
       <StructuredData data={generateLocalBusinessSchema()} />
       <StructuredData data={generateServiceSchema()} />
@@ -93,11 +92,10 @@ export default function Home() {
               transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.2 }}
             >
               <h1 className="hero-title text-white mb-6">
-                Professional Bathtub & Kitchen Reglazing Services
+                Professional Bathtub & Kitchen Refinishing
               </h1>
               <p className="text-xl text-gray-100 mb-8 font-jost leading-relaxed">
-                Bathtubs, sinks, and kitchen countertops crack, peel, and get worn out over time.
-                Save up to <span className="font-bold text-2xl text-blue-400">90%</span> vs replacement with our professional reglazing services.
+                We work with multi-unit complexes and small home owners to reglaze tubs, bath vanities, kitchen countertops, kitchen sinks, and more. Our tub reglazing services span Los Angeles and San Bernardino counties.
               </p>
 
               {/* Photo-Backed Stat Cards */}
@@ -105,7 +103,7 @@ export default function Home() {
                 {[
                   { stat: '20+', label: 'Years Experience', img: 'painter_1.jpg' },
                   { stat: '4,000+', label: 'Units Serviced', img: '1_after.jpg' },
-                  { stat: '100%', label: 'Satisfaction', img: '2_after.jpg' },
+                  { stat: '2-Year', label: 'Guarantee', img: '2_after.jpg' },
                 ].map((item, index) => (
                   <motion.div
                     key={item.label}
@@ -145,7 +143,7 @@ export default function Home() {
             >
               <div className="bg-[#FAF8F3] rounded-2xl p-8 shadow-2xl">
                 <h2 className="text-2xl font-orbitron font-bold text-[#232423] mb-2">
-                  Get Your Free Quote
+                  Get Your Free Reglazing Quote
                 </h2>
                 <p className="text-[#7A7269] font-jost mb-6 text-sm">
                   Fill out the form below and we'll contact you within 24 hours with a personalized quote.
@@ -177,9 +175,9 @@ export default function Home() {
             }}
             className="text-center mb-16"
           >
-            <h2 className="section-title text-[#232423] mb-4">Our Services</h2>
+            <h2 className="section-title text-[#232423] mb-4">Refinishing Services</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
-              Complete reglazing and refinishing services for residential and commercial properties
+              Below you will find a list of surfaces we refinish / reglaze within the Los Angeles, San Bernardino, and surrounding areas. Text or call for more information or custom refinishing services like Jacuzzis, Pools, Fridges, etc.
             </p>
           </motion.div>
 
@@ -249,8 +247,8 @@ export default function Home() {
               <p className="text-xl font-jost">Units Serviced</p>
             </div>
             <div>
-              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">100%</div>
-              <p className="text-xl font-jost">Satisfaction Rate</p>
+              <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">24-Hour</div>
+              <p className="text-xl font-jost">Turnaround</p>
             </div>
             <div>
               <div className="text-5xl font-orbitron font-bold text-[#FB8040] mb-2">2-Year</div>
@@ -260,87 +258,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-title text-[#232423] mb-4">What Our Customers Say</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 rounded-xl p-8"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-8 h-8 text-yellow-500" />
-                ))}
-              </div>
-              <p className="text-gray-700 font-jost mb-4 italic">
-                "Outstanding work! Our bathtub looks brand new. Jorge and his team were
-                professional, punctual, and the quality exceeded our expectations."
-              </p>
-              <p className="font-orbitron font-semibold text-[#232423]">
-                - San Bernardino Homeowner
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gray-100 rounded-xl p-8"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-8 h-8 text-yellow-500" />
-                ))}
-              </div>
-              <p className="text-gray-700 font-jost mb-4 italic">
-                "Saved thousands compared to replacement. The kitchen countertops look amazing and
-                the 2-year warranty gives us peace of mind."
-              </p>
-              <p className="font-orbitron font-semibold text-[#232423]">
-                - Riverside Property Manager
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-100 rounded-xl p-8"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-8 h-8 text-yellow-500" />
-                ))}
-              </div>
-              <p className="text-gray-700 font-jost mb-4 italic">
-                "Highly recommend! Jorge's expertise and attention to detail transformed our
-                apartment complex bathrooms. Excellent value for money."
-              </p>
-              <p className="font-orbitron font-semibold text-[#232423]">
-                - Los Angeles Property Owner
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Service Areas - Merged Section */}
       <section className="relative py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title text-navy-900 mb-4">Service Areas</h2>
+            <h2 className="section-title text-navy-900 mb-4">Refinishing Service Areas</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
-              Proudly serving Southern California with professional reglazing services
+              Proudly serving Southern California with professional refinishing and reglazing services
             </p>
           </div>
 
@@ -373,7 +297,7 @@ export default function Home() {
       <section id="quote-form" className="py-16 bg-neutral-50 scroll-mt-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-neutral-600 mb-4">
-            Get Your Free Quote Today
+            Get Your Free Reglazing Quote Today
           </h2>
           <p className="text-center text-neutral-400 mb-8">
             Fill out the form below and we'll contact you within 24 hours
@@ -387,9 +311,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="relative py-16 bg-[#FB8040] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Space?</h2>
+          <h2 className="text-3xl font-bold mb-6">Refinish your Tub or Kitchen Surface Today</h2>
           <p className="text-xl mb-8">
-            Get a professional reglazing quote today. Save up to <span className="font-bold text-2xl">90%</span> compared to replacement costs.
+            Get a professional reglazing quote today. Save up to 90% compared to replacement costs.
           </p>
           <Link
             to="/contact"

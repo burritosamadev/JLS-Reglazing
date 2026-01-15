@@ -31,7 +31,7 @@ export default function Riverside() {
                 Serving Riverside County Communities
               </h2>
               <p className="text-lg text-gray-700 font-jost mb-6 leading-relaxed">
-                JL Bath Renovation Services has been providing professional reglazing services to
+                JL Bathtub Renovation Services has been providing professional reglazing services to
                 Riverside County homeowners and businesses for over two decades. From downtown
                 Riverside to Temecula, Murrieta, and everywhere in between, we deliver exceptional
                 results that save you money and time.

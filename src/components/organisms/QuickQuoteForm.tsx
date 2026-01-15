@@ -255,7 +255,7 @@ export default function QuickQuoteForm() {
           className="mt-0.5 w-4 h-4 border border-[#E5E0D6] rounded bg-white checked:bg-[#FB8040] checked:border-[#FB8040] focus:ring-2 focus:ring-[#FB8040] focus:ring-offset-0"
         />
         <label htmlFor="smsConsent" className="text-xs text-[#7A7269] leading-tight cursor-pointer">
-          I agree to receive SMS from JLS Reglazing. Msg & data rates may apply. Reply STOP to opt out.
+          By checking, you agree to receive appointment reminders and service updates via SMS from JLS Reglazing. Msg frequency varies. Msg & data rates may apply. Reply HELP for help, STOP to opt out. Your info won't be shared with 3rd parties. See our <a href="/privacy-policy" target="_blank" className="text-[#FB8040] underline">privacy policy</a>.
         </label>
       </div>
 

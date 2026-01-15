@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 4: Third-Party Services */}
+            {/* Section 4: Data Sharing */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -187,7 +187,38 @@ export default function PrivacyPolicy() {
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                4. Third-Party Services
+                4. Data Sharing
+              </h2>
+              <ul className="list-disc pl-6 mb-6 text-gray-700 font-jost space-y-2">
+                <li>Customer data is not shared with 3rd parties for promotional or marketing purposes.</li>
+                <li>Mobile opt-in and consent are never shared with anyone for any purpose. Any information sharing that may be mentioned elsewhere in this policy excludes mobile opt-in data.</li>
+              </ul>
+            </motion.div>
+
+            {/* Section 5: Messaging Terms and Conditions */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg"
+            >
+              <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
+                5. Messaging Terms and Conditions
+              </h2>
+              <p className="text-gray-700 font-jost mb-4">
+                By providing your phone number and agreeing to receive texts, you consent to receive text messages from JL BATHTUB RENOVATION SERVICES, from 310-742-0057 regarding customer care. Consent is not a condition of purchase. Message frequency varies. Message & data rates may apply. You can reply STOP to unsubscribe at any time or HELP for assistance. You can also contact us at 310-742-0057 or jorge@jlsreglazing.com. Mobile opt-in information is never shared with third parties.
+              </p>
+            </motion.div>
+
+            {/* Section 6: Third-Party Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
+                6. Third-Party Services
               </h2>
               <p className="text-gray-700 font-jost mb-4">
                 We use the following third-party services to operate our business:
@@ -248,15 +279,15 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 5: Data Security */}
+            {/* Section 7: Data Security */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                5. Data Security
+                7. Data Security
               </h2>
               <p className="text-gray-700 font-jost mb-4">
                 We implement appropriate technical and organizational measures to protect your
@@ -266,15 +297,15 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 6: Data Retention */}
+            {/* Section 8: Data Retention */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                6. Data Retention
+                8. Data Retention
               </h2>
               <p className="text-gray-700 font-jost mb-4">
                 We retain your personal information for as long as necessary to:
@@ -290,15 +321,15 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 7: Your Rights */}
+            {/* Section 9: Your Rights */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                7. Your Privacy Rights
+                9. Your Privacy Rights
               </h2>
               <p className="text-gray-700 font-jost mb-4">Depending on your location, you may have the right to:</p>
               <ul className="list-disc pl-6 mb-6 text-gray-700 font-jost space-y-2">
@@ -317,15 +348,15 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 8: California Privacy Rights */}
+            {/* Section 10: California Privacy Rights */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 1.0 }}
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                8. California Privacy Rights (CCPA)
+                10. California Privacy Rights (CCPA)
               </h2>
               <p className="text-gray-700 font-jost mb-4">
                 If you are a California resident, you have additional rights under the California
@@ -339,15 +370,15 @@ export default function PrivacyPolicy() {
               </ul>
             </motion.div>
 
-            {/* Section 9: Children's Privacy */}
+            {/* Section 11: Children's Privacy */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                9. Children's Privacy
+                11. Children's Privacy
               </h2>
               <p className="text-gray-700 font-jost">
                 Our services are not directed to individuals under the age of 18. We do not
@@ -355,15 +386,15 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 10: Changes to This Policy */}
+            {/* Section 12: Changes to This Policy */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.0 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
               className="mb-12"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                10. Changes to This Privacy Policy
+                12. Changes to This Privacy Policy
               </h2>
               <p className="text-gray-700 font-jost">
                 We may update this Privacy Policy from time to time. The "Last Updated" date at the
@@ -372,15 +403,15 @@ export default function PrivacyPolicy() {
               </p>
             </motion.div>
 
-            {/* Section 11: Contact Us */}
+            {/* Section 13: Contact Us */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.1 }}
+              transition={{ duration: 0.5, delay: 1.3 }}
               className="mb-12 bg-gray-50 p-6 rounded-lg"
             >
               <h2 className="text-2xl font-orbitron font-bold text-navy-900 mb-6">
-                11. Contact Us
+                13. Contact Us
               </h2>
               <p className="text-gray-700 font-jost mb-4">
                 If you have questions or concerns about this Privacy Policy or our data practices,
@@ -406,7 +437,7 @@ export default function PrivacyPolicy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            transition={{ duration: 0.5, delay: 1.4 }}
             className="text-center mt-12"
           >
             <Link

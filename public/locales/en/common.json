@@ -1,0 +1,28 @@
+{
+  "phone": {
+    "english": "(310) 742-0057",
+    "spanish": "(424) 381-5170",
+    "label_english": "English",
+    "label_spanish": "Spanish"
+  },
+  "cta": {
+    "getFreeQuote": "Get Free Quote",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "viewGallery": "View Gallery",
+    "callNow": "Call Now",
+    "bookNow": "Book Now",
+    "getQuote": "Get Quote"
+  },
+  "warranty": "2-Year Warranty",
+  "turnaround": "24-Hour Turnaround",
+  "savings": "Save up to 90%",
+  "yearsExperience": "20+ Years Experience",
+  "unitsServiced": "4,000+ Units Serviced",
+  "satisfaction": "100% Satisfaction",
+  "licensed": "Licensed & Insured",
+  "serviceAreas": "Service Areas",
+  "followUs": "Follow Us",
+  "language": "Language",
+  "selectLanguage": "Select Language"
+}

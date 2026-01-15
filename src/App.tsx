@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Layout from './components/templates/Layout'
 import Home from './pages/Home'
 import Services from './pages/Services'
@@ -34,12 +35,33 @@ function ScrollToTop() {
   return null
 }
 
+// Language synchronization component
+function LanguageSync() {
+  const { i18n } = useTranslation()
+  const location = useLocation()
+
+  useEffect(() => {
+    const isSpanishRoute = location.pathname.startsWith('/es')
+    const currentLang = i18n.language
+
+    if (isSpanishRoute && currentLang !== 'es') {
+      i18n.changeLanguage('es')
+    } else if (!isSpanishRoute && currentLang === 'es') {
+      i18n.changeLanguage('en')
+    }
+  }, [location.pathname, i18n])
+
+  return null
+}
+
 function AppContent() {
   return (
     <>
       <ScrollToTop />
+      <LanguageSync />
       <Layout>
         <Routes>
+          {/* English Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/process" element={<Process />} />
@@ -60,6 +82,28 @@ function AppContent() {
           <Route path="/services/crack-repair" element={<CrackRepair />} />
           <Route path="/services/bathtub-enclosure" element={<BathtubEnclosureRefinishing />} />
           <Route path="/services/cut-out-repairs" element={<CutOutRepairs />} />
+
+          {/* Spanish Routes - Mirror all routes with /es prefix */}
+          <Route path="/es" element={<Home />} />
+          <Route path="/es/services" element={<Services />} />
+          <Route path="/es/process" element={<Process />} />
+          <Route path="/es/about" element={<About />} />
+          <Route path="/es/gallery" element={<Gallery />} />
+          <Route path="/es/contact" element={<Contact />} />
+          <Route path="/es/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/es/san-bernardino-reglazing" element={<SanBernardino />} />
+          <Route path="/es/riverside-reglazing" element={<Riverside />} />
+          <Route path="/es/hemet-reglazing" element={<Hemet />} />
+          <Route path="/es/los-angeles-reglazing" element={<LosAngeles />} />
+          <Route path="/es/victorville-reglazing" element={<Victorville />} />
+          {/* Spanish Individual Service Pages */}
+          <Route path="/es/services/bathtub-refinishing" element={<BathtubRefinishing />} />
+          <Route path="/es/services/kitchen-refinishing" element={<KitchenRefinishing />} />
+          <Route path="/es/services/sink-refinishing" element={<SinkRefinishing />} />
+          <Route path="/es/services/bath-vanity-refinishing" element={<BathVanityRefinishing />} />
+          <Route path="/es/services/crack-repair" element={<CrackRepair />} />
+          <Route path="/es/services/bathtub-enclosure" element={<BathtubEnclosureRefinishing />} />
+          <Route path="/es/services/cut-out-repairs" element={<CutOutRepairs />} />
         </Routes>
       </Layout>
     </>

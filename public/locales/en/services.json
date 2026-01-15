@@ -1,0 +1,44 @@
+{
+  "bathtub": {
+    "title": "Bathtub Refinishing (Afinamiento de Bañeras)",
+    "titleShort": "Bathtub Refinishing",
+    "description": "Professional bathtub reglazing services that restore your tub to like-new condition",
+    "keywords": "bathtub refinishing, bathtub reglazing, tub resurfacing, bathtub restoration"
+  },
+  "kitchen": {
+    "title": "Kitchen Countertop Refinishing (Renovación de Encimeras)",
+    "titleShort": "Kitchen Refinishing",
+    "description": "Expert kitchen countertop reglazing for tile and laminate surfaces",
+    "keywords": "kitchen refinishing, countertop reglazing, tile refinishing, kitchen renovation"
+  },
+  "sink": {
+    "title": "Sink Refinishing (Afinamiento de Lavabos)",
+    "titleShort": "Sink Refinishing",
+    "description": "Professional sink reglazing for bathroom and kitchen sinks",
+    "keywords": "sink refinishing, sink reglazing, sink restoration"
+  },
+  "bathVanity": {
+    "title": "Bath Vanity Refinishing (Renovación de Tocadores)",
+    "titleShort": "Bath Vanity Refinishing",
+    "description": "Transform your bathroom vanity with professional refinishing services",
+    "keywords": "bath vanity refinishing, vanity reglazing, bathroom vanity restoration"
+  },
+  "crackRepair": {
+    "title": "Crack & Chip Repair (Reparación de Grietas)",
+    "titleShort": "Crack Repair",
+    "description": "Expert crack and chip repair for bathtubs, sinks, and countertops",
+    "keywords": "crack repair, chip repair, bathtub repair, damage restoration"
+  },
+  "enclosure": {
+    "title": "Bathtub Enclosure Refinishing (Revestimiento de Bañera)",
+    "titleShort": "Enclosure Refinishing",
+    "description": "Professional bathtub enclosure and tile surround reglazing",
+    "keywords": "bathtub enclosure, tile surround refinishing, tub wall reglazing"
+  },
+  "cutOut": {
+    "title": "Cut-Out Repairs (Reparación de Cortes)",
+    "titleShort": "Cut-Out Repairs",
+    "description": "Expert tub cut-out and foundation repairs to prevent bathtub collapse",
+    "keywords": "cut-out repair, tub cut-out, foundation repair, structural repair"
+  }
+}

@@ -13,16 +13,16 @@ export default function TopBar() {
               onClick={() => analytics.phoneClick('310-742-0057', 'TopBar')}
               className="text-[#FB8040] hover:text-[#E5722A] transition-colors flex items-center gap-1"
             >
-              <span className="hidden sm:inline text-[#7A7269] text-xs">English:</span>
+              <span className="text-[#7A7269] text-[10px] sm:text-xs">EN:</span>
               <span className="font-medium">(310) 742-0057</span>
             </a>
-            <span className="text-[#7A7269] hidden sm:inline">|</span>
+            <span className="text-[#7A7269]">|</span>
             <a
               href="tel:+14243815170"
               onClick={() => analytics.phoneClick('424-381-5170', 'TopBar')}
               className="text-[#FB8040] hover:text-[#E5722A] transition-colors flex items-center gap-1"
             >
-              <span className="hidden sm:inline text-[#7A7269] text-xs">Spanish:</span>
+              <span className="text-[#7A7269] text-[10px] sm:text-xs">ES:</span>
               <span className="font-medium">(424) 381-5170)</span>
             </a>
           </div>

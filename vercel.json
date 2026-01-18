@@ -12,6 +12,19 @@
       "destination": "/index.html"
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.jlsreglazing.com"
+        }
+      ],
+      "destination": "https://jlsreglazing.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",

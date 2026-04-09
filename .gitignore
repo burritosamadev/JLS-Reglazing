@@ -38,3 +38,5 @@ public/secrets/
 
 /.vercel
 
+# Private internal files - strategy docs, keywords, backups, learning materials
+_private/.next/

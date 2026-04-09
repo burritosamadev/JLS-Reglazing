@@ -4,17 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:api": "vercel dev --listen 3001",
-    "dev:all": "npm run dev & npm run dev:api",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "verify:drive": "tsx scripts/verify-google-drive.ts"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@supabase/supabase-js": "^2.89.0",
+    "@next/third-parties": "^16.2.3",
     "@types/leaflet": "^1.9.21",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
@@ -23,12 +20,11 @@
     "google-spreadsheet": "^5.0.2",
     "googleapis": "^169.0.0",
     "leaflet": "^1.9.4",
+    "next": "^16.2.3",
     "node-fetch": "^3.3.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-helmet-async": "^2.0.5",
     "react-leaflet": "^5.0.0",
-    "react-router-dom": "^7.11.0",
     "uuid": "^13.0.0",
     "zod": "^4.2.1"
   },
@@ -39,7 +35,6 @@
     "@types/react-dom": "^19.2.3",
     "@types/uuid": "^10.0.0",
     "@vercel/node": "^5.5.16",
-    "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.23",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -50,8 +45,7 @@
     "tailwindcss": "^3.4.19",
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "typescript-eslint": "^8.46.4"
   },
   "overrides": {
     "path-to-regexp": "^6.3.0",

@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost'
 type ButtonSize = 'sm' | 'md' | 'lg'
@@ -14,10 +14,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles = {
-  primary: 'bg-[#FB8040] hover:bg-[#E5722A] text-white shadow-lg',
-  secondary: 'bg-white hover:bg-gray-100 text-[#232423] shadow-lg',
-  outline: 'border-2 border-[#FB8040] text-[#FB8040] hover:bg-[#FB8040] hover:text-white',
-  ghost: 'text-[#FB8040] hover:bg-[#FB8040]/10',
+  primary: 'bg-cta hover:bg-cta-hover text-white shadow-lg',
+  secondary: 'bg-white hover:bg-gray-100 text-charcoal shadow-lg',
+  outline: 'border-2 border-cta text-cta hover:bg-cta hover:text-white',
+  ghost: 'text-cta hover:bg-cta/10',
 }
 
 const sizeStyles = {
@@ -47,12 +47,11 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles = 'rounded-lg font-jost font-semibold transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none inline-flex items-center justify-center gap-2 cursor-pointer touch-manipulation select-none'
-
   const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${fullWidth ? 'w-full' : ''} ${className}`
 
   if (href) {
     return (
-      <Link to={href} className={classes}>
+      <Link href={href} className={classes}>
         {loading && <Spinner />}
         {children}
       </Link>

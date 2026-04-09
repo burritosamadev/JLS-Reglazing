@@ -1,5 +1,5 @@
-import { getBlocklistEntry } from './google-sheets.js'
-import { rateLimiter } from './rate-limiter.js'
+import { getBlocklistEntry } from './google-sheets'
+import { rateLimiter } from './rate-limiter'
 
 const disposableDomains = [
   'tempmail.com',

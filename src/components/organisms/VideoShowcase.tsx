@@ -2,11 +2,9 @@ export default function VideoShowcase() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-neutral-600 mb-8">
+        <h2 className="text-3xl font-bold text-center text-charcoal mb-8">
           Reglazing Process
         </h2>
-
-        {/* Video Container */}
         <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black">
           <video
             controls

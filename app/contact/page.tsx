@@ -6,7 +6,7 @@ import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
 export const metadata: Metadata = {
   title: 'Contact Us - Get a Free Reglazing Quote',
   description:
-    'Contact JLS Reglazing for a free bathtub and kitchen refinishing quote. Call (310) 742-0057 (EN) or (424) 381-5170 (ES). Serving San Bernardino, Riverside, Los Angeles counties.',
+    'Contact JLS Reglazing for a free bathtub and kitchen refinishing quote. Call (310) 876-5600 (EN) or (909) 501-2797 (ES). Serving San Bernardino, Riverside, Los Angeles counties.',
   alternates: { canonical: 'https://jlsreglazing.com/contact' },
   keywords:
     'contact JLS Reglazing, free reglazing quote, bathtub refinishing quote, Southern California reglazing contact',
@@ -65,20 +65,20 @@ export default function ContactPage() {
                 <div className="bg-[#F3F4F6] rounded-lg p-4">
                   <p className="font-jost text-sm text-[#2D3748]/60 mb-1">Phone (English)</p>
                   <Link
-                    href="tel:+13107420057"
+                    href="tel:+13108765600"
                     className="font-jost text-[#1B4D7A] font-semibold hover:underline"
                   >
-                    (310) 742-0057
+                    (310) 876-5600
                   </Link>
                 </div>
 
                 <div className="bg-[#F3F4F6] rounded-lg p-4">
                   <p className="font-jost text-sm text-[#2D3748]/60 mb-1">Phone (Spanish)</p>
                   <Link
-                    href="tel:+14243815170"
+                    href="tel:+19095012797"
                     className="font-jost text-[#1B4D7A] font-semibold hover:underline"
                   >
-                    (424) 381-5170
+                    (909) 501-2797
                   </Link>
                 </div>
 

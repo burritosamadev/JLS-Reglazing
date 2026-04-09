@@ -104,8 +104,8 @@ export default function SanBernardinoReglazingPage() {
           </h2>
           <p className="font-jost text-[#2D3748]/70 text-center mb-8">
             Fill out the form below or call us at{' '}
-            <Link href="tel:+13107420057" className="text-[#1B4D7A] font-semibold hover:underline">
-              (310) 742-0057
+            <Link href="tel:+13108765600" className="text-[#1B4D7A] font-semibold hover:underline">
+              (310) 876-5600
             </Link>
           </p>
           <QuickQuoteForm />

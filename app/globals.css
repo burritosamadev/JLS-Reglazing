@@ -27,8 +27,11 @@ img {
   display: block;
 }
 
+/* scroll-behavior: smooth removed — causes momentum scroll lag on iOS Safari */
+/* Use programmatic scrollTo with behavior:'smooth' only where needed */
+
 html {
-  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -150,8 +150,8 @@ export default function PrivacyPolicyPage() {
             </li>
             <li>
               Phone:{' '}
-              <Link href="tel:+13107420057" className="text-[#1B4D7A] hover:underline">
-                (310) 742-0057
+              <Link href="tel:+13108765600" className="text-[#1B4D7A] hover:underline">
+                (310) 876-5600
               </Link>
             </li>
           </ul>

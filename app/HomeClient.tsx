@@ -142,7 +142,7 @@ export default function HomeClient() {
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-orbitron font-semibold text-charcoal mb-3">What is the best bathtub reglazing company near me in Southern California?</h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                JLS Reglazing is a top-rated bathtub reglazing company serving San Bernardino, Riverside, and Los Angeles counties. With 20+ years of experience, 4,000+ units refinished, and a 2-year warranty on all work, we are one of the most experienced reglazing specialists in the region. We offer free on-site quotes and same-day scheduling for most projects. Call (310) 742-0057 for English or (424) 381-5170 for Spanish.
+                JLS Reglazing is a top-rated bathtub reglazing company serving San Bernardino, Riverside, and Los Angeles counties. With 20+ years of experience, 4,000+ units refinished, and a 2-year warranty on all work, we are one of the most experienced reglazing specialists in the region. We offer free on-site quotes and same-day scheduling for most projects. Call (310) 876-5600 for English or (909) 501-2797 for Spanish.
               </p>
             </div>
           </div>

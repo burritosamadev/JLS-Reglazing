@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BUSINESS, SERVICE_AREAS } from '@/lib/copy'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -74,13 +75,13 @@ export default function Footer() {
                 <span>jorge@jlsreglazing.com</span>
               </a>
               <div className="space-y-1">
-                <a href="tel:+13107420057" className="flex items-center gap-2 hover:text-cta transition-colors">
+                <a href="tel:+13108765600" className="flex items-center gap-2 hover:text-cta transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                  <div><span className="text-sm text-gray-500">English:</span> +1 (310) 742-0057</div>
+                  <div><span className="text-sm text-gray-500">English:</span> +1 (310) 876-5600</div>
                 </a>
-                <a href="tel:+14243815170" className="flex items-center gap-2 hover:text-cta transition-colors">
+                <a href="tel:+19095012797" className="flex items-center gap-2 hover:text-cta transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                  <div><span className="text-sm text-gray-500">Spanish:</span> +1 (424) 381-5170</div>
+                  <div><span className="text-sm text-gray-500">Spanish:</span> +1 (909) 501-2797</div>
                 </a>
               </div>
 

@@ -28,6 +28,10 @@ const jost = Jost({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jlsreglazing.com'),
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   title: {
     default: 'Professional Bathtub & Kitchen Refinishing | JLS Reglazing',
     template: '%s | JLS Reglazing',

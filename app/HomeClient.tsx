@@ -8,6 +8,7 @@ import WhatIsReglazingSection from '@/components/organisms/WhatIsReglazingSectio
 import FAQSection from '@/components/organisms/FAQSection'
 import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
 import WaveDivider from '@/components/atoms/WaveDivider'
+import TrustBadges from '@/components/atoms/TrustBadges'
 import {
   SparklesIcon,
   HomeModernIcon,
@@ -203,6 +204,9 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
+
+      {/* Trust Badges — Yelp, Google, Experience, Bilingual */}
+      <TrustBadges />
 
       {/* Service Areas */}
       <section className="relative py-16 bg-white">

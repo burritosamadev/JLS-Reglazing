@@ -34,8 +34,9 @@ export const BUSINESS = {
   logoLight: '/logo-light.svg',
   ogImage: '/images/1_after.webp',
 
-  // Social
+  // Social & Reviews
   facebook: 'https://www.facebook.com/profile.php?id=61586186871010',
+  yelp: 'https://www.yelp.com/biz/jls-reglazing-san-bernardino',
   instagram: 'https://instagram.com/jlsreglazing',
   tiktok: 'https://tiktok.com/@jlsreglazing',
 

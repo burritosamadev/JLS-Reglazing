@@ -19,6 +19,7 @@ const BUSINESS = {
     'https://www.facebook.com/profile.php?id=61586186871010',
     'https://instagram.com/jlsreglazing',
     'https://tiktok.com/@jlsreglazing',
+    'https://www.yelp.com/biz/jls-reglazing-san-bernardino',
   ],
 }
 

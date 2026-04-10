@@ -16,7 +16,7 @@ const BUSINESS = {
   foundingYear: 2004,
   description: 'Professional bathtub and kitchen reglazing services in Southern California. Over 20 years of hands-on experience with 4,000+ units serviced. Licensed, insured, and backed by a 2-year warranty on all refinishing work.',
   sameAs: [
-    'https://www.facebook.com/profile.php?id=61586186871010',
+    'https://www.facebook.com/profile.php?id=61573379680031',
     'https://instagram.com/jlsreglazing',
     'https://tiktok.com/@jlsreglazing',
     'https://www.yelp.com/biz/jls-reglazing-san-bernardino',

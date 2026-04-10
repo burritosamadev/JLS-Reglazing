@@ -35,7 +35,7 @@ export default function TrustBadges() {
             </svg>
             <div>
               <p className="font-jost font-semibold text-charcoal text-sm group-hover:text-cta transition-colors">Google Business Profile</p>
-              <p className="text-xs text-form-muted">Licensed &middot; Insured &middot; 2-Year Warranty</p>
+              <p className="text-xs text-form-muted">San Bernardino &middot; Riverside &middot; LA County</p>
             </div>
           </a>
 

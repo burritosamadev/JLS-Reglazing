@@ -75,6 +75,9 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Trust Badges — right below hero for maximum visibility */}
+      <TrustBadges />
+
       <WhatIsReglazingSection />
 
       {/* AEO: Answer-First Cost Section — targets "bathtub reglazing cost" (1,900 vol, AI Overview) */}
@@ -204,9 +207,6 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-
-      {/* Trust Badges — Yelp, Google, Experience, Bilingual */}
-      <TrustBadges />
 
       {/* Service Areas */}
       <section className="relative py-16 bg-white">

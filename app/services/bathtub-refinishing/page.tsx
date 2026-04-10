@@ -50,6 +50,7 @@ export default function BathtubRefinishingPage() {
       <ServicePageContent
         title="Bathtub Refinishing & Reglazing"
         subtitle="Restore your worn, stained, or outdated bathtub to a brilliant, factory-smooth finish in just one day. Our professional reglazing process saves you up to 90% compared to a full tub replacement."
+        priceRange="$300–$450"
         beforeImage="/images/1_before.webp"
         afterImage="/images/1_after.webp"
         defaultService="Bathtub Reglazing"

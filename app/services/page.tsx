@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
 
 export const metadata: Metadata = {
   title: 'Our Refinishing & Reglazing Services | JLS Reglazing',
@@ -163,6 +164,16 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
+
+      <section id="quote-form" className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-orbitron font-bold text-center text-[#2D3748] mb-4">Get Your Free Reglazing Quote</h2>
+          <p className="text-center text-gray-600 font-jost mb-8">Tell us about your project and we will get back to you within 24 hours.</p>
+          <div className="bg-[#FAFAFA] rounded-xl p-8 shadow-lg">
+            <QuickQuoteForm />
+          </div>
+        </div>
+      </section>
     </>
   )
 }

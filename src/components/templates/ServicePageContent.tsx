@@ -15,6 +15,7 @@ interface ServicePageContentProps {
   faqs: { question: string; answer: string }[]
   defaultService: string
   relatedServices: { name: string; path: string }[]
+  priceRange?: string
 }
 
 export default function ServicePageContent({
@@ -26,6 +27,7 @@ export default function ServicePageContent({
   faqs,
   defaultService,
   relatedServices,
+  priceRange,
 }: ServicePageContentProps) {
   return (
     <div className="min-h-screen bg-[#FAFAFA]">
@@ -80,6 +82,20 @@ export default function ServicePageContent({
           />
         </div>
       </section>
+
+      {/* Pricing Anchor — AEO: answers "how much does X cost?" */}
+      {priceRange && (
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-orbitron font-bold text-[#2D3748] mb-4">How Much Does {title} Cost?</h2>
+            <p className="text-lg text-gray-700 font-jost leading-relaxed">
+              {title} typically costs <strong className="text-[#1B4D7A]">{priceRange}</strong> for most residential projects in Southern California.
+              This is up to 90% less than full replacement. The exact price depends on the current condition of the surface, the type of material, and whether structural repairs are needed.
+              All projects include a 2-year warranty and most are completed within 24 hours.
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Features / Benefits Section */}
       <section className="py-16 md:py-20 bg-[#F3F4F6]">

@@ -50,6 +50,7 @@ export default function SinkRefinishingPage() {
       <ServicePageContent
         title="Sink Refinishing"
         subtitle="Bring your bathroom or kitchen sink back to life with professional refinishing. We eliminate stains, chips, and discoloration to give you a beautiful, like-new surface without the plumbing costs of a full replacement."
+        priceRange="$250–$400"
         beforeImage="/images/2_before.webp"
         afterImage="/images/2_after.webp"
         defaultService="Sink/Vanity Reglazing"

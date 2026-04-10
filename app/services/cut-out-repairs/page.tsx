@@ -50,6 +50,7 @@ export default function CutOutRepairsPage() {
       <ServicePageContent
         title="Tub Cut-Out & Foundation Repairs"
         subtitle="Improve bathroom accessibility with a professional tub cut-out conversion, or restore structural integrity with our foundation repair services. These specialized solutions address safety concerns and structural issues without requiring a full bathroom renovation."
+        priceRange="$400–$600"
         beforeImage="/images/6_before.webp"
         afterImage="/images/6_after.webp"
         defaultService="Bathroom Foundation Repair (cut-outs)"

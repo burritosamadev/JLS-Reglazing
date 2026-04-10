@@ -50,6 +50,7 @@ export default function BathtubEnclosurePage() {
       <ServicePageContent
         title="Bathtub Enclosure Refinishing"
         subtitle="Transform your dated or worn bathtub enclosure and tile surround with a fresh, seamless finish. Our professional reglazing process updates the look of your entire tub area without the mess and expense of tile demolition."
+        priceRange="$450–$600"
         beforeImage="/images/5_before.webp"
         afterImage="/images/5_after.webp"
         defaultService="Tile Reglazing"

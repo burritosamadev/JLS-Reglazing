@@ -50,6 +50,7 @@ export default function CrackRepairPage() {
       <ServicePageContent
         title="Crack & Chip Repair"
         subtitle="Do not let cracks and chips ruin your bathtub, sink, or countertop. Our expert repair process restores both structural integrity and a flawless appearance, preventing further damage and saving you from a costly replacement."
+        priceRange="$150–$350"
         beforeImage="/images/4_before.webp"
         afterImage="/images/4_after.webp"
         defaultService="Repair Cracks or Peeling"

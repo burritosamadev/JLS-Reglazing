@@ -93,6 +93,7 @@ export const SERVICES = [
     path: '/services/bathtub-refinishing',
     description: 'Expert bathtub refinishing for fiberglass, porcelain, cast iron, and ceramic tile surfaces. Transform worn tubs with professional reglazing — fraction of replacement cost.',
     formValue: 'Bathtub Reglazing',
+    priceRange: '$300–$450',
     image: '/images/1_after.jpg',
   },
   {
@@ -101,6 +102,7 @@ export const SERVICES = [
     path: '/services/kitchen-refinishing',
     description: 'Kitchen countertop refinishing that restores tile and laminate surfaces. Professional kitchen reglazing delivers durable, heat-resistant finishes for rental units and homes.',
     formValue: 'Kitchen Reglazing',
+    priceRange: '$350–$550',
     image: '/images/solo_4.jpg',
   },
   {
@@ -109,6 +111,7 @@ export const SERVICES = [
     path: '/services/sink-refinishing',
     description: 'Professional sink refinishing for kitchen and bathroom. We reglaze porcelain and stainless steel sinks, removing rust and stains while restoring shine.',
     formValue: 'Sink/Vanity Reglazing',
+    priceRange: '$250–$400',
     image: '/images/2_after.jpg',
   },
   {
@@ -117,6 +120,7 @@ export const SERVICES = [
     path: '/services/bath-vanity-refinishing',
     description: 'Bathroom vanity refinishing and reglazing services. Restore bath vanity surfaces with professional refinishing techniques and durable coatings.',
     formValue: 'Sink/Vanity Reglazing',
+    priceRange: '$300–$500',
     image: '/images/3_after.jpg',
   },
   {
@@ -125,6 +129,7 @@ export const SERVICES = [
     path: '/services/crack-repair',
     description: 'Expert crack and chip repair for bathtubs and countertops. We fix structural damage, weak foundations, and surface imperfections before refinishing.',
     formValue: 'Repair Cracks or Peeling',
+    priceRange: '$150–$350',
     image: '/images/4_after.jpg',
   },
   {
@@ -133,6 +138,7 @@ export const SERVICES = [
     path: '/services/bathtub-enclosure',
     description: 'Complete bathtub enclosure refinishing including tile walls and tub surrounds. Ceramic tile reglazing with mold-resistant, waterproof finishes.',
     formValue: 'Tile Reglazing',
+    priceRange: '$450–$600',
     image: '/images/5_after.jpg',
   },
   {
@@ -141,6 +147,7 @@ export const SERVICES = [
     path: '/services/cut-out-repairs',
     description: 'Accessibility conversions and structural reinforcement for damaged bathtub foundations. Expert tub cut-out and foundation repair services.',
     formValue: 'Bathroom Foundation Repair (cut-outs)',
+    priceRange: '$400–$600',
     image: '/images/6_after.jpg',
   },
 ] as const

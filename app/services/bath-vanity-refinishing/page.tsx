@@ -50,6 +50,7 @@ export default function BathVanityRefinishingPage() {
       <ServicePageContent
         title="Bath Vanity Refinishing"
         subtitle="Refresh your entire bathroom vanity with a seamless, professional refinish. We restore vanity tops and integrated basins to a beautiful, factory-smooth surface, giving your bathroom an updated look without the expense of a full remodel."
+        priceRange="$300–$500"
         beforeImage="/images/3_before.webp"
         afterImage="/images/3_after.webp"
         defaultService="Sink/Vanity Reglazing"

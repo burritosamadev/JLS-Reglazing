@@ -50,6 +50,7 @@ export default function KitchenRefinishingPage() {
       <ServicePageContent
         title="Kitchen Countertop Refinishing"
         subtitle="Give your kitchen a stunning makeover without the cost and hassle of a full remodel. Our professional countertop refinishing creates a durable, beautiful surface that looks brand new."
+        priceRange="$350–$550"
         beforeImage="/images/solo_4_before.webp"
         afterImage="/images/solo_4_after.webp"
         defaultService="Kitchen Reglazing"

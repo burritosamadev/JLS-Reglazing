@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/bathtub-enclosure' },
   keywords:
     'bathtub enclosure refinishing, tile surround reglazing, tub surround refinishing, shower tile refinishing, tile reglazing, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Bathtub Enclosure Refinishing Services | JLS Reglazing',
+    description:
+      'Professional bathtub enclosure and tile surround refinishing in Southern California. Refresh your tub surround without costly tile replacement. Free quotes available.',
+    url: 'https://jlsreglazing.com/services/bathtub-enclosure',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bathtub Enclosure Refinishing Services | JLS Reglazing',
+    description:
+      'Professional bathtub enclosure and tile surround refinishing in Southern California. Refresh your tub surround without costly tile replacement. Free quotes available.',
+  },
 }
 
 const jsonLd = {

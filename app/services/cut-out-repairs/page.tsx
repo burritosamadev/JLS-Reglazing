@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/cut-out-repairs' },
   keywords:
     'tub cut-out, bathtub cut-out conversion, bathroom foundation repair, tub to walk-in conversion, accessibility bathtub, bathtub structural repair, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Tub Cut-Out & Foundation Repair Services | JLS Reglazing',
+    description:
+      'Professional tub cut-out conversions and bathroom foundation repairs in Southern California. Improve accessibility and fix structural issues. Free quotes available.',
+    url: 'https://jlsreglazing.com/services/cut-out-repairs',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tub Cut-Out & Foundation Repair Services | JLS Reglazing',
+    description:
+      'Professional tub cut-out conversions and bathroom foundation repairs in Southern California. Improve accessibility and fix structural issues. Free quotes available.',
+  },
 }
 
 const jsonLd = {

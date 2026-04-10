@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { generateCountySchema } from '@/lib/seo'
 import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
 import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 const cities = [
   'Los Angeles', 'Pasadena', 'Long Beach', 'Glendale', 'Burbank',
@@ -32,9 +33,11 @@ export default function LosAngelesReglazingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateCountySchema('Los Angeles County')),
+          __html: JSON.stringify(generateCountySchema('Los Angeles County', cities)),
         }}
       />
+
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Los Angeles County Reglazing', href: '/los-angeles-reglazing' }]} />
 
       {/* Hero */}
       <section className="bg-[#1B4D7A] text-white py-16 md:py-24">

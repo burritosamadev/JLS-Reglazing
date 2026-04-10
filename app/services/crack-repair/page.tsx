@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/crack-repair' },
   keywords:
     'crack repair, chip repair, bathtub crack repair, sink chip repair, countertop crack repair, porcelain repair, fiberglass repair, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Crack & Chip Repair Services | JLS Reglazing',
+    description:
+      'Expert crack and chip repair for bathtubs, sinks, and countertops in Southern California. Invisible repairs that restore structural integrity. Fast turnaround. Free quotes.',
+    url: 'https://jlsreglazing.com/services/crack-repair',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Crack & Chip Repair Services | JLS Reglazing',
+    description:
+      'Expert crack and chip repair for bathtubs, sinks, and countertops in Southern California. Invisible repairs that restore structural integrity. Fast turnaround. Free quotes.',
+  },
 }
 
 const jsonLd = {

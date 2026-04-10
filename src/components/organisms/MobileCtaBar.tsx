@@ -10,7 +10,7 @@ export default function MobileCtaBar() {
     const el = document.querySelector('#quote-form')
     if (el) {
       const pos = el.getBoundingClientRect().top + window.scrollY - 80
-      window.scrollTo({ top: pos, behavior: 'smooth' })
+      window.scrollTo({ top: pos, behavior: 'auto' })
     } else {
       window.location.href = '/contact'
     }

@@ -30,7 +30,8 @@ export default function HomeClient() {
       {/* Hero Section */}
       <section className="relative bg-brand-500 text-white py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <video autoPlay muted loop playsInline preload="none" className="w-full h-full object-cover opacity-40">
+          {/* Video hidden on mobile — autoPlay doesn't work on iOS anyway */}
+          <video autoPlay muted loop playsInline preload="metadata" className="hidden md:block w-full h-full object-cover opacity-40">
             <source src="/videos/video1.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-brand-500/70 to-brand-900/60"></div>
@@ -38,7 +39,7 @@ export default function HomeClient() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.2 }}>
+            <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
               <h1 className="hero-title text-white mb-6">Professional Bathtub & Kitchen Refinishing</h1>
               <p className="text-xl text-gray-100 mb-8 font-jost leading-relaxed">
                 We work with multi-unit complexes and small home owners to reglaze tubs, bath vanities, kitchen countertops, kitchen sinks, and more. Our tub reglazing services span Los Angeles and San Bernardino counties.
@@ -62,7 +63,7 @@ export default function HomeClient() {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.4 }} className="relative">
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }} className="relative">
               <div className="bg-white rounded-2xl p-8 shadow-2xl">
                 <h2 className="text-2xl font-orbitron font-bold text-charcoal mb-2">Get Your Free Reglazing Quote</h2>
                 <p className="text-form-muted font-jost mb-6 text-sm">Fill out the form below and we&apos;ll contact you within 24 hours with a personalized quote.</p>

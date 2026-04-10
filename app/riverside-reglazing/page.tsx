@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { generateCountySchema } from '@/lib/seo'
 import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
 import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 const cities = [
   'Riverside', 'Corona', 'Moreno Valley', 'Temecula', 'Murrieta',
@@ -31,9 +32,11 @@ export default function RiversideReglazingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateCountySchema('Riverside County')),
+          __html: JSON.stringify(generateCountySchema('Riverside County', cities)),
         }}
       />
+
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Riverside County Reglazing', href: '/riverside-reglazing' }]} />
 
       {/* Hero */}
       <section className="bg-[#1B4D7A] text-white py-16 md:py-24">

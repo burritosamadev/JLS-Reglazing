@@ -55,8 +55,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${orbitron.variable} ${roboto.variable} ${jost.variable}`}>
       <body className="font-roboto min-h-screen flex flex-col">
-        <div className="sticky top-0 z-50 will-change-transform" style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
-          <TopBar />
+        <div className="sticky top-0 z-50" style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}>
+          <div className="hidden sm:block">
+            <TopBar />
+          </div>
           <Navigation />
         </div>
         <main className="flex-grow pb-16 lg:pb-0">

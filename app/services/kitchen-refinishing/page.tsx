@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/kitchen-refinishing' },
   keywords:
     'kitchen countertop refinishing, countertop resurfacing, kitchen reglazing, countertop restoration, laminate countertop refinishing, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Kitchen Countertop Refinishing Services | JLS Reglazing',
+    description:
+      'Professional kitchen countertop refinishing in Southern California. Transform worn or dated countertops with a durable, factory-smooth finish. Save thousands vs replacement.',
+    url: 'https://jlsreglazing.com/services/kitchen-refinishing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kitchen Countertop Refinishing Services | JLS Reglazing',
+    description:
+      'Professional kitchen countertop refinishing in Southern California. Transform worn or dated countertops with a durable, factory-smooth finish. Save thousands vs replacement.',
+  },
 }
 
 const jsonLd = {

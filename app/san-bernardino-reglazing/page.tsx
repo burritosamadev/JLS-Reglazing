@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { generateCountySchema } from '@/lib/seo'
 import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
 import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 const cities = [
   'San Bernardino', 'Fontana', 'Rancho Cucamonga', 'Ontario', 'Upland',
@@ -31,9 +32,11 @@ export default function SanBernardinoReglazingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateCountySchema('San Bernardino County')),
+          __html: JSON.stringify(generateCountySchema('San Bernardino County', cities)),
         }}
       />
+
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'San Bernardino County Reglazing', href: '/san-bernardino-reglazing' }]} />
 
       {/* Hero */}
       <section className="bg-[#1B4D7A] text-white py-16 md:py-24">

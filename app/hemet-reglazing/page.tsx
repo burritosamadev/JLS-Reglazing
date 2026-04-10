@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { generateCountySchema } from '@/lib/seo'
 import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
 import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 const cities = [
   'Hemet', 'San Jacinto', 'Idyllwild', 'Valle Vista',
@@ -30,9 +31,11 @@ export default function HemetReglazingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateCountySchema('Hemet')),
+          __html: JSON.stringify(generateCountySchema('Hemet', cities)),
         }}
       />
+
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Hemet Reglazing', href: '/hemet-reglazing' }]} />
 
       {/* Hero */}
       <section className="bg-[#1B4D7A] text-white py-16 md:py-24">

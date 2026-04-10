@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/bathtub-refinishing' },
   keywords:
     'bathtub refinishing, bathtub reglazing, tub resurfacing, bathtub restoration, bathtub repair, Southern California bathtub refinishing',
+  openGraph: {
+    type: 'website',
+    title: 'Bathtub Refinishing & Reglazing Services | JLS Reglazing',
+    description:
+      'Professional bathtub refinishing and reglazing in Southern California. Restore your tub to a like-new finish in just one day. Save up to 90% vs replacement. Free quotes.',
+    url: 'https://jlsreglazing.com/services/bathtub-refinishing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bathtub Refinishing & Reglazing Services | JLS Reglazing',
+    description:
+      'Professional bathtub refinishing and reglazing in Southern California. Restore your tub to a like-new finish in just one day. Save up to 90% vs replacement. Free quotes.',
+  },
 }
 
 const jsonLd = {

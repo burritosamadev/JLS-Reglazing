@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/bath-vanity-refinishing' },
   keywords:
     'bath vanity refinishing, vanity top refinishing, bathroom vanity reglazing, vanity resurfacing, cultured marble refinishing, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Bath Vanity Refinishing Services | JLS Reglazing',
+    description:
+      'Professional bath vanity refinishing in Southern California. Restore your vanity top and basin to a like-new finish without a full bathroom remodel. Free quotes available.',
+    url: 'https://jlsreglazing.com/services/bath-vanity-refinishing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bath Vanity Refinishing Services | JLS Reglazing',
+    description:
+      'Professional bath vanity refinishing in Southern California. Restore your vanity top and basin to a like-new finish without a full bathroom remodel. Free quotes available.',
+  },
 }
 
 const jsonLd = {

@@ -27,7 +27,7 @@ export default function ServiceAreaMap() {
   const mapCenter: [number, number] = [33.9, -117.5]
 
   return (
-    <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl z-0">
+    <div className="relative w-full h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl z-0">
       <MapContainer center={mapCenter} zoom={8} scrollWheelZoom={false} dragging={false} touchZoom={false} doubleClickZoom={false} zoomControl={false} className="h-full w-full" style={{ zIndex: 0 }}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {serviceAreas.map((area) => (

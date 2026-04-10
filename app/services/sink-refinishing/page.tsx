@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jlsreglazing.com/services/sink-refinishing' },
   keywords:
     'sink refinishing, sink reglazing, sink resurfacing, bathroom sink refinishing, kitchen sink refinishing, porcelain sink repair, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Sink Refinishing Services | JLS Reglazing',
+    description:
+      'Professional sink refinishing in Southern California. Restore stained, chipped, or outdated sinks to a beautiful, like-new finish. Bathroom and kitchen sinks. Free quotes.',
+    url: 'https://jlsreglazing.com/services/sink-refinishing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sink Refinishing Services | JLS Reglazing',
+    description:
+      'Professional sink refinishing in Southern California. Restore stained, chipped, or outdated sinks to a beautiful, like-new finish. Bathroom and kitchen sinks. Free quotes.',
+  },
 }
 
 const jsonLd = {

@@ -1,4 +1,3 @@
-import { getBlocklistEntry } from './google-sheets'
 import { rateLimiter } from './rate-limiter'
 
 const disposableDomains = [
@@ -30,6 +29,11 @@ const spamKeywords = [
   'make money fast',
   'weight loss',
 ]
+
+// In-memory blocklist — add IPs or emails here as needed
+const blockedIPs: string[] = []
+const blockedEmails: string[] = []
+const blockedDomains: string[] = []
 
 interface SpamCheckInput {
   email: string
@@ -73,36 +77,27 @@ export async function calculateSpamScore(input: SpamCheckInput): Promise<SpamChe
     reasons.push('Disposable email domain')
   }
 
-  // Check blocklist (Google Sheets)
-  const blockedIP = await getBlocklistEntry('ip', input.ipAddress)
-
-  if (blockedIP) {
+  // Blocklist checks (in-memory)
+  if (blockedIPs.includes(input.ipAddress)) {
     spamScore += 100
     reasons.push('IP address blocked')
     return { isSpam: true, spamScore, reasons }
   }
 
-  const blockedEmail = await getBlocklistEntry('email', input.email.toLowerCase())
-
-  if (blockedEmail) {
+  if (blockedEmails.includes(input.email.toLowerCase())) {
     spamScore += 100
     reasons.push('Email address blocked')
     return { isSpam: true, spamScore, reasons }
   }
 
-  if (emailDomain) {
-    const blockedDomain = await getBlocklistEntry('domain', emailDomain)
-
-    if (blockedDomain) {
-      spamScore += 100
-      reasons.push('Email domain blocked')
-      return { isSpam: true, spamScore, reasons }
-    }
+  if (emailDomain && blockedDomains.includes(emailDomain)) {
+    spamScore += 100
+    reasons.push('Email domain blocked')
+    return { isSpam: true, spamScore, reasons }
   }
 
-  // Check rate limiting (in-memory)
+  // Rate limiting (in-memory)
   const rateLimit = rateLimiter.checkRateLimit(input.ipAddress)
-
   if (rateLimit.exceeded) {
     spamScore += 60
     reasons.push(`Rate limit exceeded (${rateLimit.count} submissions in 1 hour)`)

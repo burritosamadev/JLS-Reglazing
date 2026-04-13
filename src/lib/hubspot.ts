@@ -19,13 +19,15 @@ export async function createHubSpotContact(data: {
   const firstname = nameParts[0] || ''
   const lastname = nameParts.slice(1).join(' ') || ''
 
-  // Only use HubSpot built-in properties — no custom properties needed
+  // Only use HubSpot built-in properties — no custom property setup needed
   const properties: Record<string, string> = {
     firstname,
     lastname,
     email: data.email,
     phone: data.phone,
     address: data.serviceAddress,
+    lifecyclestage: 'lead',
+    hs_lead_status: 'NEW',
   }
 
   try {

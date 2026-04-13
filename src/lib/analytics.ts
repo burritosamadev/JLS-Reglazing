@@ -10,9 +10,13 @@ declare global {
 }
 
 export const trackEvent = (eventName: string, props?: Record<string, string | number>) => {
-  if (typeof window !== 'undefined' && window.plausible) {
-    window.plausible(eventName, { props })
+  if (typeof window === 'undefined') return
+  // Queue events if plausible hasn't loaded yet
+  window.plausible = window.plausible || function (...args: unknown[]) {
+    (window.plausible as unknown as { q: unknown[] }).q = (window.plausible as unknown as { q: unknown[] }).q || []
+    ;(window.plausible as unknown as { q: unknown[] }).q.push(args)
   }
+  window.plausible(eventName, { props })
 }
 
 // Predefined event trackers

@@ -1,6 +1,8 @@
 /**
  * Plausible Analytics event tracking
- * Using the tagged-events extension for custom event tracking
+ * Events are silently dropped if Plausible hasn't loaded yet.
+ * This is intentional — early events (first focus, initial click) are
+ * low-value and not worth breaking the page over.
  */
 
 declare global {
@@ -10,52 +12,18 @@ declare global {
 }
 
 export const trackEvent = (eventName: string, props?: Record<string, string | number>) => {
-  if (typeof window === 'undefined') return
-  // Queue events if plausible hasn't loaded yet
-  window.plausible = window.plausible || function (...args: unknown[]) {
-    (window.plausible as unknown as { q: unknown[] }).q = (window.plausible as unknown as { q: unknown[] }).q || []
-    ;(window.plausible as unknown as { q: unknown[] }).q.push(args)
+  if (typeof window !== 'undefined' && typeof window.plausible === 'function') {
+    window.plausible(eventName, { props })
   }
-  window.plausible(eventName, { props })
 }
 
-// Predefined event trackers
 export const analytics = {
-  // Form events
-  formSubmit: (formType: string) => {
-    trackEvent('Form Submit', { type: formType })
-  },
-
-  formStart: (formType: string) => {
-    trackEvent('Form Start', { type: formType })
-  },
-
-  formError: (formType: string, error: string) => {
-    trackEvent('Form Error', { type: formType, error })
-  },
-
-  // Call tracking
-  phoneClick: (phoneNumber: string, location: string) => {
-    trackEvent('Phone Click', { number: phoneNumber, location })
-  },
-
-  // Email tracking
-  emailClick: (location: string) => {
-    trackEvent('Email Click', { location })
-  },
-
-  // Navigation
-  ctaClick: (ctaText: string, location: string) => {
-    trackEvent('CTA Click', { text: ctaText, location })
-  },
-
-  // Service interest
-  serviceView: (serviceName: string) => {
-    trackEvent('Service View', { service: serviceName })
-  },
-
-  // External links
-  externalLink: (url: string, location: string) => {
-    trackEvent('External Link', { url, location })
-  },
+  formSubmit: (formType: string) => trackEvent('Form Submit', { type: formType }),
+  formStart: (formType: string) => trackEvent('Form Start', { type: formType }),
+  formError: (formType: string, error: string) => trackEvent('Form Error', { type: formType, error }),
+  phoneClick: (phoneNumber: string, location: string) => trackEvent('Phone Click', { number: phoneNumber, location }),
+  emailClick: (location: string) => trackEvent('Email Click', { location }),
+  ctaClick: (ctaText: string, location: string) => trackEvent('CTA Click', { text: ctaText, location }),
+  serviceView: (serviceName: string) => trackEvent('Service View', { service: serviceName }),
+  externalLink: (url: string, location: string) => trackEvent('External Link', { url, location }),
 }

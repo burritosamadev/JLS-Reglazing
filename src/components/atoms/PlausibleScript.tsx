@@ -5,10 +5,9 @@ import Script from 'next/script'
 export default function PlausibleScript() {
   return (
     <Script
-      defer
       data-domain="jlsreglazing.com"
       src="https://plausible.io/js/pa-8E-on2b3gEVQiEx52Phz8.js"
-      strategy="afterInteractive"
+      strategy="beforeInteractive"
     />
   )
 }

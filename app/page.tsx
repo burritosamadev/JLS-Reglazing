@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { generateHomepageGraphSchema, generateFAQSchema } from '@/lib/seo'
+import { generateHomepageGraphSchema } from '@/lib/seo'
 import HomeClient from './HomeClient'
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateHomepageGraphSchema()) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema()) }} />
+      {/* FAQPage schema is rendered by FAQSection component — only one instance per page */}
       <HomeClient />
     </>
   )

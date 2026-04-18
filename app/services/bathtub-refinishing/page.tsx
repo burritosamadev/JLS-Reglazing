@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
 
 export const metadata: Metadata = {
-  title: 'Bathtub Refinishing & Reglazing Services | JLS Reglazing',
+  title: 'Bathtub Refinishing & Reglazing Services',
   description:
     'Professional bathtub refinishing and reglazing in Southern California. Restore your tub to a like-new finish in just one day. Save up to 90% vs replacement. Free quotes.',
   alternates: { canonical: 'https://jlsreglazing.com/services/bathtub-refinishing' },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'bathtub refinishing, bathtub reglazing, tub resurfacing, bathtub restoration, bathtub repair, Southern California bathtub refinishing',
   openGraph: {
     type: 'website',
-    title: 'Bathtub Refinishing & Reglazing Services | JLS Reglazing',
+    title: 'Bathtub Refinishing & Reglazing Services',
     description:
       'Professional bathtub refinishing and reglazing in Southern California. Restore your tub to a like-new finish in just one day. Save up to 90% vs replacement. Free quotes.',
     url: 'https://jlsreglazing.com/services/bathtub-refinishing',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bathtub Refinishing & Reglazing Services | JLS Reglazing',
+    title: 'Bathtub Refinishing & Reglazing Services',
     description:
       'Professional bathtub refinishing and reglazing in Southern California. Restore your tub to a like-new finish in just one day. Save up to 90% vs replacement. Free quotes.',
   },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
 
 export const metadata: Metadata = {
-  title: 'Sink Refinishing Services | JLS Reglazing',
+  title: 'Sink Refinishing Services',
   description:
     'Professional sink refinishing in Southern California. Restore stained, chipped, or outdated sinks to a beautiful, like-new finish. Bathroom and kitchen sinks. Free quotes.',
   alternates: { canonical: 'https://jlsreglazing.com/services/sink-refinishing' },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'sink refinishing, sink reglazing, sink resurfacing, bathroom sink refinishing, kitchen sink refinishing, porcelain sink repair, Southern California',
   openGraph: {
     type: 'website',
-    title: 'Sink Refinishing Services | JLS Reglazing',
+    title: 'Sink Refinishing Services',
     description:
       'Professional sink refinishing in Southern California. Restore stained, chipped, or outdated sinks to a beautiful, like-new finish. Bathroom and kitchen sinks. Free quotes.',
     url: 'https://jlsreglazing.com/services/sink-refinishing',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sink Refinishing Services | JLS Reglazing',
+    title: 'Sink Refinishing Services',
     description:
       'Professional sink refinishing in Southern California. Restore stained, chipped, or outdated sinks to a beautiful, like-new finish. Bathroom and kitchen sinks. Free quotes.',
   },

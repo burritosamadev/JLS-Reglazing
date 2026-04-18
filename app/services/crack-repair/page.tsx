@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
 
 export const metadata: Metadata = {
-  title: 'Crack & Chip Repair Services | JLS Reglazing',
+  title: 'Crack & Chip Repair Services',
   description:
     'Expert crack and chip repair for bathtubs, sinks, and countertops in Southern California. Invisible repairs that restore structural integrity. Fast turnaround. Free quotes.',
   alternates: { canonical: 'https://jlsreglazing.com/services/crack-repair' },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'crack repair, chip repair, bathtub crack repair, sink chip repair, countertop crack repair, porcelain repair, fiberglass repair, Southern California',
   openGraph: {
     type: 'website',
-    title: 'Crack & Chip Repair Services | JLS Reglazing',
+    title: 'Crack & Chip Repair Services',
     description:
       'Expert crack and chip repair for bathtubs, sinks, and countertops in Southern California. Invisible repairs that restore structural integrity. Fast turnaround. Free quotes.',
     url: 'https://jlsreglazing.com/services/crack-repair',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crack & Chip Repair Services | JLS Reglazing',
+    title: 'Crack & Chip Repair Services',
     description:
       'Expert crack and chip repair for bathtubs, sinks, and countertops in Southern California. Invisible repairs that restore structural integrity. Fast turnaround. Free quotes.',
   },

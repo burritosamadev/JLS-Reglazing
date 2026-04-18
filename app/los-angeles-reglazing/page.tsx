@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords:
     'bathtub reglazing Los Angeles, kitchen refinishing Pasadena, tub reglazing Long Beach, bathtub refinishing Glendale, reglazing Burbank, reglazing Pomona, Los Angeles County reglazing, West Covina refinishing',
   openGraph: {
-    title: 'Bathtub & Kitchen Reglazing in Los Angeles County | JLS Reglazing',
+    title: 'Bathtub & Kitchen Reglazing in Los Angeles County',
     description:
       'Professional bathtub and kitchen reglazing across Los Angeles County. 20+ years experience, 4,000+ units serviced.',
     url: 'https://jlsreglazing.com/los-angeles-reglazing',

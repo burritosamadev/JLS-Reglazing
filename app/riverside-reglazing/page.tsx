@@ -19,10 +19,18 @@ export const metadata: Metadata = {
   keywords:
     'bathtub reglazing Riverside, kitchen refinishing Corona, tub reglazing Moreno Valley, bathtub refinishing Temecula, reglazing Murrieta, reglazing Menifee, Riverside County reglazing',
   openGraph: {
-    title: 'Bathtub & Kitchen Reglazing in Riverside County | JLS Reglazing',
+    type: 'website',
+    title: 'Bathtub & Kitchen Reglazing in Riverside County',
     description:
       'Professional bathtub and kitchen reglazing across Riverside County. 20+ years experience, 4,000+ units serviced.',
     url: 'https://jlsreglazing.com/riverside-reglazing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bathtub & Kitchen Reglazing in Riverside County',
+    description:
+      'Professional bathtub and kitchen reglazing across Riverside County. 20+ years experience, 4,000+ units serviced.',
   },
 }
 

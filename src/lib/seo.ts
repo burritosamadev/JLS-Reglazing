@@ -98,6 +98,88 @@ export const generateHomepageGraphSchema = () => ({
   ],
 })
 
+// Organization schema for About page
+export const generateOrganizationSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${BUSINESS.url}/#organization`,
+  name: BUSINESS.name,
+  legalName: BUSINESS.legalName,
+  alternateName: 'JLS Reglazing',
+  url: BUSINESS.url,
+  logo: BUSINESS.logo,
+  image: BUSINESS.image,
+  description: BUSINESS.description,
+  foundingDate: `${BUSINESS.foundingYear}`,
+  founder: { '@type': 'Person', name: BUSINESS.founder, jobTitle: 'Master Craftsman & Owner' },
+  email: BUSINESS.email,
+  telephone: BUSINESS.telephone,
+  sameAs: BUSINESS.sameAs,
+  address: { '@type': 'PostalAddress', addressRegion: 'CA', addressCountry: 'US' },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'San Bernardino County' },
+    { '@type': 'AdministrativeArea', name: 'Riverside County' },
+    { '@type': 'AdministrativeArea', name: 'Los Angeles County' },
+  ],
+  knowsAbout: [
+    'Bathtub Reglazing', 'Kitchen Refinishing', 'Tile Reglazing',
+    'Porcelain Refinishing', 'Fiberglass Tub Refinishing', 'Cast Iron Tub Refinishing',
+  ],
+})
+
+// Contact page schema — combines LocalBusiness + ContactPoint
+export const generateContactPageSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${BUSINESS.url}/#business`,
+  name: BUSINESS.name,
+  image: BUSINESS.image,
+  url: BUSINESS.url,
+  telephone: BUSINESS.telephone,
+  email: BUSINESS.email,
+  priceRange: BUSINESS.priceRange,
+  description: BUSINESS.description,
+  sameAs: BUSINESS.sameAs,
+  address: { '@type': 'PostalAddress', addressRegion: 'CA', addressCountry: 'US' },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: BUSINESS.telephone,
+      contactType: 'Customer Service',
+      availableLanguage: ['English'],
+      areaServed: 'US-CA',
+    },
+    {
+      '@type': 'ContactPoint',
+      telephone: BUSINESS.telephoneSpanish,
+      contactType: 'Customer Service',
+      availableLanguage: ['Spanish'],
+      areaServed: 'US-CA',
+    },
+  ],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    opens: '07:00',
+    closes: '18:00',
+  },
+})
+
+// Gallery / CollectionPage schema
+export const generateGallerySchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Before & After Reglazing Gallery - JLS Reglazing',
+  description: 'Real before and after photos of bathtub, sink, vanity, and kitchen refinishing projects completed across San Bernardino, Riverside, and Los Angeles counties.',
+  url: `${BUSINESS.url}/gallery`,
+  mainEntity: {
+    '@type': 'ImageGallery',
+    name: 'Bathtub & Kitchen Reglazing Before/After Gallery',
+    description: '4,000+ refinishing projects across Southern California over 20+ years.',
+  },
+  provider: { '@id': `${BUSINESS.url}/#business` },
+})
+
 // BreadcrumbList schema for any page
 export const generateBreadcrumbSchema = (items: { name: string; url: string }[]) => ({
   '@context': 'https://schema.org',

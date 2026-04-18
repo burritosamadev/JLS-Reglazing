@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Countertop Refinishing Services | JLS Reglazing',
+  title: 'Kitchen Countertop Refinishing Services',
   description:
     'Professional kitchen countertop refinishing in Southern California. Transform worn or dated countertops with a durable, factory-smooth finish. Save thousands vs replacement.',
   alternates: { canonical: 'https://jlsreglazing.com/services/kitchen-refinishing' },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'kitchen countertop refinishing, countertop resurfacing, kitchen reglazing, countertop restoration, laminate countertop refinishing, Southern California',
   openGraph: {
     type: 'website',
-    title: 'Kitchen Countertop Refinishing Services | JLS Reglazing',
+    title: 'Kitchen Countertop Refinishing Services',
     description:
       'Professional kitchen countertop refinishing in Southern California. Transform worn or dated countertops with a durable, factory-smooth finish. Save thousands vs replacement.',
     url: 'https://jlsreglazing.com/services/kitchen-refinishing',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kitchen Countertop Refinishing Services | JLS Reglazing',
+    title: 'Kitchen Countertop Refinishing Services',
     description:
       'Professional kitchen countertop refinishing in Southern California. Transform worn or dated countertops with a durable, factory-smooth finish. Save thousands vs replacement.',
   },

@@ -18,10 +18,18 @@ export const metadata: Metadata = {
   keywords:
     'bathtub reglazing Hemet, kitchen refinishing San Jacinto, tub reglazing Idyllwild, bathtub refinishing Valle Vista, reglazing East Hemet, Hemet reglazing, San Jacinto Valley refinishing',
   openGraph: {
-    title: 'Bathtub & Kitchen Reglazing in Hemet & San Jacinto Valley | JLS Reglazing',
+    type: 'website',
+    title: 'Bathtub & Kitchen Reglazing in Hemet & San Jacinto Valley',
     description:
       'Professional bathtub and kitchen reglazing in Hemet and the San Jacinto Valley. 20+ years experience, 4,000+ units serviced.',
     url: 'https://jlsreglazing.com/hemet-reglazing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bathtub & Kitchen Reglazing in Hemet & San Jacinto Valley',
+    description:
+      'Professional bathtub and kitchen reglazing in Hemet and the San Jacinto Valley. 20+ years experience, 4,000+ units serviced.',
   },
 }
 

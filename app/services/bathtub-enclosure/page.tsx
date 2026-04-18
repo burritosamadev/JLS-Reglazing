@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
 
 export const metadata: Metadata = {
-  title: 'Bathtub Enclosure Refinishing Services | JLS Reglazing',
+  title: 'Bathtub Enclosure Refinishing Services',
   description:
     'Professional bathtub enclosure and tile surround refinishing in Southern California. Refresh your tub surround without costly tile replacement. Free quotes available.',
   alternates: { canonical: 'https://jlsreglazing.com/services/bathtub-enclosure' },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'bathtub enclosure refinishing, tile surround reglazing, tub surround refinishing, shower tile refinishing, tile reglazing, Southern California',
   openGraph: {
     type: 'website',
-    title: 'Bathtub Enclosure Refinishing Services | JLS Reglazing',
+    title: 'Bathtub Enclosure Refinishing Services',
     description:
       'Professional bathtub enclosure and tile surround refinishing in Southern California. Refresh your tub surround without costly tile replacement. Free quotes available.',
     url: 'https://jlsreglazing.com/services/bathtub-enclosure',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bathtub Enclosure Refinishing Services | JLS Reglazing',
+    title: 'Bathtub Enclosure Refinishing Services',
     description:
       'Professional bathtub enclosure and tile surround refinishing in Southern California. Refresh your tub surround without costly tile replacement. Free quotes available.',
   },

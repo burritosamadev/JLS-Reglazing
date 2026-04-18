@@ -1,14 +1,29 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Our Refinishing & Reglazing Services | JLS Reglazing',
+  title: 'Our Refinishing & Reglazing Services',
   description:
     'Professional bathtub, sink, kitchen countertop, and tile refinishing services in Southern California. Save up to 90% compared to replacement. Free quotes available.',
   alternates: { canonical: 'https://jlsreglazing.com/services' },
   keywords:
     'reglazing services, refinishing services, bathtub reglazing, sink refinishing, kitchen countertop refinishing, tile reglazing, crack repair, Southern California',
+  openGraph: {
+    type: 'website',
+    title: 'Our Refinishing & Reglazing Services',
+    description:
+      'Professional bathtub, sink, kitchen countertop, and tile refinishing services in Southern California. Save up to 90% compared to replacement. Free quotes available.',
+    url: 'https://jlsreglazing.com/services',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Refinishing & Reglazing Services',
+    description:
+      'Professional bathtub, sink, kitchen countertop, and tile refinishing services in Southern California. Save up to 90% compared to replacement. Free quotes available.',
+  },
 }
 
 const services = [
@@ -82,6 +97,8 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Services', href: '/services' }]} />
 
       <div className="min-h-screen bg-[#FAFAFA]">
         {/* Hero */}

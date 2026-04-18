@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
+import { generateOrganizationSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'About JLS Reglazing - 20+ Years of Professional Refinishing',
@@ -9,10 +11,18 @@ export const metadata: Metadata = {
   keywords:
     'about JLS Reglazing, Jorge Saldana, bathtub reglazing expert, Hispanic-owned business, Southern California refinishing',
   openGraph: {
-    title: 'About JLS Reglazing | JLS Reglazing',
+    type: 'website',
+    title: 'About JLS Reglazing - 20+ Years of Professional Refinishing',
     description:
-      'Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience in Southern California.',
+      'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. Licensed, insured, 2-year warranty.',
     url: 'https://jlsreglazing.com/about',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About JLS Reglazing - 20+ Years of Professional Refinishing',
+    description:
+      'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. Licensed, insured, 2-year warranty.',
   },
 }
 
@@ -67,6 +77,13 @@ const whyChooseUs = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
+      />
+
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'About', href: '/about' }]} />
+
       {/* Hero */}
       <section className="bg-[#1B4D7A] text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -104,10 +121,19 @@ export default function AboutPage() {
               transparent pricing, and reliable service.
             </p>
             <p className="font-jost text-[#2D3748]/80 leading-relaxed">
-              Having serviced over 4,000 units across San Bernardino County, Riverside County,
-              Los Angeles County, and the High Desert, we understand the unique needs of property
-              managers, contractors, and homeowners. Every project is backed by our comprehensive
-              2-year warranty because we stand behind our work.
+              Having serviced over 4,000 units across{' '}
+              <Link href="/san-bernardino-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">San Bernardino County</Link>,{' '}
+              <Link href="/riverside-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">Riverside County</Link>,{' '}
+              <Link href="/los-angeles-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">Los Angeles County</Link>, and the{' '}
+              <Link href="/victorville-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">High Desert</Link>, we understand the unique needs of property managers, contractors, and homeowners. Every project is backed by our comprehensive 2-year warranty because we stand behind our work.
+            </p>
+            <p className="font-jost text-[#2D3748]/80 leading-relaxed mt-4">
+              Our full range of services includes{' '}
+              <Link href="/services/bathtub-refinishing" className="text-[#1B4D7A] font-semibold hover:underline">bathtub refinishing</Link>,{' '}
+              <Link href="/services/kitchen-refinishing" className="text-[#1B4D7A] font-semibold hover:underline">kitchen countertop reglazing</Link>,{' '}
+              <Link href="/services/sink-refinishing" className="text-[#1B4D7A] font-semibold hover:underline">sink refinishing</Link>, and{' '}
+              <Link href="/services/cut-out-repairs" className="text-[#1B4D7A] font-semibold hover:underline">accessibility cut-outs</Link>. See our{' '}
+              <Link href="/process" className="text-[#1B4D7A] font-semibold hover:underline">7-step reglazing process</Link> to learn how we deliver factory-quality results in a single day.
             </p>
           </div>
         </div>

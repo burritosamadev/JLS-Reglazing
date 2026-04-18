@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Bath Vanity Refinishing Services | JLS Reglazing',
+  title: 'Bath Vanity Refinishing & Reglazing Services',
   description:
     'Professional bath vanity refinishing in Southern California. Restore your vanity top and basin to a like-new finish without a full bathroom remodel. Free quotes available.',
   alternates: { canonical: 'https://jlsreglazing.com/services/bath-vanity-refinishing' },
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     'bath vanity refinishing, vanity top refinishing, bathroom vanity reglazing, vanity resurfacing, cultured marble refinishing, Southern California',
   openGraph: {
     type: 'website',
-    title: 'Bath Vanity Refinishing Services | JLS Reglazing',
+    title: 'Bath Vanity Refinishing & Reglazing Services',
     description:
       'Professional bath vanity refinishing in Southern California. Restore your vanity top and basin to a like-new finish without a full bathroom remodel. Free quotes available.',
     url: 'https://jlsreglazing.com/services/bath-vanity-refinishing',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bath Vanity Refinishing Services | JLS Reglazing',
+    title: 'Bath Vanity Refinishing & Reglazing Services',
     description:
       'Professional bath vanity refinishing in Southern California. Restore your vanity top and basin to a like-new finish without a full bathroom remodel. Free quotes available.',
   },
@@ -47,6 +48,7 @@ export default function BathVanityRefinishingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Bath Vanity Refinishing', href: '/services/bath-vanity-refinishing' }]} />
       <ServicePageContent
         title="Bath Vanity Refinishing"
         subtitle="Refresh your entire bathroom vanity with a seamless, professional refinish. We restore vanity tops and integrated basins to a beautiful, factory-smooth surface, giving your bathroom an updated look without the expense of a full remodel."

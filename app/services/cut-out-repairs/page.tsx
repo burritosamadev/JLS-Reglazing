@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
 
 export const metadata: Metadata = {
-  title: 'Tub Cut-Out & Foundation Repair Services | JLS Reglazing',
+  title: 'Tub Cut-Out & Foundation Repair Services',
   description:
     'Professional tub cut-out conversions and bathroom foundation repairs in Southern California. Improve accessibility and fix structural issues. Free quotes available.',
   alternates: { canonical: 'https://jlsreglazing.com/services/cut-out-repairs' },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'tub cut-out, bathtub cut-out conversion, bathroom foundation repair, tub to walk-in conversion, accessibility bathtub, bathtub structural repair, Southern California',
   openGraph: {
     type: 'website',
-    title: 'Tub Cut-Out & Foundation Repair Services | JLS Reglazing',
+    title: 'Tub Cut-Out & Foundation Repair Services',
     description:
       'Professional tub cut-out conversions and bathroom foundation repairs in Southern California. Improve accessibility and fix structural issues. Free quotes available.',
     url: 'https://jlsreglazing.com/services/cut-out-repairs',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tub Cut-Out & Foundation Repair Services | JLS Reglazing',
+    title: 'Tub Cut-Out & Foundation Repair Services',
     description:
       'Professional tub cut-out conversions and bathroom foundation repairs in Southern California. Improve accessibility and fix structural issues. Free quotes available.',
   },

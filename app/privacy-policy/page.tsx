@@ -1,16 +1,33 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: 'Privacy Policy - JLS Reglazing | Data & SMS Policy',
   description:
-    'Privacy Policy for JLS Reglazing. Learn how we collect, use, and protect your personal information including SMS consent and data handling practices.',
+    'Privacy Policy for JLS Reglazing. Learn how we collect, use, and protect your personal information including SMS consent, analytics, cookies, and data handling practices.',
   alternates: { canonical: 'https://jlsreglazing.com/privacy-policy' },
+  openGraph: {
+    type: 'website',
+    title: 'Privacy Policy - JLS Reglazing | Data & SMS Policy',
+    description:
+      'Privacy Policy for JLS Reglazing. Learn how we collect, use, and protect your personal information including SMS consent, analytics, cookies, and data handling practices.',
+    url: 'https://jlsreglazing.com/privacy-policy',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy - JLS Reglazing | Data & SMS Policy',
+    description:
+      'Privacy Policy for JLS Reglazing. Learn how we collect, use, and protect your personal information including SMS consent, analytics, cookies, and data handling practices.',
+  },
 }
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="py-16 bg-white">
+    <>
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Privacy Policy', href: '/privacy-policy' }]} />
+      <section className="py-16 bg-white">
       <div className="max-w-3xl mx-auto px-4">
         <h1 className="font-orbitron text-3xl md:text-4xl font-bold text-[#2D3748] mb-8">
           Privacy Policy
@@ -167,5 +184,6 @@ export default function PrivacyPolicyPage() {
         </div>
       </div>
     </section>
+    </>
   )
 }

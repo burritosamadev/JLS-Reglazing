@@ -19,10 +19,18 @@ export const metadata: Metadata = {
   keywords:
     'bathtub reglazing San Bernardino, kitchen refinishing Fontana, tub reglazing Rancho Cucamonga, bathtub refinishing Ontario, reglazing Upland, reglazing Redlands, San Bernardino County reglazing',
   openGraph: {
-    title: 'Bathtub & Kitchen Reglazing in San Bernardino County | JLS Reglazing',
+    type: 'website',
+    title: 'Bathtub & Kitchen Reglazing in San Bernardino County',
     description:
       'Professional bathtub and kitchen reglazing across San Bernardino County. 20+ years experience, 4,000+ units serviced.',
     url: 'https://jlsreglazing.com/san-bernardino-reglazing',
+    images: [{ url: '/images/1_after.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bathtub & Kitchen Reglazing in San Bernardino County',
+    description:
+      'Professional bathtub and kitchen reglazing across San Bernardino County. 20+ years experience, 4,000+ units serviced.',
   },
 }
 

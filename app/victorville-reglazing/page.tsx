@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   keywords:
     'bathtub reglazing Victorville, kitchen refinishing Hesperia, tub reglazing Apple Valley, bathtub refinishing Barstow, reglazing Big Bear, High Desert reglazing, Adelanto refinishing',
   openGraph: {
-    title: 'Bathtub & Kitchen Reglazing in Victorville & High Desert | JLS Reglazing',
+    title: 'Bathtub & Kitchen Reglazing in Victorville & High Desert',
     description:
       'Professional bathtub and kitchen reglazing in the High Desert. 20+ years experience, 4,000+ units serviced.',
     url: 'https://jlsreglazing.com/victorville-reglazing',

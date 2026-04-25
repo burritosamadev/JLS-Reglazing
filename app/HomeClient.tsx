@@ -157,16 +157,16 @@ export default function HomeClient() {
       {/* Services Preview */}
       <section className="relative py-16 bg-surface-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="text-center mb-16">
+          <div className="text-center mb-16">
             <h2 className="section-title text-charcoal mb-4">Refinishing Services</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-jost">
               Below you will find a list of surfaces we refinish / reglaze within the Los Angeles, San Bernardino, and surrounding areas. Text or call for more information or custom refinishing services like Jacuzzis, Pools, Fridges, etc.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {services.map((service, index) => (
-              <motion.div key={service.title} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.1 } } }} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            {services.map((service) => (
+              <div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="relative h-72 overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                 </div>
@@ -174,7 +174,7 @@ export default function HomeClient() {
                   <h3 className="text-xl font-roboto font-semibold text-charcoal mb-3">{service.title}</h3>
                   <p className="text-gray-600 font-roboto">{service.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 

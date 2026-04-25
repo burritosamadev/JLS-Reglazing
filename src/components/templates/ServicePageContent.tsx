@@ -60,20 +60,14 @@ export default function ServicePageContent({
       {/* Before & After Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-10"
-          >
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-[#2D3748] mb-4">
               See the Difference
             </h2>
             <p className="text-lg text-gray-600 font-jost">
               Real results from our professional {title.toLowerCase()} service
             </p>
-          </motion.div>
+          </div>
 
           <BeforeAfterComparison
             beforeImage={beforeImage}
@@ -100,34 +94,24 @@ export default function ServicePageContent({
       {/* Features / Benefits Section */}
       <section className="py-16 md:py-20 bg-[#F3F4F6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-[#2D3748] mb-4">
               Why Choose Our {title}?
             </h2>
             <p className="text-lg text-gray-600 font-jost max-w-3xl mx-auto">
               Save up to <span className="font-bold text-xl text-[#1B4D7A]">90%</span> compared to full replacement costs
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-lg p-6 shadow-md border border-gray-200"
               >
                 <CheckCircleIcon className="w-8 h-8 text-[#1B4D7A] mb-3" />
                 <p className="text-[#2D3748] font-jost text-lg">{feature}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -153,34 +137,22 @@ export default function ServicePageContent({
       {/* Related Services */}
       <section className="py-16 md:py-20 bg-[#F3F4F6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-[#2D3748] mb-4">
               Related Services
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <div key={index}>
                 <Link
                   href={service.path}
                   className="block bg-[#1B4D7A] hover:bg-[#164068] text-white rounded-lg p-6 text-center font-jost font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   {service.name}
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -189,20 +161,14 @@ export default function ServicePageContent({
       {/* Quick Quote Form */}
       <section id="quote" className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-10"
-          >
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-[#2D3748] mb-4">
               Get Your Free Quote
             </h2>
             <p className="text-lg text-gray-600 font-jost">
               Fill out the form below and we will get back to you within 24 hours
             </p>
-          </motion.div>
+          </div>
 
           <QuickQuoteForm defaultService={defaultService} />
         </div>

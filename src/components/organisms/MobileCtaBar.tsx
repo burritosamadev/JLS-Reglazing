@@ -1,9 +1,37 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import { analytics } from '@/lib/analytics'
 
 export default function MobileCtaBar() {
+  const [isVisible, setIsVisible] = useState(true)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      // Always visible near the top of the page
+      if (currentScrollY < 100) {
+        setIsVisible(true)
+      }
+      // Scrolling down — hide
+      else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false)
+      }
+      // Scrolling up — show
+      else if (currentScrollY < lastScrollY.current) {
+        setIsVisible(true)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const handleQuoteClick = (e: React.MouseEvent) => {
     e.preventDefault()
     analytics.ctaClick('Get Quote', 'Mobile CTA Bar')
@@ -18,8 +46,10 @@ export default function MobileCtaBar() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-900 shadow-2xl border-t-2 border-cta"
-      style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+      className={`fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-900 shadow-2xl border-t-2 border-cta transition-transform duration-200 ease-out ${
+        isVisible ? 'translate-y-0' : 'translate-y-full'
+      }`}
+      style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
     >
       <div className="flex items-stretch h-14">
         <a

@@ -1,7 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 interface BeforeAfterComparisonProps {
   beforeImage: string
   afterImage: string
@@ -11,13 +9,7 @@ interface BeforeAfterComparisonProps {
 
 export default function BeforeAfterComparison({ beforeImage, afterImage, alt, priority = false }: BeforeAfterComparisonProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-1 rounded-xl overflow-hidden shadow-2xl"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 rounded-xl overflow-hidden shadow-2xl">
       {/* Before */}
       <div className="relative aspect-[4/3]">
         <picture>
@@ -59,6 +51,6 @@ export default function BeforeAfterComparison({ beforeImage, afterImage, alt, pr
           AFTER
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePageContent from '@/components/templates/ServicePageContent'
+import BeforeAfterComparison from '@/components/molecules/BeforeAfterComparison'
+import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
 
 export const metadata: Metadata = {
   title: 'Tub Cut-Out & Foundation Repair Services',
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
     description:
       'Professional tub cut-out conversions and bathroom foundation repairs in Southern California. Improve accessibility and fix structural issues. Free quotes available.',
     url: 'https://jlsreglazing.com/services/cut-out-repairs',
-    images: [{ url: '/images/1_after.webp' }],
+    images: [{ url: '/images/6_after.webp' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -47,13 +49,85 @@ export default function CutOutRepairsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Custom hero — two column: messaging + before/after */}
+      <section className="bg-[#1B4D7A] text-white py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <div>
+              <h1 className="font-orbitron text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                Tub Cut-Out &amp; Foundation Repairs
+              </h1>
+              <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
+                Improve bathroom accessibility with a professional tub cut-out conversion, or restore structural integrity with our foundation repair services. A safer, more affordable solution for seniors and aging-in-place renovations.
+              </p>
+
+              {/* Quick stats */}
+              <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="font-orbitron text-2xl font-bold">20+</div>
+                  <div className="font-jost text-xs text-white/80">Years</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="font-orbitron text-2xl font-bold">4,000+</div>
+                  <div className="font-jost text-xs text-white/80">Units Done</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="font-orbitron text-2xl font-bold">$400+</div>
+                  <div className="font-jost text-xs text-white/80">Starting</div>
+                </div>
+              </div>
+
+              {/* Phone CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+13108765600" className="flex-1 bg-[#F26522] hover:bg-[#d9551a] text-white font-jost font-semibold px-6 py-3 rounded-lg text-center transition-colors">
+                  Call (310) 876-5600
+                </a>
+                <a href="#quote-form" className="flex-1 bg-white text-[#1B4D7A] hover:bg-gray-100 font-jost font-semibold px-6 py-3 rounded-lg text-center transition-colors">
+                  Get a Free Quote
+                </a>
+              </div>
+            </div>
+
+            {/* Right: before/after */}
+            <div>
+              <BeforeAfterComparison
+                beforeImage="/images/6_before.webp"
+                afterImage="/images/6_after.webp"
+                alt="Tub Cut-Out and Foundation Repair before and after"
+                priority={true}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote form section near top — same module as bottom for ease of use */}
+      <section id="quote-form" className="py-12 md:py-16 bg-white scroll-mt-20">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-[#2D3748] mb-2">
+              Get Your Free Tub Cut-Out Quote
+            </h2>
+            <p className="font-jost text-[#2D3748]/70">
+              Same-day response. Bilingual service in English &amp; Spanish.
+            </p>
+          </div>
+          <div className="bg-[#FAFAFA] rounded-xl p-6 md:p-8 shadow-md">
+            <QuickQuoteForm defaultService="Bathroom Foundation Repair (cut-outs)" />
+          </div>
+        </div>
+      </section>
+
+      {/* ServicePageContent renders the rest (skipping the default hero + before/after) */}
       <ServicePageContent
         title="Tub Cut-Out & Foundation Repairs"
-        subtitle="Improve bathroom accessibility with a professional tub cut-out conversion, or restore structural integrity with our foundation repair services. These specialized solutions address safety concerns and structural issues without requiring a full bathroom renovation."
+        subtitle="Improve bathroom accessibility with a professional tub cut-out conversion, or restore structural integrity with our foundation repair services."
         priceRange="$400–$600"
         beforeImage="/images/6_before.webp"
         afterImage="/images/6_after.webp"
         defaultService="Bathroom Foundation Repair (cut-outs)"
+        skipDefaultHero={true}
         features={[
           'Low step-in tub cut-out for improved accessibility and safety',
           'Ideal for seniors and individuals with limited mobility',

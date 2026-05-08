@@ -16,6 +16,8 @@ interface ServicePageContentProps {
   defaultService: string
   relatedServices: { name: string; path: string }[]
   priceRange?: string
+  /** When true, suppresses the default hero + before/after sections (caller renders custom hero before this component) */
+  skipDefaultHero?: boolean
 }
 
 export default function ServicePageContent({
@@ -28,54 +30,59 @@ export default function ServicePageContent({
   defaultService,
   relatedServices,
   priceRange,
+  skipDefaultHero = false,
 }: ServicePageContentProps) {
   return (
     <div className="min-h-screen bg-[#FAFAFA]">
-      {/* Hero Section */}
-      <section className="relative bg-[#1B4D7A] text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1B4D7A]/95 to-[#1B4D7A]/80" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-5xl font-orbitron font-bold mb-6">
-              {title}
-            </h1>
-            <p className="text-xl text-gray-200 font-jost leading-relaxed mb-8">
-              {subtitle}
-            </p>
-            <a
-              href="#quote"
-              className="inline-block bg-[#F26522] hover:bg-[#d9551a] text-white px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
-            >
-              Get a Free Quote
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      {!skipDefaultHero && (
+        <>
+          {/* Hero Section */}
+          <section className="relative bg-[#1B4D7A] text-white py-20 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1B4D7A]/95 to-[#1B4D7A]/80" />
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center max-w-4xl mx-auto"
+              >
+                <h1 className="text-4xl md:text-5xl font-orbitron font-bold mb-6">
+                  {title}
+                </h1>
+                <p className="text-xl text-gray-200 font-jost leading-relaxed mb-8">
+                  {subtitle}
+                </p>
+                <a
+                  href="#quote"
+                  className="inline-block bg-[#F26522] hover:bg-[#d9551a] text-white px-10 py-4 rounded-lg font-jost font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                >
+                  Get a Free Quote
+                </a>
+              </motion.div>
+            </div>
+          </section>
 
-      {/* Before & After Section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-[#2D3748] mb-4">
-              See the Difference
-            </h2>
-            <p className="text-lg text-gray-600 font-jost">
-              Real results from our professional {title.toLowerCase()} service
-            </p>
-          </div>
+          {/* Before & After Section */}
+          <section className="py-16 md:py-20 bg-white">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-[#2D3748] mb-4">
+                  See the Difference
+                </h2>
+                <p className="text-lg text-gray-600 font-jost">
+                  Real results from our professional {title.toLowerCase()} service
+                </p>
+              </div>
 
-          <BeforeAfterComparison
-            beforeImage={beforeImage}
-            afterImage={afterImage}
-            alt={`${title} before and after`}
-          />
-        </div>
-      </section>
+              <BeforeAfterComparison
+                beforeImage={beforeImage}
+                afterImage={afterImage}
+                alt={`${title} before and after`}
+              />
+            </div>
+          </section>
+        </>
+      )}
 
       {/* Pricing Anchor — AEO: answers "how much does X cost?" */}
       {priceRange && (

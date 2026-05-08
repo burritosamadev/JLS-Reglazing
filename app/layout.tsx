@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Poppins, Roboto, Jost } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import TopBar from '@/components/organisms/TopBar'
 import Navigation from '@/components/organisms/Navigation'
 import Footer from '@/components/organisms/Footer'
 import MobileCtaBar from '@/components/organisms/MobileCtaBar'
-import PlausibleScript from '@/components/atoms/PlausibleScript'
 import './globals.css'
 
 const poppins = Poppins({
@@ -59,6 +59,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${poppins.variable} ${roboto.variable} ${jost.variable}`}>
+      <head>
+        {/* Plausible Analytics — loaded directly in <head> for reliable tracking
+             (beforeInteractive only works in app/layout.tsx, not in nested wrapper components) */}
+        <Script
+          defer
+          data-domain="jlsreglazing.com"
+          src="https://plausible.io/js/pa-8E-on2b3gEVQiEx52Phz8.js"
+          strategy="beforeInteractive"
+        />
+        {/* window.plausible queue stub — captures custom events fired before script loads */}
+        <Script id="plausible-queue" strategy="beforeInteractive">
+          {`window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`}
+        </Script>
+      </head>
       <body className="font-roboto min-h-screen flex flex-col">
         <div className="sticky top-0 z-50" style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}>
           <div className="hidden sm:block">
@@ -71,7 +85,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <MobileCtaBar />
-        <PlausibleScript />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}

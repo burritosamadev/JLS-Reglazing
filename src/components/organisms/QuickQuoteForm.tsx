@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import { analytics } from '@/lib/analytics'
+import { getAttribution } from '@/lib/lead-attribution'
 
 interface QuickQuoteFormProps {
   defaultService?: string
@@ -53,6 +54,7 @@ export default function QuickQuoteForm({ defaultService = '' }: QuickQuoteFormPr
         message: formData.projectDetails || '',
         website: formData.website,
         submissionTime,
+        attribution: getAttribution(),
       }
 
       const response = await fetch('/api/submit-form', {

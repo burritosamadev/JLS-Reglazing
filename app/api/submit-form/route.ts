@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
     // Track rate limit
     rateLimiter.addSubmission(ipAddress)
 
-    // Create contact in HubSpot
+    // Create contact in HubSpot (with attribution for lead source tracking)
     const hubspotResult = await createHubSpotContact({
       name: validatedData.name,
       email: validatedData.email,
@@ -62,6 +62,7 @@ export async function POST(request: NextRequest) {
       service: validatedData.subject || '',
       message: validatedData.message || '',
       smsConsent: body.smsConsent || false,
+      attribution: body.attribution,
     })
 
     if (!hubspotResult) {

@@ -6,6 +6,7 @@ import TopBar from '@/components/organisms/TopBar'
 import Navigation from '@/components/organisms/Navigation'
 import Footer from '@/components/organisms/Footer'
 import MobileCtaBar from '@/components/organisms/MobileCtaBar'
+import AttributionTracker from '@/components/atoms/AttributionTracker'
 import './globals.css'
 
 const poppins = Poppins({
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <MobileCtaBar />
+        <AttributionTracker />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}

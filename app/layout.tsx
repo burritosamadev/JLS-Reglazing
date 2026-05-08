@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Orbitron, Roboto, Jost } from 'next/font/google'
+import { Poppins, Roboto, Jost } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import TopBar from '@/components/organisms/TopBar'
 import Navigation from '@/components/organisms/Navigation'
@@ -8,8 +8,9 @@ import MobileCtaBar from '@/components/organisms/MobileCtaBar'
 import PlausibleScript from '@/components/atoms/PlausibleScript'
 import './globals.css'
 
-const orbitron = Orbitron({
+const poppins = Poppins({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-orbitron',
   display: 'swap',
 })
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${roboto.variable} ${jost.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${roboto.variable} ${jost.variable}`}>
       <body className="font-roboto min-h-screen flex flex-col">
         <div className="sticky top-0 z-50" style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}>
           <div className="hidden sm:block">

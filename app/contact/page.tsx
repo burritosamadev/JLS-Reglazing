@@ -46,30 +46,60 @@ export default function ContactPage() {
 
       <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Contact', href: '/contact' }]} />
 
-      {/* Hero */}
-      <section className="bg-[#1B4D7A] text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="font-orbitron text-3xl md:text-5xl font-bold mb-4">
-            Contact Us
-          </h1>
-          <p className="font-jost text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Get a free quote or ask us anything. We offer bilingual service in English and Spanish.
-          </p>
-        </div>
-      </section>
+      {/* Hero with form above the fold */}
+      <section className="bg-[#1B4D7A] text-white py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+            {/* Left: messaging */}
+            <div>
+              <h1 className="font-orbitron text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                Contact JLS Reglazing
+              </h1>
+              <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
+                Get a free quote in 24 hours. Bilingual service in English and Spanish. No obligation, no pressure.
+              </p>
 
-      {/* Click-to-call CTA strip */}
-      <section className="bg-[#F3F4F6] border-y border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          <a href="tel:+13108765600" className="flex items-center gap-2 text-[#2D3748] hover:text-[#F26522] transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-            <span className="font-jost"><strong className="font-semibold">English:</strong> (310) 876-5600</span>
-          </a>
-          <span className="hidden sm:inline text-gray-300">|</span>
-          <a href="tel:+19095012797" className="flex items-center gap-2 text-[#2D3748] hover:text-[#F26522] transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-            <span className="font-jost"><strong className="font-semibold">Español:</strong> (909) 501-2797</span>
-          </a>
+              {/* Phone CTAs */}
+              <div className="space-y-3 mb-6">
+                <a href="tel:+13108765600" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg px-4 py-3 transition-colors">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  <div>
+                    <div className="font-jost text-xs text-white/70">English</div>
+                    <div className="font-jost font-semibold">(310) 876-5600</div>
+                  </div>
+                </a>
+                <a href="tel:+19095012797" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg px-4 py-3 transition-colors">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  <div>
+                    <div className="font-jost text-xs text-white/70">Español</div>
+                    <div className="font-jost font-semibold">(909) 501-2797</div>
+                  </div>
+                </a>
+                <a href="mailto:jorge@jlsreglazing.com" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg px-4 py-3 transition-colors">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  <div>
+                    <div className="font-jost text-xs text-white/70">Email</div>
+                    <div className="font-jost font-semibold">jorge@jlsreglazing.com</div>
+                  </div>
+                </a>
+              </div>
+
+              <div className="font-jost text-sm text-white/80 border-t border-white/20 pt-4">
+                <strong className="font-semibold text-white">Hours:</strong> Mon &ndash; Sat, 7:00 AM &ndash; 6:00 PM
+              </div>
+            </div>
+
+            {/* Right: form above the fold */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
+              <h2 className="font-orbitron text-2xl font-bold text-[#2D3748] mb-2">
+                Request a Free Quote
+              </h2>
+              <p className="font-jost text-[#2D3748]/70 mb-6 text-sm">
+                Tell us about your project and we&apos;ll respond within 24 hours.
+              </p>
+              <QuickQuoteForm />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -131,82 +161,22 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Info + Form */}
+      {/* Service Areas */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Contact Info Sidebar */}
-          <div className="lg:col-span-2 space-y-8">
-            <div>
-              <h2 className="font-orbitron text-xl font-bold text-[#2D3748] mb-4">
-                Get in Touch
-              </h2>
-
-              <div className="space-y-4">
-                <div className="bg-[#F3F4F6] rounded-lg p-4">
-                  <p className="font-jost text-sm text-[#2D3748]/60 mb-1">Email</p>
-                  <Link
-                    href="mailto:jorge@jlsreglazing.com"
-                    className="font-jost text-[#1B4D7A] font-semibold hover:underline"
-                  >
-                    jorge@jlsreglazing.com
-                  </Link>
-                </div>
-
-                <div className="bg-[#F3F4F6] rounded-lg p-4">
-                  <p className="font-jost text-sm text-[#2D3748]/60 mb-1">Phone (English)</p>
-                  <Link
-                    href="tel:+13108765600"
-                    className="font-jost text-[#1B4D7A] font-semibold hover:underline"
-                  >
-                    (310) 876-5600
-                  </Link>
-                </div>
-
-                <div className="bg-[#F3F4F6] rounded-lg p-4">
-                  <p className="font-jost text-sm text-[#2D3748]/60 mb-1">Phone (Spanish)</p>
-                  <Link
-                    href="tel:+19095012797"
-                    className="font-jost text-[#1B4D7A] font-semibold hover:underline"
-                  >
-                    (909) 501-2797
-                  </Link>
-                </div>
-
-                <div className="bg-[#F3F4F6] rounded-lg p-4">
-                  <p className="font-jost text-sm text-[#2D3748]/60 mb-1">Hours</p>
-                  <p className="font-jost text-[#2D3748] font-semibold">
-                    Mon – Sat: 7:00 AM – 6:00 PM
-                  </p>
-                  <p className="font-jost text-sm text-[#2D3748]/70 mt-1">We respond within 24 hours</p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-orbitron text-lg font-bold text-[#2D3748] mb-3">
-                Service Areas
-              </h3>
-              <ul className="space-y-2">
-                {serviceAreas.map((area) => (
-                  <li key={area.name}>
-                    <Link
-                      href={area.href}
-                      className="font-jost text-[#1B4D7A] hover:underline"
-                    >
-                      {area.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Quote Form */}
-          <div className="lg:col-span-3">
-            <h2 className="font-orbitron text-xl font-bold text-[#2D3748] mb-4">
-              Request a Free Quote
-            </h2>
-            <QuickQuoteForm />
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-[#2D3748] text-center mb-8">
+            Our Service Areas
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {serviceAreas.map((area) => (
+              <Link
+                key={area.name}
+                href={area.href}
+                className="bg-[#F3F4F6] hover:bg-[#1B4D7A] hover:text-white rounded-lg p-4 text-center font-jost text-[#2D3748] font-semibold transition-colors"
+              >
+                {area.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

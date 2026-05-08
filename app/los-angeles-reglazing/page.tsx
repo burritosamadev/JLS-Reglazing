@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { generateCountySchema } from '@/lib/seo'
 import QuickQuoteForm from '@/components/organisms/QuickQuoteForm'
+import BeforeAfterComparison from '@/components/molecules/BeforeAfterComparison'
 import ServiceAreaMapWrapper from '@/components/organisms/ServiceAreaMapWrapper'
 import Breadcrumbs from '@/components/atoms/Breadcrumbs'
 
@@ -39,16 +40,73 @@ export default function LosAngelesReglazingPage() {
 
       <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Los Angeles County Reglazing', href: '/los-angeles-reglazing' }]} />
 
-      {/* Hero */}
-      <section className="bg-[#1B4D7A] text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="font-orbitron text-3xl md:text-5xl font-bold mb-4">
-            Bathtub &amp; Kitchen Reglazing in Los Angeles County
-          </h1>
-          <p className="font-jost text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Professional refinishing services for homeowners, property managers, and contractors
-            across Los Angeles County. Save up to 90% compared to full replacement.
-          </p>
+      {/* Hero — two column: messaging + before/after on desktop, stacks on mobile */}
+      <section className="bg-[#1B4D7A] text-white py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            {/* Left: messaging + CTA */}
+            <div>
+              <h1 className="font-orbitron text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                Bathtub &amp; Kitchen Reglazing in Los Angeles County
+              </h1>
+              <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
+                Trusted by LA-area homeowners and property managers for 20+ years. Professional refinishing for tubs, sinks, vanities, and kitchen countertops &mdash; completed in a single day, backed by a 2-year warranty.
+              </p>
+
+              {/* Quick stats */}
+              <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="font-orbitron text-2xl font-bold">20+</div>
+                  <div className="font-jost text-xs text-white/80">Years</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="font-orbitron text-2xl font-bold">4,000+</div>
+                  <div className="font-jost text-xs text-white/80">Units Done</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="font-orbitron text-2xl font-bold">$300+</div>
+                  <div className="font-jost text-xs text-white/80">Starting</div>
+                </div>
+              </div>
+
+              {/* Phone CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+13108765600" className="flex-1 bg-[#F26522] hover:bg-[#d9551a] text-white font-jost font-semibold px-6 py-3 rounded-lg text-center transition-colors">
+                  Call (310) 876-5600
+                </a>
+                <a href="#quote-form" className="flex-1 bg-white text-[#1B4D7A] hover:bg-gray-100 font-jost font-semibold px-6 py-3 rounded-lg text-center transition-colors">
+                  Get a Free Quote
+                </a>
+              </div>
+            </div>
+
+            {/* Right: before/after */}
+            <div>
+              <BeforeAfterComparison
+                beforeImage="/images/1_before.webp"
+                afterImage="/images/1_after.webp"
+                alt="Bathtub Reglazing in Los Angeles County"
+                priority={true}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote form section near top — same module as bottom for ease of use */}
+      <section id="quote-form" className="py-12 md:py-16 bg-white scroll-mt-20">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-[#2D3748] mb-2">
+              Get Your Free LA Reglazing Quote
+            </h2>
+            <p className="font-jost text-[#2D3748]/70">
+              Same-day response. Bilingual service in English &amp; Spanish.
+            </p>
+          </div>
+          <div className="bg-[#FAFAFA] rounded-xl p-6 md:p-8 shadow-md">
+            <QuickQuoteForm />
+          </div>
         </div>
       </section>
 
@@ -197,17 +255,22 @@ export default function LosAngelesReglazingPage() {
         </div>
       </section>
 
-      {/* CTA / Quote Form */}
+      {/* Bottom CTA / Quote Form — second instance for users who scrolled past the top */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-[#2D3748] text-center mb-2">
-            Get a Free Quote in Los Angeles County
+            Ready to Reglaze in Los Angeles? Get a Free Quote
           </h2>
           <p className="font-jost text-[#2D3748]/70 text-center mb-8">
-            Fill out the form below or call us at{' '}
+            Same-day response. Or call{' '}
             <Link href="tel:+13108765600" className="text-[#1B4D7A] font-semibold hover:underline">
               (310) 876-5600
-            </Link>
+            </Link>{' '}
+            for English or{' '}
+            <Link href="tel:+19095012797" className="text-[#1B4D7A] font-semibold hover:underline">
+              (909) 501-2797
+            </Link>{' '}
+            for Spanish.
           </p>
           <QuickQuoteForm />
         </div>

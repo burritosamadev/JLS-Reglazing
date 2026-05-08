@@ -24,8 +24,9 @@ export default function WhatIsReglazingSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-start mb-16">
           <div className="lg:sticky lg:top-8">
             <BeforeAfterComparison
-              beforeImage="/images/1_before.webp"
-              afterImage="/images/1_after.webp"
+              variant="composite"
+              compositeImage="/images/before_after_combined_1.jpg"
+              aspectRatio="4/5"
               alt="Bathtub Transformation"
             />
           </div>

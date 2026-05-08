@@ -92,8 +92,9 @@ export default function CutOutRepairsPage() {
             {/* Right: before/after */}
             <div>
               <BeforeAfterComparison
-                beforeImage="/images/6_before.webp"
-                afterImage="/images/6_after.webp"
+                variant="composite"
+                compositeImage="/images/before_after_combined_1.jpg"
+                aspectRatio="4/5"
                 alt="Tub Cut-Out and Foundation Repair before and after"
                 priority={true}
               />

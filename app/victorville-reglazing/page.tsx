@@ -81,8 +81,9 @@ export default function VictorvilleReglazingPage() {
             {/* Right: before/after */}
             <div>
               <BeforeAfterComparison
-                beforeImage="/images/5_before.webp"
-                afterImage="/images/5_after.webp"
+                variant="composite"
+                compositeImage="/images/before_after_combined_1.jpg"
+                aspectRatio="4/5"
                 alt="Bathtub Reglazing in Victorville & High Desert"
                 priority={true}
               />

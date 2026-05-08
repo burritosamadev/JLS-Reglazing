@@ -37,22 +37,19 @@ export default function BeforeAfterComparison({
   // Composite variant: single pre-composed image
   if (variant === 'composite' && compositeImage) {
     const aspectClass = aspectClassMap[aspectRatio]
+    const match = compositeImage.match(/^(.+)\.(webp|jpe?g|png)$/i)
+    const small = match ? `${match[1]}-800w.${match[2]}` : compositeImage
     return (
       <div className={`relative ${aspectClass} rounded-xl overflow-hidden shadow-2xl`}>
-        <picture>
-          <source
-            srcSet={`${compositeImage.replace('.webp', '-800w.webp')} 800w, ${compositeImage} 1536w`}
-            sizes="(max-width: 768px) 100vw, 600px"
-            type="image/webp"
-          />
-          <img
-            src={compositeImage.replace('.webp', '.jpg')}
-            alt={alt}
-            className="w-full h-full object-cover"
-            loading={priority ? 'eager' : 'lazy'}
-            fetchPriority={priority ? 'high' : 'auto'}
-          />
-        </picture>
+        <img
+          src={compositeImage}
+          srcSet={`${small} 800w, ${compositeImage} 1536w`}
+          sizes="(max-width: 768px) 100vw, 600px"
+          alt={alt}
+          className="w-full h-full object-cover"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+        />
       </div>
     )
   }

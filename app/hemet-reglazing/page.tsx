@@ -89,8 +89,9 @@ export default function HemetReglazingPage() {
             {/* Right: before/after */}
             <div>
               <BeforeAfterComparison
-                beforeImage="/images/4_before.webp"
-                afterImage="/images/4_after.webp"
+                variant="composite"
+                compositeImage="/images/before_after_combined_1.jpg"
+                aspectRatio="4/5"
                 alt="Bathtub Reglazing in Hemet & San Jacinto Valley"
                 priority={true}
               />

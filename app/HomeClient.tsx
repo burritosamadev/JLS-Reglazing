@@ -168,7 +168,7 @@ export default function HomeClient() {
             {services.map((service) => (
               <div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="relative h-72 overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-8">
                   <h3 className="text-xl font-roboto font-semibold text-charcoal mb-3">{service.title}</h3>

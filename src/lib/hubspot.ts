@@ -3,31 +3,31 @@ import type { LeadAttribution } from './lead-attribution'
 const HUBSPOT_API = 'https://api.hubapi.com'
 
 /**
- * Convert raw UTM data into a human-readable lead source string.
- * Examples:
- *   - utm_source=craigslist → "Craigslist"
- *   - utm_source=craigslist + campaign=la-apartments → "Craigslist (LA Apartments)"
- *   - referrer only → "Google" / "Yelp" / etc.
- *   - nothing → "Direct / Organic"
+ * Convert utm_campaign or utm_medium into a clean human-readable label.
+ * Replaces hyphens AND underscores with spaces, then title-cases each word.
+ */
+function humanize(value: string): string {
+  return value
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+}
+
+/**
+ * Channel only — e.g. "Craigslist", "Yelp", "Google (Organic)", "Direct / Organic".
+ * Campaign and medium are stored in their own dedicated properties.
  */
 function buildLeadSource(attribution?: LeadAttribution): string {
   if (!attribution) return 'Direct / Organic'
 
-  const { utm_source, utm_campaign, referrer } = attribution
+  const { utm_source, referrer } = attribution
 
   if (utm_source) {
-    const source = utm_source.charAt(0).toUpperCase() + utm_source.slice(1).toLowerCase()
-    if (utm_campaign) {
-      const campaign = utm_campaign.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
-      return `${source} (${campaign})`
-    }
-    return source
+    return utm_source.charAt(0).toUpperCase() + utm_source.slice(1).toLowerCase()
   }
 
   if (referrer) {
     try {
       const host = new URL(referrer).hostname.replace(/^www\./, '')
-      // Common referrer cleanups
       if (host.includes('google.')) return 'Google (Organic)'
       if (host.includes('bing.')) return 'Bing (Organic)'
       if (host.includes('yelp.')) return 'Yelp'
@@ -64,8 +64,11 @@ export async function createHubSpotContact(data: {
   const lastname = nameParts.slice(1).join(' ') || ''
 
   const leadSource = buildLeadSource(data.attribution)
+  const leadSourceCampaign = data.attribution?.utm_campaign ? humanize(data.attribution.utm_campaign) : ''
+  const leadSourceMedium = data.attribution?.utm_medium ? humanize(data.attribution.utm_medium) : ''
 
-  // Built-in HubSpot properties + the user's custom "Lead Source" property (internal name: lead_source)
+  // Built-in HubSpot properties + custom "Lead Source" properties
+  // Custom internal names: lead_source, lead_source_campaign, lead_source_medium
   const properties: Record<string, string> = {
     firstname,
     lastname,
@@ -75,6 +78,8 @@ export async function createHubSpotContact(data: {
     lifecyclestage: 'lead',
     hs_lead_status: 'NEW',
     lead_source: leadSource,
+    lead_source_campaign: leadSourceCampaign,
+    lead_source_medium: leadSourceMedium,
   }
 
   try {
@@ -88,14 +93,15 @@ export async function createHubSpotContact(data: {
       body: JSON.stringify({ properties }),
     })
 
-    // If lead_source property doesn't exist yet (e.g., not configured in HubSpot),
-    // retry without it so the contact still gets created.
+    // If any custom lead_source* property doesn't exist yet, strip all three
+    // and retry so the contact still gets created. Attribution is also stored
+    // in the Note, so nothing is lost.
     if (!response.ok && response.status === 400) {
       const errorText = await response.text()
       if (errorText.includes('lead_source') || errorText.includes('Property')) {
-        console.warn('lead_source property not found in HubSpot — retrying without it. Configure the custom property in HubSpot Settings → Properties.')
-        const { lead_source, ...basicProperties } = properties
-        void lead_source
+        console.warn('One or more lead_source* custom properties not found in HubSpot — retrying without them. Configure them in Settings → Properties.')
+        const { lead_source, lead_source_campaign, lead_source_medium, ...basicProperties } = properties
+        void lead_source; void lead_source_campaign; void lead_source_medium
         response = await fetch(`${HUBSPOT_API}/crm/v3/objects/contacts`, {
           method: 'POST',
           headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
@@ -143,6 +149,7 @@ export async function createHubSpotContact(data: {
       if (a.utm_content) attributionLines.push(`Content: ${a.utm_content}`)
       if (a.referrer) attributionLines.push(`Referrer: ${a.referrer}`)
       if (a.landing_page) attributionLines.push(`Landing page: ${a.landing_page}`)
+      if (a.conversion_page) attributionLines.push(`Converted on: ${a.conversion_page}`)
     }
 
     const noteSections = [

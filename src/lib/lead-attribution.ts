@@ -20,6 +20,7 @@ export interface LeadAttribution {
   utm_content?: string
   referrer?: string
   landing_page?: string
+  conversion_page?: string
   captured_at?: string
 }
 

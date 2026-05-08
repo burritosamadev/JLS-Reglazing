@@ -54,7 +54,10 @@ export default function QuickQuoteForm({ defaultService = '' }: QuickQuoteFormPr
         message: formData.projectDetails || '',
         website: formData.website,
         submissionTime,
-        attribution: getAttribution(),
+        attribution: {
+          ...getAttribution(),
+          conversion_page: typeof window !== 'undefined' ? window.location.pathname + window.location.search : undefined,
+        },
       }
 
       const response = await fetch('/api/submit-form', {

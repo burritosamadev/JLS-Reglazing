@@ -60,17 +60,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${poppins.variable} ${roboto.variable} ${jost.variable}`}>
       <head>
-        {/* Plausible Analytics — plain <script> tag so it lands in initial SSR HTML.
-             next/script with beforeInteractive was queueing via __next_s instead of emitting a real script tag,
-             which delayed (and sometimes prevented) the request from firing. */}
+        {/* Plausible Analytics — custom-configured tracker script.
+             This script variant (pa-XXX.js) does NOT read data-domain from the tag — it requires
+             an explicit plausible.init({ domain, endpoint, autoCapturePageviews }) call to begin tracking. */}
         <script
           defer
-          data-domain="jlsreglazing.com"
           src="https://plausible.io/js/pa-8E-on2b3gEVQiEx52Phz8.js"
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}`,
+            __html: `
+              window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+              window.plausible.init = window.plausible.init || function(o) { window.plausible.o = o };
+              window.plausible.init({ domain: 'jlsreglazing.com', endpoint: 'https://plausible.io/api/event', autoCapturePageviews: true });
+            `,
           }}
         />
       </head>

@@ -15,7 +15,7 @@ const cities = [
 export const metadata: Metadata = {
   title: 'Bathtub & Kitchen Reglazing in Riverside County',
   description:
-    'Professional bathtub and kitchen reglazing in Riverside County. Serving Corona, Moreno Valley, Temecula, Murrieta, Menifee & more. 20+ years experience, 2-year warranty.',
+    'Professional bathtub and kitchen reglazing in Riverside County. Serving Corona, Moreno Valley, Temecula, Murrieta, Menifee & more. 20+ years experience, 3-year warranty.',
   alternates: { canonical: 'https://jlsreglazing.com/riverside-reglazing' },
   keywords:
     'bathtub reglazing Riverside, kitchen refinishing Corona, tub reglazing Moreno Valley, bathtub refinishing Temecula, reglazing Murrieta, reglazing Menifee, Riverside County reglazing',
@@ -57,7 +57,7 @@ export default function RiversideReglazingPage() {
                 Bathtub &amp; Kitchen Reglazing in Riverside County
               </h1>
               <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
-                Trusted refinishing services for homeowners, property managers, and contractors throughout Riverside County. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 2-year warranty.
+                Trusted refinishing services for homeowners, property managers, and contractors throughout Riverside County. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 3-year warranty.
               </p>
 
               {/* Quick stats */}
@@ -124,8 +124,8 @@ export default function RiversideReglazingPage() {
           {[
             { value: '20+', label: 'Years Experience' },
             { value: '4,000+', label: 'Units Serviced' },
-            { value: 'Licensed', label: '& Insured' },
-            { value: '2-Year', label: 'Warranty' },
+            { value: 'Free', label: 'On-Site Quotes' },
+            { value: '3-Year', label: 'Warranty' },
           ].map((item) => (
             <div key={item.label} className="p-4">
               <p className="font-orbitron text-2xl md:text-3xl font-bold text-[#1B4D7A]">
@@ -162,7 +162,7 @@ export default function RiversideReglazingPage() {
             JLS Reglazing has spent over two decades serving families and property owners in Riverside County. We prep every surface meticulously to remove hard-water deposits and existing damage before applying our multi-coat refinishing system. This preparation step is critical in areas with mineral-heavy water, and it is one of the reasons our finishes outlast those of less experienced competitors.
           </p>
           <p className="font-jost text-gray-700 leading-relaxed">
-            From a single guest-bathroom tub in Perris to a full kitchen and bath refresh in Lake Elsinore, every JLS project comes with a 2-year warranty, full licensing and insurance, and a commitment to leaving your home clean when we walk out the door.
+            From a single guest-bathroom tub in Perris to a full kitchen and bath refresh in Lake Elsinore, every JLS project comes with a 3-year warranty and a commitment to leaving your home clean when we walk out the door.
           </p>
         </div>
       </section>

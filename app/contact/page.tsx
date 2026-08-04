@@ -110,7 +110,7 @@ export default function ContactPage() {
             Why Contact JLS Reglazing?
           </h2>
           <p className="font-jost text-lg text-gray-700 leading-relaxed mb-8">
-            When you contact JLS Reglazing, you reach a family-owned reglazing company with over 20 years of hands-on experience and 4,000+ completed projects across Southern California. Every quote is free, every estimate is honest, and every project is backed by our 2-year warranty.
+            When you contact JLS Reglazing, you reach a family-owned reglazing company with over 20 years of hands-on experience and 4,000+ completed projects across Southern California. Every quote is free, every estimate is honest, and every project is backed by our 3-year warranty.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <article className="bg-[#F3F4F6] rounded-xl p-6">

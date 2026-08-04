@@ -14,7 +14,7 @@ const cities = [
 export const metadata: Metadata = {
   title: 'Bathtub & Kitchen Reglazing in Victorville & High Desert',
   description:
-    'Professional bathtub and kitchen reglazing in Victorville, Hesperia, Apple Valley, Barstow, Big Bear Lake & the High Desert. 20+ years experience, 2-year warranty. Save 90% vs replacement.',
+    'Professional bathtub and kitchen reglazing in Victorville, Hesperia, Apple Valley, Barstow, Big Bear Lake & the High Desert. 20+ years experience, 3-year warranty. Save 90% vs replacement.',
   alternates: { canonical: 'https://jlsreglazing.com/victorville-reglazing' },
   keywords:
     'bathtub reglazing Victorville, kitchen refinishing Hesperia, tub reglazing Apple Valley, bathtub refinishing Barstow, reglazing Big Bear, High Desert reglazing, Adelanto refinishing',
@@ -48,7 +48,7 @@ export default function VictorvilleReglazingPage() {
                 Bathtub &amp; Kitchen Reglazing in Victorville &amp; the High Desert
               </h1>
               <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
-                Professional refinishing services for homeowners and property managers across the High Desert region. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 2-year warranty.
+                Professional refinishing services for homeowners and property managers across the High Desert region. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 3-year warranty.
               </p>
 
               {/* Quick stats */}
@@ -115,8 +115,8 @@ export default function VictorvilleReglazingPage() {
           {[
             { value: '20+', label: 'Years Experience' },
             { value: '4,000+', label: 'Units Serviced' },
-            { value: 'Licensed', label: '& Insured' },
-            { value: '2-Year', label: 'Warranty' },
+            { value: 'Free', label: 'On-Site Quotes' },
+            { value: '3-Year', label: 'Warranty' },
           ].map((item) => (
             <div key={item.label} className="p-4">
               <p className="font-orbitron text-2xl md:text-3xl font-bold text-[#1B4D7A]">
@@ -153,7 +153,7 @@ export default function VictorvilleReglazingPage() {
             The communities of Victorville, Hesperia, and Adelanto are also home to many military families stationed at or near Fort Irwin. Frequent relocations mean homes in these areas often change tenants regularly, and landlords need a cost-effective way to refresh bathrooms between occupants. Reglazing provides a like-new appearance without the timeline or expense of a full remodel&mdash;an important advantage for property owners managing rentals in a military-adjacent market.
           </p>
           <p className="font-jost text-gray-700 leading-relaxed">
-            Whether you own a single home in Wrightwood, a rental property in Barstow, or a vacation cabin near Big Bear Lake, JLS Reglazing delivers the same licensed, insured, warranty-backed service that has earned us over 4,000 completed projects across Southern California.
+            Whether you own a single home in Wrightwood, a rental property in Barstow, or a vacation cabin near Big Bear Lake, JLS Reglazing delivers the same warranty-backed service that has earned us over 4,000 completed projects across Southern California.
           </p>
         </div>
       </section>

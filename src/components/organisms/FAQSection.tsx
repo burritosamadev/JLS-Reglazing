@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: 'How long does bathtub reglazing last?',
-    answer: 'Professional bathtub reglazing lasts 10 to 15 years with proper care. Longevity depends on the quality of surface preparation, the materials used, and how the finish is maintained. To extend the life of a reglazed tub, avoid abrasive cleaners, use non-slip mats instead of adhesive strips, and clean with mild soap. JLS Reglazing includes a 2-year warranty on all refinishing projects.',
+    answer: 'Professional bathtub reglazing lasts 10 to 15 years with proper care. Longevity depends on the quality of surface preparation, the materials used, and how the finish is maintained. To extend the life of a reglazed tub, avoid abrasive cleaners, use non-slip mats instead of adhesive strips, and clean with mild soap. JLS Reglazing includes a 3-year warranty on all refinishing projects.',
   },
   {
     question: 'How long does the refinishing process take?',

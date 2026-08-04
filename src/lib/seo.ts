@@ -14,7 +14,7 @@ const BUSINESS = {
   logo: 'https://jlsreglazing.com/logo.svg',
   founder: 'Jorge Saldana',
   foundingYear: 2004,
-  description: 'Professional bathtub and kitchen reglazing services in Southern California. Over 20 years of hands-on experience with 4,000+ units serviced. Licensed, insured, and backed by a 2-year warranty on all refinishing work.',
+  description: 'Professional bathtub and kitchen reglazing services in Southern California. Over 20 years of hands-on experience with 4,000+ units serviced. Backed by a 3-year warranty on all refinishing work.',
   sameAs: [
     'https://www.facebook.com/profile.php?id=61573379680031',
     'https://instagram.com/jlsreglazing',
@@ -251,7 +251,7 @@ export const generateCountySchema = (county: string, cities?: string[]) => ({
       areaServed: cities
         ? cities.map((city) => ({ '@type': 'City', name: city }))
         : [{ '@type': 'AdministrativeArea', name: county }],
-      description: `Professional bathtub and kitchen reglazing services throughout ${county}. Over 20 years experience, 4,000+ units serviced. Licensed, insured, 2-year warranty.`,
+      description: `Professional bathtub and kitchen reglazing services throughout ${county}. Over 20 years experience, 4,000+ units serviced. 3-year warranty.`,
     },
     {
       '@type': 'BreadcrumbList',
@@ -273,7 +273,7 @@ export const generateFAQSchema = () => ({
       name: 'How much does bathtub reglazing cost in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Bathtub reglazing typically costs between $300 and $600, which is up to 90% less than full bathtub replacement ($1,500–$5,000+). The exact cost depends on tub condition, type of surface (fiberglass, porcelain, cast iron, or acrylic), repairs needed (cracks, chips, cut-outs), and project scope. At JLS Reglazing, we provide free on-site quotes and most projects are completed within 24 hours. All work includes a 2-year warranty.',
+        text: 'Bathtub reglazing typically costs between $300 and $600, which is up to 90% less than full bathtub replacement ($1,500–$5,000+). The exact cost depends on tub condition, type of surface (fiberglass, porcelain, cast iron, or acrylic), repairs needed (cracks, chips, cut-outs), and project scope. At JLS Reglazing, we provide free on-site quotes and most projects are completed within 24 hours. All work includes a 3-year warranty.',
       },
     },
     {
@@ -289,7 +289,7 @@ export const generateFAQSchema = () => ({
       name: 'How long does bathtub reglazing last?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Professional bathtub reglazing lasts 10 to 15 years with proper care. Longevity depends on the quality of preparation, materials used, and how the surface is maintained. Avoid abrasive cleaners, use non-slip mats instead of adhesive strips, and clean with mild soap. JLS Reglazing includes a 2-year warranty on all refinishing projects and uses professional-grade coatings rated for long-term durability.',
+        text: 'Professional bathtub reglazing lasts 10 to 15 years with proper care. Longevity depends on the quality of preparation, materials used, and how the surface is maintained. Avoid abrasive cleaners, use non-slip mats instead of adhesive strips, and clean with mild soap. JLS Reglazing includes a 3-year warranty on all refinishing projects and uses professional-grade coatings rated for long-term durability.',
       },
     },
     {

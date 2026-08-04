@@ -16,7 +16,7 @@ const cities = [
 export const metadata: Metadata = {
   title: 'Bathtub & Kitchen Reglazing in Los Angeles County',
   description:
-    'Professional bathtub and kitchen reglazing in Los Angeles County. Serving Pasadena, Long Beach, Glendale, Burbank, Pomona, West Covina & more. 20+ years experience, 2-year warranty.',
+    'Professional bathtub and kitchen reglazing in Los Angeles County. Serving Pasadena, Long Beach, Glendale, Burbank, Pomona, West Covina & more. 20+ years experience, 3-year warranty.',
   alternates: { canonical: 'https://jlsreglazing.com/los-angeles-reglazing' },
   keywords:
     'bathtub reglazing Los Angeles, kitchen refinishing Pasadena, tub reglazing Long Beach, bathtub refinishing Glendale, reglazing Burbank, reglazing Pomona, Los Angeles County reglazing, West Covina refinishing',
@@ -50,7 +50,7 @@ export default function LosAngelesReglazingPage() {
                 Bathtub &amp; Kitchen Reglazing in Los Angeles County
               </h1>
               <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
-                Trusted by LA-area homeowners and property managers for 20+ years. Professional refinishing for tubs, sinks, vanities, and kitchen countertops &mdash; completed in a single day, backed by a 2-year warranty.
+                Trusted by LA-area homeowners and property managers for 20+ years. Professional refinishing for tubs, sinks, vanities, and kitchen countertops &mdash; completed in a single day, backed by a 3-year warranty.
               </p>
 
               {/* Quick stats */}
@@ -117,8 +117,8 @@ export default function LosAngelesReglazingPage() {
           {[
             { value: '20+', label: 'Years Experience' },
             { value: '4,000+', label: 'Units Serviced' },
-            { value: 'Licensed', label: '& Insured' },
-            { value: '2-Year', label: 'Warranty' },
+            { value: 'Free', label: 'On-Site Quotes' },
+            { value: '3-Year', label: 'Warranty' },
           ].map((item) => (
             <div key={item.label} className="p-4">
               <p className="font-orbitron text-2xl md:text-3xl font-bold text-[#1B4D7A]">
@@ -155,7 +155,7 @@ export default function LosAngelesReglazingPage() {
             JLS Reglazing has partnered with LA-area property managers and landlords for over two decades. We understand the scheduling constraints of multi-unit buildings&mdash;coordinating access, working within tenant-occupied properties, and delivering consistent quality across dozens of units in a single project. Our team can handle volume work without sacrificing the attention to detail that keeps tenants happy and maintenance calls low.
           </p>
           <p className="font-jost text-gray-700 leading-relaxed">
-            For individual homeowners across the San Gabriel Valley and beyond, we bring the same professional-grade materials and craftsmanship. Every job is backed by our 2-year warranty, full licensing, and comprehensive insurance coverage.
+            For individual homeowners across the San Gabriel Valley and beyond, we bring the same professional-grade materials and craftsmanship. Every job is backed by our 3-year warranty.
           </p>
         </div>
       </section>
@@ -220,7 +220,7 @@ export default function LosAngelesReglazingPage() {
                 How much does bathtub reglazing cost in Los Angeles?
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Standard bathtub reglazing in Los Angeles County ranges from $300 to $600 per tub, depending on the surface material, current condition, and any repairs needed before coating. Kitchen countertops and sinks fall within a similar range. For multi-unit projects, we offer tiered pricing that reduces the per-unit cost as the project scope increases. Every quote includes surface preparation, multi-coat application, and our 2-year warranty at no additional charge.
+                Standard bathtub reglazing in Los Angeles County ranges from $300 to $600 per tub, depending on the surface material, current condition, and any repairs needed before coating. Kitchen countertops and sinks fall within a similar range. For multi-unit projects, we offer tiered pricing that reduces the per-unit cost as the project scope increases. Every quote includes surface preparation, multi-coat application, and our 3-year warranty at no additional charge.
               </p>
             </article>
           </div>

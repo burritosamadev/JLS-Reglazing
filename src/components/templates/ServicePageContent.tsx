@@ -92,7 +92,7 @@ export default function ServicePageContent({
             <p className="text-lg text-gray-700 font-jost leading-relaxed">
               {title} typically costs <strong className="text-[#1B4D7A]">{priceRange}</strong> for most residential projects in Southern California.
               This is up to 90% less than full replacement. The exact price depends on the current condition of the surface, the type of material, and whether structural repairs are needed.
-              All projects include a 2-year warranty and most are completed within 24 hours.
+              All projects include a 3-year warranty and most are completed within 24 hours.
             </p>
           </div>
         </section>

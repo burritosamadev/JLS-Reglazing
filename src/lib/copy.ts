@@ -13,7 +13,7 @@ export const BUSINESS = {
   foundingYear: 2004,
   yearsExperience: '20+',
   unitsServiced: '4,000+',
-  warrantyYears: '2',
+  warrantyYears: '3',
   priceRange: '$300–$600',
 
   // Phone numbers
@@ -28,6 +28,10 @@ export const BUSINESS = {
   // Email
   email: 'jorge@jlsreglazing.com',
 
+  // Mailing address — PO Box for correspondence and legal notices only.
+  // Not a service location; do NOT use in LocalBusiness structured data.
+  mailingAddress: 'PO Box 63006, Los Angeles, CA 90063',
+
   // URLs
   url: 'https://jlsreglazing.com',
   logo: '/logo.svg',
@@ -41,7 +45,7 @@ export const BUSINESS = {
   tiktok: 'https://tiktok.com/@jlsreglazing',
 
   // Description
-  description: 'Professional bathtub and kitchen reglazing services in Southern California. Over 20 years of hands-on experience with 4,000+ units serviced. Licensed, insured, and backed by a 2-year warranty on all refinishing work.',
+  description: 'Professional bathtub and kitchen reglazing services in Southern California. Over 20 years of hands-on experience with 4,000+ units serviced. Backed by a 3-year warranty on all refinishing work.',
   shortDescription: 'Professional bathtub and kitchen reglazing services in Southern California.',
 
   // Taglines
@@ -52,8 +56,7 @@ export const BUSINESS = {
   trustSignals: [
     '20+ Years Experience',
     '4,000+ Units Serviced',
-    'Licensed & Insured',
-    '2-Year Warranty',
+    '3-Year Warranty',
     'Hispanic-Owned & Operated',
     'Free On-Site Quotes',
   ],

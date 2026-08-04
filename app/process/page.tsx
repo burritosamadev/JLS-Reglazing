@@ -67,7 +67,7 @@ const steps = [
     number: 7,
     title: 'Final Cure & Handoff',
     description:
-      'The new finish needs 48-72 hours to fully cure. We walk you through care instructions to maximize the life of your refinished surface, backed by our comprehensive 2-year warranty.',
+      'The new finish needs 48-72 hours to fully cure. We walk you through care instructions to maximize the life of your refinished surface, backed by our comprehensive 3-year warranty.',
   },
 ]
 

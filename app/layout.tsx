@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     default: 'Professional Bathtub & Kitchen Refinishing | JLS Reglazing',
     template: '%s | JLS Reglazing',
   },
-  description: 'Expert bathtub and kitchen reglazing services in Southern California. 20+ years experience, 4,000+ units serviced. Licensed, insured, 2-year warranty. Save 90% vs replacement.',
+  description: 'Expert bathtub and kitchen reglazing services in Southern California. 20+ years experience, 4,000+ units serviced. 3-year warranty. Save 90% vs replacement.',
   keywords: 'bathtub reglazing, bathtub refinishing, kitchen reglazing, kitchen refinishing, San Bernardino, Riverside, Los Angeles, tile refinishing, porcelain refinishing',
   openGraph: {
     type: 'website',

@@ -8,7 +8,7 @@ export default function WhatIsReglazingSection() {
     'Save up to 90% compared to bathtub or kitchen replacement',
     'Completed in 24 hours—perfect for rental unit turnarounds',
     'Durable, heat-resistant finish for long-lasting results',
-    '2-year warranty included on all refinishing services',
+    '3-year warranty included on all refinishing services',
   ]
 
   return (

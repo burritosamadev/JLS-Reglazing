@@ -124,7 +124,7 @@ export default function GalleryPage() {
             <Link href="/victorville-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">Victorville</Link>.
           </p>
           <p className="font-jost text-lg text-gray-700 leading-relaxed">
-            Every project is completed in a single day, uses professional-grade coatings rated for 10–15 years of daily use, and comes with a 2-year warranty. Hover or tap any image below to see the service type and project details.
+            Every project is completed in a single day, uses professional-grade coatings rated for 10–15 years of daily use, and comes with a 3-year warranty. Hover or tap any image below to see the service type and project details.
           </p>
         </div>
       </section>

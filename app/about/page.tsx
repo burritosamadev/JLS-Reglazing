@@ -6,7 +6,7 @@ import { generateOrganizationSchema } from '@/lib/seo'
 export const metadata: Metadata = {
   title: 'About JLS Reglazing - 20+ Years of Professional Refinishing',
   description:
-    'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. Licensed, insured, 2-year warranty.',
+    'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. 3-year warranty.',
   alternates: { canonical: 'https://jlsreglazing.com/about' },
   keywords:
     'about JLS Reglazing, Jorge Saldana, bathtub reglazing expert, Hispanic-owned business, Southern California refinishing',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'About JLS Reglazing - 20+ Years of Professional Refinishing',
     description:
-      'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. Licensed, insured, 2-year warranty.',
+      'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. 3-year warranty.',
     url: 'https://jlsreglazing.com/about',
     images: [{ url: '/images/1_after.webp' }],
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About JLS Reglazing - 20+ Years of Professional Refinishing',
     description:
-      'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. Licensed, insured, 2-year warranty.',
+      'Learn about JLS Reglazing, a Hispanic-owned family business with 20+ years of bathtub and kitchen refinishing experience. 4,000+ units serviced. 3-year warranty.',
   },
 }
 
@@ -33,8 +33,8 @@ const credentials = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
       </svg>
     ),
-    title: 'Licensed & Insured',
-    description: 'Fully licensed and insured for your protection and peace of mind.',
+    title: 'Free On-Site Quotes',
+    description: 'Free, no-obligation on-site quotes with honest pricing before any work begins.',
   },
   {
     icon: (
@@ -42,8 +42,8 @@ const credentials = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
       </svg>
     ),
-    title: '2-Year Warranty',
-    description: 'Every project backed by a comprehensive 2-year warranty.',
+    title: '3-Year Warranty',
+    description: 'Every project backed by a comprehensive 3-year warranty.',
   },
   {
     icon: (
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <Link href="/san-bernardino-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">San Bernardino County</Link>,{' '}
               <Link href="/riverside-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">Riverside County</Link>,{' '}
               <Link href="/los-angeles-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">Los Angeles County</Link>, and the{' '}
-              <Link href="/victorville-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">High Desert</Link>, we understand the unique needs of property managers, contractors, and homeowners. Every project is backed by our comprehensive 2-year warranty because we stand behind our work.
+              <Link href="/victorville-reglazing" className="text-[#1B4D7A] font-semibold hover:underline">High Desert</Link>, we understand the unique needs of property managers, contractors, and homeowners. Every project is backed by our comprehensive 3-year warranty because we stand behind our work.
             </p>
             <p className="font-jost text-[#2D3748]/80 leading-relaxed mt-4">
               Our full range of services includes{' '}

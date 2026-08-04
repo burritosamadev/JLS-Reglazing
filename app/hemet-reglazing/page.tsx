@@ -14,7 +14,7 @@ const cities = [
 export const metadata: Metadata = {
   title: 'Bathtub & Kitchen Reglazing in Hemet & San Jacinto Valley',
   description:
-    'Professional bathtub and kitchen reglazing in Hemet, San Jacinto, Idyllwild, Valle Vista & surrounding areas. 20+ years experience, 2-year warranty. Save 90% vs replacement.',
+    'Professional bathtub and kitchen reglazing in Hemet, San Jacinto, Idyllwild, Valle Vista & surrounding areas. 20+ years experience, 3-year warranty. Save 90% vs replacement.',
   alternates: { canonical: 'https://jlsreglazing.com/hemet-reglazing' },
   keywords:
     'bathtub reglazing Hemet, kitchen refinishing San Jacinto, tub reglazing Idyllwild, bathtub refinishing Valle Vista, reglazing East Hemet, Hemet reglazing, San Jacinto Valley refinishing',
@@ -56,7 +56,7 @@ export default function HemetReglazingPage() {
                 Bathtub &amp; Kitchen Reglazing in Hemet &amp; San Jacinto Valley
               </h1>
               <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
-                Trusted refinishing services for homeowners and property managers in the Hemet and San Jacinto Valley area. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 2-year warranty.
+                Trusted refinishing services for homeowners and property managers in the Hemet and San Jacinto Valley area. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 3-year warranty.
               </p>
 
               {/* Quick stats */}
@@ -123,8 +123,8 @@ export default function HemetReglazingPage() {
           {[
             { value: '20+', label: 'Years Experience' },
             { value: '4,000+', label: 'Units Serviced' },
-            { value: 'Licensed', label: '& Insured' },
-            { value: '2-Year', label: 'Warranty' },
+            { value: 'Free', label: 'On-Site Quotes' },
+            { value: '3-Year', label: 'Warranty' },
           ].map((item) => (
             <div key={item.label} className="p-4">
               <p className="font-orbitron text-2xl md:text-3xl font-bold text-[#1B4D7A]">
@@ -161,7 +161,7 @@ export default function HemetReglazingPage() {
             Hemet and San Jacinto also have a growing number of single-family homes built from the 1970s through the early 2000s. The original fixtures in these properties&mdash;often builder-grade fiberglass or acrylic&mdash;are well past their prime. Rather than gutting a bathroom for a costly renovation, reglazing renews the surface for a fraction of the price and with far less disruption to daily life.
           </p>
           <p className="font-jost text-gray-700 leading-relaxed">
-            JLS Reglazing brings over 20 years of specialized experience to every home in the valley. We carry full licensing and insurance, and every project is protected by our 2-year warranty&mdash;giving you confidence that the work is done right the first time.
+            JLS Reglazing brings over 20 years of specialized experience to every home in the valley. Every project is protected by our 3-year warranty&mdash;giving you confidence that the work is done right the first time.
           </p>
         </div>
       </section>
@@ -226,7 +226,7 @@ export default function HemetReglazingPage() {
                 How long does a reglazed tub last in Hemet&apos;s climate?
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                With proper care, a professionally reglazed bathtub in the San Jacinto Valley typically lasts 10 to 15 years. Hemet&apos;s warm, dry climate is actually favorable for cured coatings&mdash;humidity-related issues like peeling are less common here than in coastal areas. We recommend using non-abrasive cleaners and avoiding suction-cup bath mats, which can lift the finish over time. Every JLS Reglazing project includes a 2-year warranty for your peace of mind.
+                With proper care, a professionally reglazed bathtub in the San Jacinto Valley typically lasts 10 to 15 years. Hemet&apos;s warm, dry climate is actually favorable for cured coatings&mdash;humidity-related issues like peeling are less common here than in coastal areas. We recommend using non-abrasive cleaners and avoiding suction-cup bath mats, which can lift the finish over time. Every JLS Reglazing project includes a 3-year warranty for your peace of mind.
               </p>
             </article>
           </div>

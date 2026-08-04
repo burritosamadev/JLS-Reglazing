@@ -22,7 +22,8 @@ const LAST_UPDATED = {
   hemet: '2026-04-18',
   losAngeles: '2026-04-18',
   victorville: '2026-04-18',
-  privacyPolicy: '2026-04-18',
+  privacyPolicy: '2026-08-03',
+  terms: '2026-08-03',
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -59,5 +60,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Legal
     { url: `${baseUrl}/privacy-policy`, lastModified: LAST_UPDATED.privacyPolicy, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: LAST_UPDATED.terms, changeFrequency: 'yearly', priority: 0.3 },
   ]
 }

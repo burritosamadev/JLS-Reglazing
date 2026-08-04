@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="space-y-2 text-gray-400">
               <p>20+ Years Experience</p>
               <p>4,000+ Units Serviced</p>
-              <p>Licensed & Insured</p>
+              <p>3-Year Warranty</p>
             </div>
           </div>
 
@@ -102,9 +102,11 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {currentYear} JL Bathtub Renovation Services. All rights reserved.</p>
-          <p className="mt-2">Hispanic-Owned & Operated | 2-Year Warranty</p>
+          <p className="mt-2">Hispanic-Owned & Operated | 3-Year Warranty</p>
           <p className="mt-3">
             <Link href="/privacy-policy" className="text-gray-400 hover:text-cta transition-colors">Privacy Policy</Link>
+            <span className="mx-2 text-gray-600">|</span>
+            <Link href="/terms" className="text-gray-400 hover:text-cta transition-colors">Terms of Service</Link>
           </p>
         </div>
       </div>

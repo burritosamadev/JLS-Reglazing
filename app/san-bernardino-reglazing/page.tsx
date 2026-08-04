@@ -15,7 +15,7 @@ const cities = [
 export const metadata: Metadata = {
   title: 'Bathtub & Kitchen Reglazing in San Bernardino County',
   description:
-    'Professional bathtub and kitchen reglazing in San Bernardino County. Serving Fontana, Rancho Cucamonga, Ontario, Upland, Redlands & more. 20+ years experience, 2-year warranty. Save 90% vs replacement.',
+    'Professional bathtub and kitchen reglazing in San Bernardino County. Serving Fontana, Rancho Cucamonga, Ontario, Upland, Redlands & more. 20+ years experience, 3-year warranty. Save 90% vs replacement.',
   alternates: { canonical: 'https://jlsreglazing.com/san-bernardino-reglazing' },
   keywords:
     'bathtub reglazing San Bernardino, kitchen refinishing Fontana, tub reglazing Rancho Cucamonga, bathtub refinishing Ontario, reglazing Upland, reglazing Redlands, San Bernardino County reglazing',
@@ -57,7 +57,7 @@ export default function SanBernardinoReglazingPage() {
                 Bathtub &amp; Kitchen Reglazing in San Bernardino County
               </h1>
               <p className="font-jost text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
-                Professional refinishing services for homeowners, property managers, and contractors across the Inland Empire. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 2-year warranty.
+                Professional refinishing services for homeowners, property managers, and contractors across the Inland Empire. Save up to 90% compared to full replacement &mdash; completed in a single day, backed by a 3-year warranty.
               </p>
 
               {/* Quick stats */}
@@ -124,8 +124,8 @@ export default function SanBernardinoReglazingPage() {
           {[
             { value: '20+', label: 'Years Experience' },
             { value: '4,000+', label: 'Units Serviced' },
-            { value: 'Licensed', label: '& Insured' },
-            { value: '2-Year', label: 'Warranty' },
+            { value: 'Free', label: 'On-Site Quotes' },
+            { value: '3-Year', label: 'Warranty' },
           ].map((item) => (
             <div key={item.label} className="p-4">
               <p className="font-orbitron text-2xl md:text-3xl font-bold text-[#1B4D7A]">
@@ -162,7 +162,7 @@ export default function SanBernardinoReglazingPage() {
             Summer temperatures in the Inland Empire regularly top 100 degrees Fahrenheit, which can stress bathroom surfaces that are already cracked or worn. JLS Reglazing uses heat-resistant coatings specifically formulated to withstand the thermal cycling common in San Bernardino County homes. With over 20 years of hands-on experience and more than 4,000 units serviced across the region, we understand the unique demands that the local climate places on refinished surfaces.
           </p>
           <p className="font-jost text-gray-700 leading-relaxed">
-            Whether you are a homeowner in Fontana updating a single bathroom, a landlord turning units in Ontario, or a contractor handling a multi-property renovation in Rialto, JLS Reglazing provides licensed and insured service backed by a 2-year warranty on every project.
+            Whether you are a homeowner in Fontana updating a single bathroom, a landlord turning units in Ontario, or a contractor handling a multi-property renovation in Rialto, JLS Reglazing provides professional service backed by a 3-year warranty on every project.
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function SanBernardinoReglazingPage() {
                 How does desert heat affect reglazed surfaces?
               </h3>
               <p className="text-gray-700 font-jost leading-relaxed">
-                Extreme heat can cause cheaper coatings to yellow or peel over time. At JLS Reglazing, we apply professional-grade, heat-resistant finishes that are engineered to handle the temperature swings typical in the Inland Empire&mdash;from triple-digit summer days to cool winter mornings. When properly applied and cured, our reglazing coatings maintain their gloss and structural integrity for years, which is why we stand behind every project with a 2-year warranty.
+                Extreme heat can cause cheaper coatings to yellow or peel over time. At JLS Reglazing, we apply professional-grade, heat-resistant finishes that are engineered to handle the temperature swings typical in the Inland Empire&mdash;from triple-digit summer days to cool winter mornings. When properly applied and cured, our reglazing coatings maintain their gloss and structural integrity for years, which is why we stand behind every project with a 3-year warranty.
               </p>
             </article>
             <article className="bg-white rounded-xl p-6 shadow-sm">
